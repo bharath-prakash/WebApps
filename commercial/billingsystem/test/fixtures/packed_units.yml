@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  unit_code: MyString
+  unit_name: MyString
+  no_of_units: 1.5
+  unit_wieght: 1.5
+  total_wieght: 1.5
+  product: 
+
+two:
+  unit_code: MyString
+  unit_name: MyString
+  no_of_units: 1.5
+  unit_wieght: 1.5
+  total_wieght: 1.5
+  product: 

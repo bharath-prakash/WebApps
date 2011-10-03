@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Billing System</title>
+  
+ <%= stylesheet_link_tag "core" %>
+  <%= stylesheet_link_tag "jq-tabs" %>
+   <%= stylesheet_link_tag    "application" %>
+  <%= javascript_include_tag "application" %>
+    <%= javascript_include_tag "jquery-1.5.1.min.js" %>
+  <%= javascript_include_tag "jquery-ui-1.8.13.js" %>
+  <%= javascript_include_tag "jquery_ujs.js" %>
+  
+ 
+ 
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<div id="all">
+		<div id="top-bar">
+        <div id="header">
+            <h1><span class="intro" style="font:Ariel;font-size:20px;">iRetail</span> 
+			<span style="font:Ariel;font-size:15px;">an online service for Enterprise Resource Planing</span></h1>
+			<div id="right-side">
+			<%= image_tag "images/usericon.jpg" %>			
+				<a href="#" class="first">Guest</a>
+				<a href="#">Logout</a> 
+				<form id="main-search" action="#">
+							<label for="search-field" id="search-field-label">Search</label>
+							<input type="text" maxlength="255" id="search-field"/>
+								
+							<input type="image" alt="Search" value="Search" src="/assets/images/search.png" id="search-button"/>  
+				</form>
+			</div>
+			
+			
+            
+        </div>
+		<%= render :partial => "layouts/header"  %>      
+		</div>
+		<div id = "main-content">
+
+        <div id="content">
+            <% if alerted = alert %>
+                <p id="alert"><%= alerted %></p>
+            <% end %>
+			<br/>
+            <%= yield %>
+        </div>
+		</div>
+		<div id="footer">
+			
+			  <p>
+			  Copyright © Basaveshwara Marketing Inc. All rights reserved.
+			</p>
+			
+		</div>
+    </div>
+<script type="text/javascript">
+		$(document).ready(function(){
+		   $("#zone-bar li em").click(function() {
+		   		var hidden = $(this).parents("li").children("ul").is(":hidden");
+		   		
+				$("#zone-bar>ul>li>ul").hide()        
+			   	$("#zone-bar>ul>li>a").removeClass();
+			   		
+			   	if (hidden) {
+			   		$(this)
+				   		.parents("li").children("ul").toggle()
+				   		.parents("li").children("a").addClass("zoneCur");
+				   	} 
+			   });
+		});
+	</script>
+
+
+</body>
+</html>

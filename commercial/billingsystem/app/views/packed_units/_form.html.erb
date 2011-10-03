@@ -1,0 +1,38 @@
+<%= form_for(@packed_unit) do |f| %>
+  <% if @packed_unit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@packed_unit.errors.count, "error") %> prohibited this packed_unit from being saved:</h2>
+
+      <ul>
+      <% @packed_unit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :unit_code %><br />
+    <%= f.text_field :unit_code %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_name %><br />
+    <%= f.text_field :unit_name %>
+  </div>
+  <div class="field">
+    <%= f.label :no_of_units %><br />
+    <%= f.text_field :no_of_units %>
+  </div>
+  <div class="field">
+    <%= f.label :unit_wieght %><br />
+    <%= f.text_field :unit_wieght %>
+  </div>
+  <div class="field">
+    <%= f.label :total_wieght %><br />
+    <%= f.text_field :total_wieght %>
+  </div>
+  
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/Fixtures.html
+
+one:
+  tax_type: MyString
+  description: MyString
+  percent: 1.5
+
+two:
+  tax_type: MyString
+  description: MyString
+  percent: 1.5

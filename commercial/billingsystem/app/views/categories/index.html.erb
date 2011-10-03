@@ -1,0 +1,32 @@
+<h1>Listing categories</h1>
+
+<table>
+  <tr>
+    <th>Category name</th>
+    <th>Category desc</th>
+    <th>Supplier</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @categories.each do |category| %>
+  <tr>
+    <td><%= category.category_name %></td>
+    <td><%= category.category_desc %></td>
+	<% if category.supplier.nil?%>
+	<td> No Supplier Attached </td>
+	<% end %>
+	<% if category.supplier!=nil%>
+    <td><%= category.supplier.supplier_name %></td>
+	<% end %>
+    <td><%= link_to 'Show', category %></td>
+    <td><%= link_to 'Edit', edit_category_path(category) %></td>
+    <td><%= link_to 'Destroy', category, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Category', new_category_path %>
