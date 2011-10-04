@@ -1,6 +1,6 @@
 class Supplier < ActiveRecord::Base
 
-	validates :supplier_name,  :presence => true , :uniqueness =>true,:length => { :minimum => 3 }
+  validates :supplier_name,  :presence => true , :uniqueness =>true,:length => { :minimum => 3 }
   validates :supplier_address, :presence => true, :length => { :minimum => 5 }
   validates :contact_person, :presence => true
   validates :tin_no, :presence => true, :uniqueness =>true, :numericality => true, :length => { :minimum => 8 }
