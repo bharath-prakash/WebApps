@@ -1,6 +1,22 @@
 Billingsystem::Application.routes.draw do
-  resources :users
+  
 
+  get "users/signup"
+
+  get "users/login"
+
+  get "users/logout"
+
+  get "users/delete"
+
+  get "users/edit"
+
+  get "users/forgot_password"
+  
+  post "users/auth_login"
+
+  resources :users
+  
   resources :product_costs
 
   resources :suppliers

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111003112508) do
+ActiveRecord::Schema.define(:version => 20111004092420) do
 
   create_table "categories", :force => true do |t|
     t.string   "category_name"
@@ -21,12 +21,6 @@ ActiveRecord::Schema.define(:version => 20111003112508) do
   end
 
   add_index "categories", ["supplier_id"], :name => "index_categories_on_supplier_id"
-
-  create_table "lists", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
 
   create_table "packed_units", :force => true do |t|
     t.string   "unit_code"
@@ -70,22 +64,14 @@ ActiveRecord::Schema.define(:version => 20111003112508) do
 
   create_table "suppliers", :force => true do |t|
     t.string   "supplier_name"
+    t.text     "Supplier_address"
     t.string   "contact_person"
-    t.integer  "tin_no",           :limit => 8
-    t.integer  "phone_no",         :limit => 8
+    t.integer  "tin_no"
+    t.integer  "phone_no"
     t.string   "email"
     t.float    "outstand_bal"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.text     "supplier_address"
-  end
-
-  create_table "tasks", :force => true do |t|
-    t.string   "name"
-    t.boolean  "done"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "list_id"
   end
 
   create_table "tax_masters", :force => true do |t|
@@ -97,15 +83,11 @@ ActiveRecord::Schema.define(:version => 20111003112508) do
   end
 
   create_table "users", :force => true do |t|
-    t.string   "login_name"
-    t.string   "password"
-    t.string   "first_name"
-    t.string   "last_name"
-    t.text     "address"
+    t.string   "login"
+    t.string   "hashed_password"
+    t.string   "email"
     t.string   "contact_no"
-    t.string   "role"
-    t.string   "created_by"
-    t.string   "updated_by"
+    t.string   "salt"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
