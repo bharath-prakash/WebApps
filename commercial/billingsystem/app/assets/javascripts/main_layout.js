@@ -87,13 +87,14 @@ $(document).ready(function(){
 				allFields.val( "" ).removeClass( "ui-state-error" );
 			}
 		});
+		
 
 		$( "#loginLnk" )	
 			.click(function() {
 				$( "#dialog-form" ).dialog( "open" );
 			});
 			
-			
+			if()
 			   
 			   
 		});
