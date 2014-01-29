@@ -1,0 +1,33 @@
+﻿@charset "UTF-8";
+/*
+ * Example of RSS Ticker Styling
+ *
+ */
+
+
+.rssFeed {
+	
+}
+.rssFeed a {
+	color: #444;
+	text-decoration: none;
+}
+.rssFeed a:hover {
+	color: #000;
+	text-decoration: underline;
+}
+
+.rssHeader { padding: 0.2em 0; }
+
+.rssBody >ul{ list-style:none;padding:0px; }
+.rssRow h4, .rssRow p, .rssRow div {
+	margin: 0;
+	padding: 0.5em;
+}
+
+
+#rss_feed_content .odd { background-color: #F7FBF7; }
+#rss_feed_content.even { background-color: #d4e8d4; }
+
+#rss_feed_content-navcoll .odd { background-color: #F7FBF7; }
+#rss_feed_content-navcoll .even { background-color: #d4e8d4; }
