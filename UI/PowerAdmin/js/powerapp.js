@@ -31,14 +31,38 @@ $('#left-panel').css('min-height',bodyHeight+'px');
 		
 		
 		$('.notify_messages,.lbl_notify_messages').click(function(){
-		alert($(this).attr('id'));
+			
+			if($(this).parent().hasClass('btn-group')){
+				$(this).parent().next().html('');
+				$(this).parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}else{
+				$(this).parent().parent().parent().next().html('');
+				$(this).parent().parent().parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}
+			var elemId = $(this);
+			setTimeout(function(){
+		ajaxNotification(elemId);		
+			},1000);
+
 		
-		ajaxNotification(this);
 		});
 		
 		
 		$('.notify_alerts,.lbl_notify_alerts').click(function(){
-		ajaxSystemMessages(this);
+			if($(this).parent().hasClass('btn-group')){
+				$(this).parent().next().html('');
+				$(this).parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}else{
+				$(this).parent().parent().parent().next().html('');
+				$(this).parent().parent().parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}
+			var elemId = $(this);
+			setTimeout(function(){
+				ajaxSystemMessages(elemId);
+			},1000);
+
+
+		
 		});
 		
 		
