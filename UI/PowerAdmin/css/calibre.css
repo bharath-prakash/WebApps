@@ -963,12 +963,18 @@ text-align: right;
 #site-updates  li{
 list-style: none;
 float:left;
+padding-left: 0px!important;
 
 }
 
 #site-updates  li h5{
 display:block;
 text-transform: uppercase;
+padding-left: 0px;
+}
+
+#site-updates  li div{
+padding-left: 0px;
 }
 
 #site-updates  li h5 span{
@@ -1043,8 +1049,8 @@ background-color:white;
 border-bottom: 1px solid rgb(245, 245, 245);
 }
 
-.power-widget .power-widget-body :first-child{
-  margin-top:10px;
+.power-widget >.power-widget-body > :first-child{
+  margin-top:15px;
 }
 
 
@@ -1128,27 +1134,95 @@ display:block;
 
 
 .todo-list ul{
-padding: 10px 20px;
+padding-left: 0px;
 }
 
 .todo-list ul li {
   list-style: none;
+  margin: 5px 0;
+  border-bottom: 1px solid #e7e7e7;
 
 }
+
+.todo-list ul li:last-child {
+border-bottom: 0px;
+  }
 .todo-list ul li span{
 color: rgb(51, 51, 104);
 font-size: 12px;
 
 }
 
-.todo-list .critical{
+.todo-list div{
   font-size: 15px;
   border-bottom: 1px solid silver;
 
 }
 
-.todo-list .critical i{
+.todo-list div i{
   padding-left: 5px;
   padding-right: 5px; 
   
 }
+
+.todo-list .important{
+border-top: 1px solid silver;  
+}
+
+.todo-list .completed{
+border-top: 1px solid silver;  
+}
+
+
+.todo-list .todo-completed li{
+text-decoration: line-through;
+font-style: italic;
+}
+
+.todo-list>ul>li>p>span.date{
+font-size: 10px;
+margin:0px!important;
+display: block;
+color: #bfbfbf;
+}
+
+.todo-list>ul>li>p{
+margin-bottom:0px!important;
+margin-left: 52px;
+}
+
+.power-widget>.power-widget-body>.power-widget-footer>div>span>i {
+margin-top: 0px;
+}
+
+.sub-text{
+  color: #999!important;
+  font-size: 12px!important;
+}
+
+.todo-list > ul  >li  >span:first-child >i{
+  float: left;
+padding-left: 18px;
+padding-top: 10px;
+  
+
+}
+
+.server-usage > ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.server-usage > ul > li{
+  padding-bottom: 12px;
+}
+
+.server-usage > ul > li > span > div{
+ padding-left: 10px;
+ padding-right: 10px;
+}
+
+.server-usage > ul > li > span > div>div{
+ margin-bottom: 5px;
+}
+
