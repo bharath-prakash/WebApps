@@ -65,19 +65,36 @@ $('#left-panel').css('min-height',bodyHeight+'px');
 		
 		});
 		
+
+		$('.notify_tasks,.lbl_notify_tasks').click(function(){
+			if($(this).parent().hasClass('btn-group')){
+				$(this).parent().next().html('');
+				$(this).parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}else{
+				$(this).parent().parent().parent().next().html('');
+				$(this).parent().parent().parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				}
+			var elemId = $(this);
+			setTimeout(function(){
+				ajaxGetTasks(elemId);
+			},1000);
+
+
 		
-		$('.power-widget .power-widget-header .controls').click(function(){
-		if($(this).hasClass('close')){
-		$(this).html('<i class="fa fa-spinner fa-spin"></i><i class="fa fa-minus-square"></i>');
-		$(this).parent().next().slideDown();
+		});
 		
-		
+		$('.power-widget .power-widget-header .controls>:last-child').click(function(){
+		if($(this).parent().hasClass('close')){
+			$(this).parent().find('>:first-child').before('<i class="fa fa-spinner fa-spin"></i>');
+			$(this).removeClass('fa-plus-square').addClass('fa-minus-square');
+			$(this).parent().parent().next().slideDown();
 		}else{
-		$(this).html('<i class="fa fa-spinner fa-spin"></i><i class="fa fa-plus-square"></i>');
-		$(this).parent().next().slideUp();
+			$(this).parent().find('>:first-child').before('<i class="fa fa-spinner fa-spin"></i>');			
+			$(this).removeClass('fa-minus-square').addClass('fa-plus-square');
+		$(this).parent().parent().next().slideUp();
 		}
 		setTimeout( "$('.power-widget .power-widget-header .controls').find('i.fa-spinner').hide();",1000 );
-		$(this).toggleClass('close')
+		$(this).parent().toggleClass('close');
 		});
 		
 		
@@ -345,5 +362,95 @@ $('#left-panel').css('min-height',bodyHeight+'px');
 				$(elem).parent().parent().parent().next().html(smContent);
 				
 	}
-	
+
+}
+
+
+	function ajaxGetTasks(elem){
+		var content = '<ul class="notification-body">'+
+	'<li>'+
+		'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><i class="fa fa-warning text-warning"></i> <strong>PRIMARY:</strong> <i>Upgrade Infestructure</i> <span class="pull-right semi-bold text-muted">85%</span></p>'+
+				'<div class="progress progress-md progress-striped">'+
+					'<div class="progress-bar bg-color-teal" style="width: 85%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin">last updated on 12/12/2013</em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+	'<li>'+
+	'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><strong>URGENT:</strong> <i>Project Plan</i> <span class="pull-right semi-bold text-muted">25%</span></p>'+
+				'<div class="progress progress-xs">'+
+					'<div class="progress-bar bg-color-teal" style="width: 25%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin">last updated on 12/12/2013</em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+	'<li>'+
+		'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><strong>CRITICAL:</strong> <i> Wireframes</i> <span class="pull-right semi-bold text-danger">5%</span></p>'+
+				'<div class="progress progress-xs">'+
+					'<div class="progress-bar progress-bar-danger" style="width: 5%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin">last updated on 12/12/2013</em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+	'<li>'+
+		'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><strong>NORMAL:</strong> <i>Compile hotfix</i> <span class="pull-right semi-bold text-muted">99%</span></p>'+
+				'<div class="progress progress-xs">'+
+					'<div class="progress-bar progress-bar-success" style="width: 99%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin">last updated on 12/12/2013</em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+	'<li>'+
+		'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><strong>MINOR:</strong> <i>Bug fix #213</i><span class="pull-right semi-bold text-muted"><i class="fa fa-check text-success"></i> Complete</span></p>'+
+				'<div class="progress progress-micro">'+
+					'<div class="progress-bar progress-bar-success" style="width: 100%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin">last updated on 12/12/2013</em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+	'<li>'+
+		'<span>'+
+			'<div class="bar-holder no-padding">'+
+				'<p class="margin-bottom-5"><strong>MINOR:</strong> <i>Bug fix #134</i><span class="pull-right semi-bold text-muted"><i class="fa fa-check text-success"></i> Complete</span></p>'+
+				'<div class="progress progress-micro">'+
+					'<div class="progress-bar progress-bar-success" style="width: 100%;"></div>'+
+				'</div>'+
+				'<em class="note no-margin display-inline"><a href="javascript:void(0);">see notes</a></em>'+
+			'</div>'+
+		'</span>'+
+	'</li>'+
+'</ul>';
+
+if($(elem).parent().hasClass('btn-group')){
+				
+				$(elem).parent().next().html('');
+				$(elem).parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				$(elem).parent().next().html(content);
+				
+				
+				}else{
+				
+				
+		$(elem).parent().parent().parent().next().html('');
+				$(elem).parent().parent().parent().next().html('<i class="fa fa-spinner fa-spin fa-5x"></i>');
+				$(elem).parent().parent().parent().next().html(content);
+
 	}
+}
+	
+	

@@ -1120,6 +1120,10 @@ padding: 2px;
 position:absolute;
 right:10px;
 top:2px;
+
+}
+
+.power-widget .power-widget-header .controls>:last-child{
 cursor:hand;
 }
 
@@ -1208,21 +1212,49 @@ padding-top: 10px;
 
 }
 
-.server-usage > ul{
+.task-status > ul{
   list-style: none;
   padding-left: 0px;
 }
 
-.server-usage > ul > li{
+.task-status > ul > li{
   padding-bottom: 12px;
 }
 
-.server-usage > ul > li > span > div{
+.task-status > ul > li > span > div{
  padding-left: 10px;
  padding-right: 10px;
 }
 
-.server-usage > ul > li > span > div>div{
+.task-status > ul > li > span > div>div{
  margin-bottom: 5px;
 }
 
+.power-widget-header>.controls>.dropdown-menu.dropdown-caret::after{
+  border-bottom: 6px solid rgb(187, 163, 163);
+}
+
+.power-widget-header>.controls>.dropdown-menu{
+right:20px;
+left:auto;
+}
+
+.text-color-red{
+  color:red!important;
+}
+
+.text-color-blue{
+  color:blue!important;
+}
+
+.text-color-yellow{
+  color:yellow!important;
+}
+
+.text-color-grey{
+  color:grey!important;
+}
+
+.text-color-green{
+  color:green!important;
+}
