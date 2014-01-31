@@ -1258,3 +1258,27 @@ left:auto;
 .text-color-green{
   color:green!important;
 }
+
+.chat-window > ul{
+  list-style: none;
+  padding-left: 0px;
+}
+
+.chat-window >ul >li{
+  padding: 20px 12px 0px 20px;
+  }
+
+  .chat-window >ul >li>img{
+  height:52px;
+  position: absolute;
+  border-left: 4px solid #00a300;
+  
+
+  }
+
+  .chat-window >ul >li>span{
+  margin-left: 52px;
+  padding-left:12px;  
+  
+  }
+
