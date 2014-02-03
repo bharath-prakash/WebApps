@@ -14,6 +14,7 @@
 	<link href="css/rss_ticker.css" rel="stylesheet">
 	<link href="css/power-responsive.css" rel="stylesheet">
 	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
 	  
     <!-- Custom styles for this template
     <link href="navbar-static-top.css" rel="stylesheet">
@@ -313,10 +314,7 @@
 					<li class="active">
 						<a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span></a>
 					</li>
-					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-inbox"></i> <span class="menu-item-parent">Inbox</span>
-							<span class="badge pull-right bg-color-red">14</span></a>
-					</li>
+					
 					<li>
 						<a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
 						<ul>
@@ -712,26 +710,51 @@
 								<li class="message">
 									<img src="img/tumbnails/user9.jpg" class="img-responsive">
 									<span class="message-text">
-										<time>
-											5:13pm
-										</time> <a href="javascript:void(0);" class="username">Drew Berry</a> Hi. As we discussed in meeting, can you send me updated status report for FY2013 Sales figures?
-										<p class="chat-file">
-											<b class="pull-left col-sm-6"> <!--<i class="fa fa-spinner fa-spin"></i>--> <i class="fa fa-file"></i> report-2013-sales.xls </b>
+										<p><time>5:13pm</time>
+										 <a href="javascript:void(0);" class="username">Drew Berry</a> Hi. As we discussed in meeting, can you send me updated status report for FY2013 Sales figures?
+										</p>
+										<p class="chat-file row">
+											<b class="pull-left col-sm-6">  <i class="fa fa-file"></i> report-2013-sales.xls </b>
 											<span class="col-sm-6 pull-right"> <a href="javascript:void(0);" class="btn btn-xs btn-default">cancel</a> <a href="javascript:void(0);" class="btn btn-xs btn-success">save</a> </span>
 										</p>
+
 										<p class="chat-file row">
 											<b class="pull-left col-sm-6"> <i class="fa fa-ok txt-color-green"></i> product-earnings-report-2012.doc </b>
 											<span class="col-sm-6 pull-right"> <a href="javascript:void(0);" class="btn btn-xs btn-primary">open</a> </span>
-										</p> </span>
+										</p> 
+									</span>
 								</li>
 								<li class="message">
-									<img src="img/avatars/sunny.png" class="online">
+									<img src="img/tumbnails/user8.jpg" class="online">
 									<span class="message-text">
-										<time>
+										<p><time>
 											5:14pm
-										</time> <a href="javascript:void(0);" class="username">Mark S</a> Sure. Will get back to you on this.Thanks for the file Drew! <i class="fa fa-smile-o txt-color-orange"></i> </span>
+										</time> <a href="javascript:void(0);" class="username">Mark S</a> Sure. Will get back to you on this.Thanks for the file Drew! <i class="fa fa-smile-o txt-color-orange"></i>
+										</p>
+										 </span>
 								</li>
 							</ul>
+							<div class="chat-footer col-xs-12">
+
+							<!-- CHAT TEXTAREA -->
+							<div class="textarea-div">
+
+								<div class="typearea">
+									<textarea placeholder="Write a reply..." id="textarea-expand" class="custom-scroll"></textarea>
+								</div>
+
+							</div>
+
+							<!-- CHAT REPLY/SEND -->
+							<div class="textarea-controls">
+								<button class="btn btn-sm btn-primary pull-right">
+									Reply
+								</button> <span class="pull-right smart-form" style="margin-top: 3px; margin-right: 10px;"> <label class="checkbox pull-right">
+										
+										</span> <a href="javascript:void(0);" class="pull-left"><i class="fa fa-camera fa-fw fa-lg"></i></a> 
+									</div>
+
+						</div>
 
 
 </div>
@@ -831,7 +854,34 @@
 </ul>
  </div>
 </div>
+</div><!--power widget ends here-->
+
+
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-calendar fa-inverse fa-stack-1x"></i>
+</span>
+<div class=""><h4>Calendar</h4></div>
+<div class="controls"><i class="fa fa-expand"></i><i class="fa fa-minus-square"></i></div>
 </div>
+
+<div class="power-widget-body">
+	<div id="calendar-buttons">
+
+								<div class="btn-group">
+									<a href="javascript:void(0)" class="btn btn-default " id="btn-prev"><i class="fa fa-chevron-left"></i></a>
+									<a href="javascript:void(0)" class="btn btn-default " id="btn-next"><i class="fa fa-chevron-right"></i></a>
+								</div>
+							</div>
+
+<div id='calendar'></div>
+
+</div>
+</div>
+<!--power widget ends here-->
 </div>
 </div>
 
@@ -860,7 +910,8 @@
 	<script src="js/nvd3/nv.d3.min.js"></script>
 	<script src="js/nvd3/utils.js"></script>
 <script src="js/nvd3/tooltip.js"></script>
-<script src="js/nvd3/models/stackedArea.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
 	
  <script type="text/javascript">
 
@@ -1137,6 +1188,10 @@ Morris.Donut({
 }).on('click', function(i, row){
   console.log(i, row);
 });
+
+
+
+
 
  </script>
 
