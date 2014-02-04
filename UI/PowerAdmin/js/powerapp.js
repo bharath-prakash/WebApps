@@ -93,7 +93,7 @@ $('#left-panel').css('min-height',bodyHeight+'px');
 			$(this).removeClass('fa-minus-square').addClass('fa-plus-square');
 		$(this).parent().parent().next().slideUp();
 		}
-		setTimeout( "$('.power-widget .power-widget-header .controls').find('i.fa-spinner').hide();",1000 );
+		setTimeout( "$('.power-widget .power-widget-header .controls').find('i.fa-spinner').remove();",1000 );
 		$(this).parent().toggleClass('close');
 		});
 		
@@ -142,6 +142,7 @@ var date = new Date();
 		var y = date.getFullYear();
 		
 		$('#calendar').fullCalendar({
+			height: 700,
 			header: {
 				left: 'title'				
 			},
@@ -149,24 +150,32 @@ var date = new Date();
 			events: [
 				{
 					title: 'All Day Meeting',
-					start: new Date(y, m, 1)
+					start: new Date(y, m, 1),
+					className: ["event", "bg-color-greenLight"],
+					icon: 'fa-check'
 				},
 				{
 					title: 'Customer requirement workshop',
 					start: new Date(y, m, d-5),
-					end: new Date(y, m, d-2)
+					end: new Date(y, m, d-2),
+					 className: ["event", "bg-color-red"],
+	                icon: 'fa-lock'
 				},
 				{
 					id: 999,
 					title: 'Weekly Meeting',
 					start: new Date(y, m, d-3, 16, 0),
-					allDay: false
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
 				},
 				{
 					id: 999,
 					title: 'Weekly Meeting',
 					start: new Date(y, m, d+4, 16, 0),
-					allDay: false
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
 				},
 				{
 					title: 'Meeting',
@@ -177,7 +186,9 @@ var date = new Date();
 					title: 'Lunch',
 					start: new Date(y, m, d, 12, 0),
 					end: new Date(y, m, d, 14, 0),
-					allDay: false
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
 				},
 				{
 					title: 'Birthday Party',
@@ -191,7 +202,17 @@ var date = new Date();
 					end: new Date(y, m, 29),
 					url: 'http://google.com/'
 				}
-			]
+			],
+			 eventRender: function (event, element, icon) {
+	                if (!event.description == "") {
+	                    element.find('.fc-event-title').append("<br/><span class='ultra-light'>" + event.description +
+	                        "</span>");
+	                }
+	                if (!event.icon == "") {
+	                    element.find('.fc-event-title').append("<i class='air air-top-right fa " + event.icon +
+	                        " '></i>");
+	                }
+	            }
 		});
 
 	$('.power-widget .fc-header .fc-header-center').hide();
@@ -207,8 +228,11 @@ $('#calendar-buttons #btn-prev').click(function () {
 	    $('.fc-button-next').click();
 	    return false;
 	});
-	
+
+
+renderVectorMap();
 	});
+
 	
 
 	$(document).on("click",".power-widget .power-widget-header .controls .fa-expand",function(event){
