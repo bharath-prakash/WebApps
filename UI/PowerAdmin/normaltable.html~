@@ -638,10 +638,18 @@
 <div class="controls"><i class="fa fa-minus-square"></i></div>
 				</div>
 
-			
-				
+				<!-- widget div-->
+				<div role="content">
+
+					<!-- widget edit box -->
+					<div class="power-widget-editbox">
+						<!-- This area used as dropdown edit box -->
+
+					</div>
+					<!-- end widget edit box -->
+
 					<!-- widget content -->
-					<div class="power-widget-body">
+					<div class="widget-body">
 						<p>Adds borders to any table row within <code>&lt;table&gt;</code> by adding the <code>.table-bordered</code> with the base class</p>
 						<table class="table table-bordered">
 							<thead>
@@ -695,7 +703,9 @@
 					</div>
 					<!-- end widget content -->
 
-			
+				</div>
+				<!-- end widget div -->
+
 			</div><div class="power-widget power-widget-color-darken power-widget-sortable" id="wid-id-1" data-widget-editbutton="false" role="widget" style="">
 				<!-- widget options:
 				usage: <div class="power-widget" id="wid-id-0" data-widget-editbutton="false">
