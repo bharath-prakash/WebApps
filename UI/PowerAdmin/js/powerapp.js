@@ -136,84 +136,7 @@ $('#left-panel').css('min-height',bodyHeight+'px');
 
 
 
-var date = new Date();
-		var d = date.getDate();
-		var m = date.getMonth();
-		var y = date.getFullYear();
-		
-		$('#calendar').fullCalendar({
-			height: 700,
-			header: {
-				left: 'title'				
-			},
-			editable: true,
-			events: [
-				{
-					title: 'All Day Meeting',
-					start: new Date(y, m, 1),
-					className: ["event", "bg-color-greenLight"],
-					icon: 'fa-check'
-				},
-				{
-					title: 'Customer requirement workshop',
-					start: new Date(y, m, d-5),
-					end: new Date(y, m, d-2),
-					 className: ["event", "bg-color-red"],
-	                icon: 'fa-lock'
-				},
-				{
-					id: 999,
-					title: 'Weekly Meeting',
-					start: new Date(y, m, d-3, 16, 0),
-					allDay: false,
-					 className: ["event", "bg-color-blue"],
-	                icon: 'fa-clock-o'
-				},
-				{
-					id: 999,
-					title: 'Weekly Meeting',
-					start: new Date(y, m, d+4, 16, 0),
-					allDay: false,
-					 className: ["event", "bg-color-blue"],
-	                icon: 'fa-clock-o'
-				},
-				{
-					title: 'Meeting',
-					start: new Date(y, m, d, 10, 30),
-					allDay: false
-				},
-				{
-					title: 'Lunch',
-					start: new Date(y, m, d, 12, 0),
-					end: new Date(y, m, d, 14, 0),
-					allDay: false,
-					 className: ["event", "bg-color-blue"],
-	                icon: 'fa-clock-o'
-				},
-				{
-					title: 'Birthday Party',
-					start: new Date(y, m, d+1, 19, 0),
-					end: new Date(y, m, d+1, 22, 30),
-					allDay: false
-				},
-				{
-					title: 'Click for Google',
-					start: new Date(y, m, 28),
-					end: new Date(y, m, 29),
-					url: 'http://google.com/'
-				}
-			],
-			 eventRender: function (event, element, icon) {
-	                if (!event.description == "") {
-	                    element.find('.fc-event-title').append("<br/><span class='ultra-light'>" + event.description +
-	                        "</span>");
-	                }
-	                if (!event.icon == "") {
-	                    element.find('.fc-event-title').append("<i class='air air-top-right fa " + event.icon +
-	                        " '></i>");
-	                }
-	            }
-		});
+
 
 	$('.power-widget .fc-header .fc-header-center').hide();
 			$('.power-widget .fc-header .fc-header-right').hide();
@@ -229,8 +152,13 @@ $('#calendar-buttons #btn-prev').click(function () {
 	    return false;
 	});
 
+	
+	 $('.bar').sparkline([6, 12,21,28,16,17,9, 20,17,21,23,19,21,22,23 ], { type: 'bar', height:'26px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
+   $('#traffic').sparkline([89,87,90,100,78,88,101,80, 90,89,88,92,67 ], { type: 'bar',barColor:'#88A2BB', barWidth:'4px', height:'26px',tooltipClassname:'jqtooltip_custom'});
+   $('#orders').sparkline([13, 18, 13,12,16,17,18,19, 14,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'26px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
 
-renderVectorMap();
+
+
 	});
 
 	
@@ -242,7 +170,7 @@ renderVectorMap();
 
 
 	$(document).on("click","#left-panel ul li a",function(event){
-		event.preventDefault();
+		//event.preventDefault();
 		if($(this).find(".collapse-sign em").hasClass("fa-caret-down")){
 		$(this).find(".collapse-sign em").removeClass("fa-caret-down");
 		$(this).find(".collapse-sign em").addClass("fa-caret-up");
@@ -558,3 +486,5 @@ if($(elem).parent().hasClass('btn-group')){
 }
 	
 	
+	
+	function getRandomInt(c,d){return Math.floor(Math.random()*(d-c+1))+c}

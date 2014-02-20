@@ -1,6 +1,7 @@
-@media (max-width: 767px ){
+@media (max-width: 767px ) {
  #left-panel{
-    left:-194px;
+    left:-65px;
+    width:65px;
   }
 
   .hidden-menu  #left-panel{
@@ -10,12 +11,12 @@
   
   .hidden-menu  .page-content{
   
-  margin-left:194px;
+  margin-left:65px;
   }
   
   .hidden-menu  .breadcrumb{
   
-  margin-left:194px;
+  margin-left:65px;
   }
   
   .page-content{
@@ -25,6 +26,53 @@
 .breadcrumb{
 	margin-left:0px;
 }
+
+
+#left-panel > div.shortcuts > div.btn-group {
+display:none;
+} 
+
+#left-panel > ul > li > a > span{
+display:none;
+} 
+
+#left-panel >ul>li> ul > li > a > span{
+display:none;
+}
+  
+}
+
+
+@media (min-width: 767px) and (max-width: 992px) {
+ #left-panel{
+    width:65px;
+  }
+  
+ #left-panel > div.shortcuts > div.btn-group {
+display:none;
+} 
+
+#left-panel > ul > li > a > span{
+display:none;
+} 
+
+#left-panel >ul>li> ul > li > a > span{
+display:none;
+}
+
+  
+  .page-content{
+  
+  margin-left:65px;
+  }
+  
+  .breadcrumb{
+  
+  margin-left:65px;
+  }
+  
+
+ 
   
 }
 
@@ -56,3 +104,12 @@
 	display:none;	
 }
 }
+
+
+@media (max-width: 309px ) {
+
+.power-widget .power-widget-header div h4 {
+font-size: 12px;
+}
+
+  }

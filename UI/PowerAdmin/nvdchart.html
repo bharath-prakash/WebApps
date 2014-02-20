@@ -1,0 +1,1243 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Power Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/calibre.css" rel="stylesheet">
+	<link href="css/rss_ticker.css" rel="stylesheet">
+	<link href="css/power-responsive.css" rel="stylesheet">
+	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+    <!-- Custom styles for this template
+    <link href="navbar-static-top.css" rel="stylesheet">
+ -->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+  </head>
+
+  <body >
+  
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" id="hide-menu" class="navbar-toggle" data-toggle="collapse" data-target="#left-panel">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  <div class="visible-xs">
+		   <ul class="phone-bar" >
+		   	<li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
+			 <i class="fa fa-search fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-message-collapse">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-feed-collapse">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			</li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-user-collapse">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			<span class="visible-sm">Welcome, Andy</span>
+			 <b class="caret"></b>
+			</a>
+			 
+			
+			</li>
+          </ul>
+       
+		  </div>
+        </div>
+        <!--- Notification Dropdown-->
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+		   <li>
+		  <form action="search.html" class="header-search pull-right">
+					<input type="text" placeholder="Find reports and more" id="search-fld">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+		  
+		  </li>
+		  <!--music bar-->
+		  <li><a id="" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-music fa-lg fa-fw"></i> 
+			 
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret music-dropdown action-dropdown inverse">
+			  <span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-play fa-inverse fa-stack-1x"></i>
+</span>
+<div class="player_options">
+<i class="fa fa-fw fa-lg fa-volume-up fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-volume-down fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-random fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-repeat fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-heart fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-plus fa-inverse "></i>
+</div>
+<div class="player_song">
+
+<span><marquee>Bon Jovi - It's My Life...</marquee></span>
+</div>
+<div class="player_control"> <i class="fa fa-inverse fa-2x fa-backward"></i> <i class="fa fa-inverse fa-2x fa-pause"></i> <i class="fa fa-inverse fa-2x fa-forward"></i></div>
+
+<div class="player_status"> 
+<span>00:00</span>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<span>05:20</span>
+</div>
+			
+              
+              </div>
+			 </li>
+		  <!--music bar end-->
+		  
+            <li><a id="activity" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 
+			 <b class="badge">12</b>
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="">
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+			  </div>
+			 <div class="action-content custom-scroll">
+								
+								<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			 </li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			 <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="input-group">
+                        <input type="text" id="rss_url" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			
+			</li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			Welcome, Andy
+			 <b class="caret"></b>
+			</a>
+			 <ul class="dropdown-menu dropdown-caret">
+			    <li><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></li>
+                <li><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></li>
+				<li class="divider"></li>
+                <li><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></li>
+                
+              </ul>
+			
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <!--- Notification Dropdown End-->
+        <!--- Notificaion Collapse -->
+       <div class="navbar-message-collapse collapse">
+			  
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default lbl_notify_messages" id="lbl_notify_messages">
+				          <input type="radio" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default lbl_notify_alerts" id="lbl_notify_alerts">
+				          <input type="radio" name="notify_alerts" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default lbl_notify_tasks" id="lbl_notify_tasks">
+				          <input type="radio" name="notify_tasks" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+
+			 <div class="action-content custom-scroll">
+						
+						<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; Loading..." class="btn btn-default pull-right" >
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              
+ 
+        </div><!--/.nav-collapse -->
+        <!--- Notificaion Collapse End -->
+
+         <div  class="navbar-feed-collapse collapse">
+			  <div class="input-group">
+                        <input type="text"  id="rss_url-navcoll" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub-navcoll" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content-navcoll" style="align-content: center;">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+     
+	 <div class="navbar-user-collapse collapse">
+			  
+			 <div class="dropdown-header">Welcome, Andy</div>
+			    <div><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></div>
+                <div><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></div>
+				<hr/><div><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></div>
+                
+             
+        </div><!--/.navbar-user-collapse -->
+     
+      <div  class="navbar-search-collapse collapse ">
+      	<div class="row">
+      		 <form action="#" class="phone-search">
+					<input type="text" placeholder="Find reports and more" id="search-fld" class="col-md-8 col-xs-12">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+			</div>
+              </div>
+	  
+	  </div>
+    </div>
+<div class="main-container">
+<div class="main-container-inner">
+<div id="left-panel" class="main-navbar">
+
+		<div class="shortcuts">
+		<div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn " style="height:34px;">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-facebook"></i> 
+				        </label>
+				        <label class="btn ">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-twitter"></i> 
+				        </label>
+				        <label class="btn ">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-linkedin"></i>  
+				        </label>
+				    </div>
+		</div>
+				<ul>
+					<li >
+						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span>
+						</a>
+					</li>
+					
+					<li >
+						<a href="#" class="open"><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-up"></em></b></a>
+						<ul style="display:block;">
+							<li class="active">
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
+							</li>
+							<li>
+								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
+							</li>
+						<li >
+								<a href="rickshaw.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
+							</li>								
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Normal Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Data Tables</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Layouts</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Validation</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Form Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Form Plugins</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Wizards</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Editors</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Dropzone <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">UI Elements</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>General Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Buttons</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Icons<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-plane"></i> Font Awesome</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Grid</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Tree View</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Nestable Lists</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>JQuery UI</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 2nd Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 4th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+												<ul>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 5th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+														<ul>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> Folder<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Calendar</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Gallery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="menu-item-parent">Google Map Skins</span><span class="badge bg-color-greenLight pull-right inbox-badge">9</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-windows"></i> <span class="menu-item-parent">Miscellaneous</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Pricing Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Invoice</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Login</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Register</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Locked Screen</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 404</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 500</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Blank Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Email Template</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Search Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>CK Editor</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			
+			
+
+		</div>
+<div class="breadcrumb"> <span class="home"> <i class="fa fa-home fa-fw fa-lg"></i> Home</span> <i class="fa fa-angle-double-right"></i> Graphs <i class="fa fa-angle-double-right"></i> NVD Charts </div>
+   
+<div class="page-content">
+<div class="container">
+
+
+
+
+<div class="row page-title">
+
+<div class="col-xs-12 col-sm-4 col-lg-5">
+<h3 class="">  NVD Charts <span> <i class="fa fa-angle-right"></i> nvd3.js Reusable charts </span></h3> 
+</div>
+
+<div class="col-xs-12 col-sm-8 col-lg-7">
+
+<ul id="site-updates" class="">
+			<li class="col-xs-4">
+				<h5 class="col-xs-12 col-sm-6 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
+				<div class=" col-xs-6 bar txt-color-blue hidden-xs"></div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-12  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<div id="traffic" class="col-xs-6 txt-color-purple hidden-xs">
+				</div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-12  col-sm-6 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div id="orders" class=" col-xs-6 txt-color-greenDark hidden-xs"></div>
+			</li>
+		</ul>
+
+</div>
+
+
+</div>
+
+<div class="row">
+<div class="col-xs-12">
+<div class="power-widget">
+
+<div class="power-widget-header">
+
+<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
+</span>
+<div class="">
+
+
+	<h4>Scatter Bubble Chart </h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+
+ <div id="bubble_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+  
+   
+
+  
+  </div>
+ 
+</div>
+</div>
+</div>
+
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-lg-6">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-bars fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Line Plus Bar Chart</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+
+ <div id="line_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-lg-6">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Grouped Multi Bar</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+
+ <div id="grouped_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+<!-- end of row-->
+
+<!--begin row-->
+<div class="row">
+<div class="col-xs-12 col-sm-6 col-lg-6">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-signal fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Cumulative Line Chart</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body" >
+
+ <div id="cumu_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+<div class="col-xs-12 col-sm-6 col-lg-6">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Line with View</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+
+ <div id="linewith_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+<!--end row-->
+
+<!--begin row-->
+<div class="row">
+<div class="col-xs-12 col-sm-12 col-lg-12">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-circle-o fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Pie/Donut Chart</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body" style="display:inline-block;width:100%;">
+
+<div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+ <div id="pie1_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+  </div>
+  
+ 
+  
+  <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+ <div id="don1_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+  </div>
+    <div class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+
+ <div id="don2_chart" style="height:300px;">
+ <svg></svg>   
+  </div>
+  </div>
+  
+  
+</div>
+</div>
+</div>
+
+</div>
+<!--end row-->
+
+<!--begin row-->
+<div class="row">
+<div class="col-xs-12">
+<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa fa-bullseye fa-inverse fa-stack-1x"></i>
+</span>
+
+<div class=""><h4>Bullet Chart</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body" >
+
+ <div id="bull_chart" style="height:100px;">
+ <svg></svg>   
+  </div>
+</div>
+</div>
+</div>
+
+
+
+</div>
+<!--end row-->
+
+ </div>
+
+   
+<div id="push"></div>
+    </div>
+</div>
+ 
+</div>
+	
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/powerapp.js"></script>
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	<script src="js/nvd3/nv.d3.min.js"></script>
+	<script src="js/nvd3/utils.js"></script>
+<script src="js/nvd3/tooltip.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+	<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="js/data/stream_layer.js"></script>
+ <script type="text/javascript">
+
+ nv.addGraph(function() {
+  var chart = nv.models.scatterChart()
+                .showDistX(true)    //showDist, when true, will display those little distribution lines on the axis.
+                .showDistY(true)
+                .transitionDuration(350)
+                .color(d3.scale.category10().range());
+ 
+  //Configure how the tooltip looks.
+  chart.tooltipContent(function(key) {
+      return '<h3>' + key + '</h3>';
+  });
+ 
+  //Axis settings
+  chart.xAxis.tickFormat(d3.format('.02f'));
+  chart.yAxis.tickFormat(d3.format('.02f'));
+ 
+  //We want to show shapes other than circles.
+  chart.scatter.onlyCircles(false);
+ 
+  var myData = randomData(4,40);
+  d3.select('#bubble_chart svg')
+      .datum(myData)
+      .call(chart);
+ 
+  nv.utils.windowResize(chart.update);
+ 
+  return chart;
+});
+ 
+/**************************************
+ * Simple test data generator
+ */
+function randomData(groups, points) { //# groups,# points per group
+  var data = [],
+      shapes = ['circle', 'cross', 'triangle-up', 'triangle-down', 'diamond', 'square'],
+      random = d3.random.normal();
+ 
+  for (i = 0; i < groups; i++) {
+    data.push({
+      key: 'Group ' + i,
+      values: []
+    });
+ 
+    for (j = 0; j < points; j++) {
+      data[i].values.push({
+        x: random()
+      , y: random()
+      , size: Math.random()   //Configure the size of each scatter point
+      , shape: (Math.random() > 0.95) ? shapes[j % 6] : "circle"  //Configure the shape of each scatter point.
+      });
+    }
+  }
+ 
+  return data;
+}
+
+var line_data = [ 
+    { 
+      "key" : "Quantity" , 
+      "bar": true,
+      "color": "#ccf",
+      "values" : [ [ 1136005200000 , 1271000.0] , [ 1138683600000 , 1271000.0] , [ 1141102800000 , 1271000.0] , [ 1143781200000 , 0] , [ 1146369600000 , 0] , [ 1149048000000 , 0] , [ 1151640000000 , 0] , [ 1154318400000 , 0] , [ 1156996800000 , 0] , [ 1159588800000 , 3899486.0] , [ 1162270800000 , 3899486.0] , [ 1164862800000 , 3899486.0] , [ 1167541200000 , 3564700.0] , [ 1170219600000 , 3564700.0] , [ 1172638800000 , 3564700.0] , [ 1175313600000 , 2648493.0] , [ 1177905600000 , 2648493.0] , [ 1180584000000 , 2648493.0] , [ 1183176000000 , 2522993.0] , [ 1185854400000 , 2522993.0] , [ 1188532800000 , 2522993.0] , [ 1191124800000 , 2906501.0] , [ 1193803200000 , 2906501.0] , [ 1196398800000 , 2906501.0] , [ 1199077200000 , 2206761.0] , [ 1201755600000 , 2206761.0] , [ 1204261200000 , 2206761.0] , [ 1206936000000 , 2287726.0] , [ 1209528000000 , 2287726.0] , [ 1212206400000 , 2287726.0] , [ 1214798400000 , 2732646.0] , [ 1217476800000 , 2732646.0] , [ 1220155200000 , 2732646.0] , [ 1222747200000 , 2599196.0] , [ 1225425600000 , 2599196.0] , [ 1228021200000 , 2599196.0] , [ 1230699600000 , 1924387.0] , [ 1233378000000 , 1924387.0] , [ 1235797200000 , 1924387.0] , [ 1238472000000 , 1756311.0] , [ 1241064000000 , 1756311.0] , [ 1243742400000 , 1756311.0] , [ 1246334400000 , 1743470.0] , [ 1249012800000 , 1743470.0] , [ 1251691200000 , 1743470.0] , [ 1254283200000 , 1519010.0] , [ 1256961600000 , 1519010.0] , [ 1259557200000 , 1519010.0] , [ 1262235600000 , 1591444.0] , [ 1264914000000 , 1591444.0] , [ 1267333200000 , 1591444.0] , [ 1270008000000 , 1543784.0] , [ 1272600000000 , 1543784.0] , [ 1275278400000 , 1543784.0] , [ 1277870400000 , 1309915.0] , [ 1280548800000 , 1309915.0] , [ 1283227200000 , 1309915.0] , [ 1285819200000 , 1331875.0] , [ 1288497600000 , 1331875.0] , [ 1291093200000 , 1331875.0] , [ 1293771600000 , 1331875.0] , [ 1296450000000 , 1154695.0] , [ 1298869200000 , 1154695.0] , [ 1301544000000 , 1194025.0] , [ 1304136000000 , 1194025.0] , [ 1306814400000 , 1194025.0] , [ 1309406400000 , 1194025.0] , [ 1312084800000 , 1194025.0] , [ 1314763200000 , 1244525.0] , [ 1317355200000 , 475000.0] , [ 1320033600000 , 475000.0] , [ 1322629200000 , 475000.0] , [ 1325307600000 , 690033.0] , [ 1327986000000 , 690033.0] , [ 1330491600000 , 690033.0] , [ 1333166400000 , 514733.0] , [ 1335758400000 , 514733.0]]
+    } , 
+
+    { 
+      "key" : "Price" ,
+      "color" : "#333",
+      "values" : [ [ 1136005200000 , 71.89] , [ 1138683600000 , 75.51] , [ 1141102800000 , 68.49] , [ 1143781200000 , 62.72] , [ 1146369600000 , 70.39] , [ 1149048000000 , 59.77] , [ 1151640000000 , 57.27] , [ 1154318400000 , 67.96] , [ 1156996800000 , 67.85] , [ 1159588800000 , 76.98] , [ 1162270800000 , 81.08] , [ 1164862800000 , 91.66] , [ 1167541200000 , 84.84] , [ 1170219600000 , 85.73] , [ 1172638800000 , 84.61] , [ 1175313600000 , 92.91] , [ 1177905600000 , 99.8] , [ 1180584000000 , 121.191] , [ 1183176000000 , 122.04] , [ 1185854400000 , 131.76] , [ 1188532800000 , 138.48] , [ 1191124800000 , 153.47] , [ 1193803200000 , 189.95] , [ 1196398800000 , 182.22] , [ 1199077200000 , 198.08] , [ 1201755600000 , 135.36] , [ 1204261200000 , 125.02] , [ 1206936000000 , 143.5] , [ 1209528000000 , 173.95] , [ 1212206400000 , 188.75] , [ 1214798400000 , 167.44] , [ 1217476800000 , 158.95] , [ 1220155200000 , 169.53] , [ 1222747200000 , 113.66] , [ 1225425600000 , 107.59] , [ 1228021200000 , 92.67] , [ 1230699600000 , 85.35] , [ 1233378000000 , 90.13] , [ 1235797200000 , 89.31] , [ 1238472000000 , 105.12] , [ 1241064000000 , 125.83] , [ 1243742400000 , 135.81] , [ 1246334400000 , 142.43] , [ 1249012800000 , 163.39] , [ 1251691200000 , 168.21] , [ 1254283200000 , 185.35] , [ 1256961600000 , 188.5] , [ 1259557200000 , 199.91] , [ 1262235600000 , 210.732] , [ 1264914000000 , 192.063] , [ 1267333200000 , 204.62] , [ 1270008000000 , 235.0] , [ 1272600000000 , 261.09] , [ 1275278400000 , 256.88] , [ 1277870400000 , 251.53] , [ 1280548800000 , 257.25] , [ 1283227200000 , 243.1] , [ 1285819200000 , 283.75] , [ 1288497600000 , 300.98] , [ 1291093200000 , 311.15] , [ 1293771600000 , 322.56] , [ 1296450000000 , 339.32] , [ 1298869200000 , 353.21] , [ 1301544000000 , 348.5075] , [ 1304136000000 , 350.13] , [ 1306814400000 , 347.83] , [ 1309406400000 , 335.67] , [ 1312084800000 , 390.48] , [ 1314763200000 , 384.83] , [ 1317355200000 , 381.32] , [ 1320033600000 , 404.78] , [ 1322629200000 , 382.2] , [ 1325307600000 , 405.0] , [ 1327986000000 , 456.48] , [ 1330491600000 , 542.44] , [ 1333166400000 , 599.55] , [ 1335758400000 , 583.98]]
+    }
+  ]
+
+ 
+  
+  
+
+  nv.addGraph(function() {
+  var data = line_data;
+      var chart = nv.models.linePlusBarChart()
+            .margin({top: 30, right: 60, bottom: 50, left: 70})
+            //We can set x data accessor to use index. Reason? So the bars all appear evenly spaced.
+            .x(function(d,i) { return i })
+            .y(function(d,i) {return d[1] })
+            ;
+ 
+      chart.xAxis.tickFormat(function(d) {
+        var dx = data[0].values[d] && data[0].values[d][0] || 0;
+        return d3.time.format('%x')(new Date(dx))
+      });
+ 
+      chart.y1Axis
+          .tickFormat(d3.format(',f'));
+ 
+      chart.y2Axis
+          .tickFormat(function(d) { return '$' + d3.format(',f')(d) });
+ 
+      chart.bars.forceY([0]);
+ 
+      d3.select('#line_chart svg')
+        .datum(data)
+        .transition()
+        .duration(0)
+        .call(chart);
+ 
+      nv.utils.windowResize(chart.update);
+ 
+      return chart;
+  });
+ 
+
+ nv.addGraph(function() {
+    var chart = nv.models.multiBarChart()
+      .transitionDuration(350)
+      .reduceXTicks(true)   //If 'false', every single x-axis tick label will be rendered.
+      .rotateLabels(0)      //Angle to rotate x-axis labels.
+      .showControls(true)   //Allow user to switch between 'Grouped' and 'Stacked' mode.
+      .groupSpacing(0.1)    //Distance between each group of bars.
+    ;
+ 
+    chart.xAxis
+        .tickFormat(d3.format(',f'));
+ 
+    chart.yAxis
+        .tickFormat(d3.format(',.1f'));
+ 
+    d3.select('#grouped_chart svg')
+        .datum(exampleData())
+        .call(chart);
+ 
+    nv.utils.windowResize(chart.update);
+ 
+    return chart;
+});
+ 
+//Generate some nice data.
+function exampleData() {
+  return stream_layers(3,10+Math.random()*100,.1).map(function(data, i) {
+    return {
+      key: 'Stream #' + i,
+      values: data
+    };
+  });
+}
+
+
+nv.addGraph(function() {
+  var chart = nv.models.lineWithFocusChart();
+ 
+  chart.xAxis
+      .tickFormat(d3.format(',f'));
+ 
+  chart.yAxis
+      .tickFormat(d3.format(',.2f'));
+ 
+  chart.y2Axis
+      .tickFormat(d3.format(',.2f'));
+ 
+  d3.select('#linewith_chart svg')
+      .datum(testData())
+      .transition().duration(500)
+      .call(chart);
+ 
+  nv.utils.windowResize(chart.update);
+ 
+  return chart;
+});
+/**************************************
+ * Simple test data generator
+ */
+ 
+function testData() {
+  return stream_layers(3,128,.1).map(function(data, i) {
+    return { 
+      key: 'Stream' + i,
+      values: data
+    };
+  });
+}
+ 
+
+var cumu_data = [
+  {
+    "key": "Series 1",
+    "values": [ [ 1025409600000 , 0] , [ 1028088000000 , -6.3382185140371] , [ 1030766400000 , -5.9507873460847] , [ 1033358400000 , -11.569146943813] , [ 1036040400000 , -5.4767332317425] , [ 1038632400000 , 0.50794682203014] , [ 1041310800000 , -5.5310285460542] , [ 1043989200000 , -5.7838296963382] , [ 1046408400000 , -7.3249341615649] , [ 1049086800000 , -6.7078630712489] , [ 1051675200000 , 0.44227126150934] , [ 1054353600000 , 7.2481659343222] , [ 1056945600000 , 9.2512381306992] , [ 1059624000000 , 11.341210982529] , [ 1062302400000 , 14.734820409020] , [ 1064894400000 , 12.387148007542] , [ 1067576400000 , 18.436471461827] , [ 1070168400000 , 19.830742266977] , [ 1072846800000 , 22.643205829887] , [ 1075525200000 , 26.743156781239] , [ 1078030800000 , 29.597478802228] , [ 1080709200000 , 30.831697585341] , [ 1083297600000 , 28.054068024708] , [ 1085976000000 , 29.294079423832] , [ 1088568000000 , 30.269264061274] , [ 1091246400000 , 24.934526898906] , [ 1093924800000 , 24.265982759406] , [ 1096516800000 , 27.217794897473] , [ 1099195200000 , 30.802601992077] , [ 1101790800000 , 36.331003758254] , [ 1104469200000 , 43.142498700060] , [ 1107147600000 , 40.558263931958] , [ 1109566800000 , 42.543622385800] , [ 1112245200000 , 41.683584710331] , [ 1114833600000 , 36.375367302328] , [ 1117512000000 , 40.719688980730] , [ 1120104000000 , 43.897963036919] , [ 1122782400000 , 49.797033975368] , [ 1125460800000 , 47.085993935989] , [ 1128052800000 , 46.601972859745] , [ 1130734800000 , 41.567784572762] , [ 1133326800000 , 47.296923737245] , [ 1136005200000 , 47.642969612080] , [ 1138683600000 , 50.781515820954] , [ 1141102800000 , 52.600229204305] , [ 1143781200000 , 55.599684490628] , [ 1146369600000 , 57.920388436633] , [ 1149048000000 , 53.503593218971] , [ 1151640000000 , 53.522973979964] , [ 1154318400000 , 49.846822298548] , [ 1156996800000 , 54.721341614650] , [ 1159588800000 , 58.186236223191] , [ 1162270800000 , 63.908065540997] , [ 1164862800000 , 69.767285129367] , [ 1167541200000 , 72.534013373592] , [ 1170219600000 , 77.991819436573] , [ 1172638800000 , 78.143584404990] , [ 1175313600000 , 83.702398665233] , [ 1177905600000 , 91.140859312418] , [ 1180584000000 , 98.590960607028] , [ 1183176000000 , 96.245634754228] , [ 1185854400000 , 92.326364432615] , [ 1188532800000 , 97.068765332230] , [ 1191124800000 , 105.81025556260] , [ 1193803200000 , 114.38348777791] , [ 1196398800000 , 103.59604949810] , [ 1199077200000 , 101.72488429307] , [ 1201755600000 , 89.840147735028] , [ 1204261200000 , 86.963597532664] , [ 1206936000000 , 84.075505208491] , [ 1209528000000 , 93.170105645831] , [ 1212206400000 , 103.62838083121] , [ 1214798400000 , 87.458241365091] , [ 1217476800000 , 85.808374141319] , [ 1220155200000 , 93.158054469193] , [ 1222747200000 , 65.973252382360] , [ 1225425600000 , 44.580686638224] , [ 1228021200000 , 36.418977140128] , [ 1230699600000 , 38.727678144761] , [ 1233378000000 , 36.692674173387] , [ 1235797200000 , 30.033022809480] , [ 1238472000000 , 36.707532162718] , [ 1241064000000 , 52.191457688389] , [ 1243742400000 , 56.357883979735] , [ 1246334400000 , 57.629002180305] , [ 1249012800000 , 66.650985790166] , [ 1251691200000 , 70.839243432186] , [ 1254283200000 , 78.731998491499] , [ 1256961600000 , 72.375528540349] , [ 1259557200000 , 81.738387881630] , [ 1262235600000 , 87.539792394232] , [ 1264914000000 , 84.320762662273] , [ 1267333200000 , 90.621278391889] , [ 1270008000000 , 102.47144881651] , [ 1272600000000 , 102.79320353429] , [ 1275278400000 , 90.529736050479] , [ 1277870400000 , 76.580859994531] , [ 1280548800000 , 86.548979376972] , [ 1283227200000 , 81.879653334089] , [ 1285819200000 , 101.72550015956] , [ 1288497600000 , 107.97964852260] , [ 1291093200000 , 106.16240630785] , [ 1293771600000 , 114.84268599533] , [ 1296450000000 , 121.60793322282] , [ 1298869200000 , 133.41437346605] , [ 1301544000000 , 125.46646042904] , [ 1304136000000 , 129.76784954301] , [ 1306814400000 , 128.15798861044] , [ 1309406400000 , 121.92388706072] , [ 1312084800000 , 116.70036100870] , [ 1314763200000 , 88.367701837033] , [ 1317355200000 , 59.159665765725] , [ 1320033600000 , 79.793568139753] , [ 1322629200000 , 75.903834028417] , [ 1325307600000 , 72.704218209157] , [ 1327986000000 , 84.936990804097] , [ 1330491600000 , 93.388148670744]]
+  },
+  {
+    "key": "Series 2",
+    "values": [ [ 1025409600000 , 0] , [ 1028088000000 , 0] , [ 1030766400000 , 0] , [ 1033358400000 , 0] , [ 1036040400000 , 0] , [ 1038632400000 , 0] , [ 1041310800000 , 0] , [ 1043989200000 , 0] , [ 1046408400000 , 0] , [ 1049086800000 , 0] , [ 1051675200000 , 0] , [ 1054353600000 , 0] , [ 1056945600000 , 0] , [ 1059624000000 , 0] , [ 1062302400000 , 0] , [ 1064894400000 , 0] , [ 1067576400000 , 0] , [ 1070168400000 , 0] , [ 1072846800000 , 0] , [ 1075525200000 , -0.049184266875945] , [ 1078030800000 , -0.10757569491991] , [ 1080709200000 , -0.075601531307242] , [ 1083297600000 , -0.061245277988149] , [ 1085976000000 , -0.068227316401169] , [ 1088568000000 , -0.11242758058502] , [ 1091246400000 , -0.074848439408270] , [ 1093924800000 , -0.11465623676497] , [ 1096516800000 , -0.24370633342416] , [ 1099195200000 , -0.21523268478893] , [ 1101790800000 , -0.37859370911822] , [ 1104469200000 , -0.41932884345151] , [ 1107147600000 , -0.45393735984802] , [ 1109566800000 , -0.50868179522598] , [ 1112245200000 , -0.48164396881207] , [ 1114833600000 , -0.41605962887194] , [ 1117512000000 , -0.48490348490240] , [ 1120104000000 , -0.55071036101311] , [ 1122782400000 , -0.67489170505394] , [ 1125460800000 , -0.74978070939342] , [ 1128052800000 , -0.86395050745343] , [ 1130734800000 , -0.78524898506764] , [ 1133326800000 , -0.99800440950854] , [ 1136005200000 , -1.1177951153878] , [ 1138683600000 , -1.4119975432964] , [ 1141102800000 , -1.2409959736465] , [ 1143781200000 , -1.3088936375431] , [ 1146369600000 , -1.5495785469683] , [ 1149048000000 , -1.1563414981293] , [ 1151640000000 , -0.87192471725994] , [ 1154318400000 , -0.84073995183442] , [ 1156996800000 , -0.88761892867370] , [ 1159588800000 , -0.81748513917485] , [ 1162270800000 , -1.2874081041274] , [ 1164862800000 , -1.9234702981339] , [ 1167541200000 , -1.8377768147648] , [ 1170219600000 , -2.7107654031830] , [ 1172638800000 , -2.6493268125418] , [ 1175313600000 , -3.0814553134551] , [ 1177905600000 , -3.8509837783574] , [ 1180584000000 , -5.2919167850718] , [ 1183176000000 , -5.2297750650773] , [ 1185854400000 , -3.9335668501451] , [ 1188532800000 , -2.3695525190114] , [ 1191124800000 , -2.3084243151854] , [ 1193803200000 , -3.0753680726738] , [ 1196398800000 , -2.2346609938962] , [ 1199077200000 , -3.0598810361615] , [ 1201755600000 , -1.8410154270386] , [ 1204261200000 , -1.6479442038620] , [ 1206936000000 , -1.9293858622780] , [ 1209528000000 , -3.0769590460943] , [ 1212206400000 , -4.2423933501421] , [ 1214798400000 , -2.6951491617768] , [ 1217476800000 , -2.8981825939957] , [ 1220155200000 , -2.9662727940324] , [ 1222747200000 , 0.21556750497498] , [ 1225425600000 , 2.6784995167088] , [ 1228021200000 , 4.1296711248958] , [ 1230699600000 , 3.7311068218734] , [ 1233378000000 , 4.7695330866954] , [ 1235797200000 , 5.1919133040990] , [ 1238472000000 , 4.1025856045660] , [ 1241064000000 , 2.8498939666225] , [ 1243742400000 , 2.8106017222851] , [ 1246334400000 , 2.8456526669963] , [ 1249012800000 , 0.65563070754298] , [ 1251691200000 , -0.30022343874633] , [ 1254283200000 , -1.1600358228964] , [ 1256961600000 , -0.26674408835052] , [ 1259557200000 , -1.4693389757812] , [ 1262235600000 , -2.7855421590594] , [ 1264914000000 , -1.2668244065703] , [ 1267333200000 , -2.5537804115548] , [ 1270008000000 , -4.9144552474502] , [ 1272600000000 , -6.0484408234831] , [ 1275278400000 , -3.3834349033750] , [ 1277870400000 , -0.46752826932523] , [ 1280548800000 , -1.8030186027963] , [ 1283227200000 , -0.99623230097881] , [ 1285819200000 , -3.3475370235594] , [ 1288497600000 , -3.8187026520342] , [ 1291093200000 , -4.2354146250353] , [ 1293771600000 , -5.6795404292885] , [ 1296450000000 , -6.2928665328172] , [ 1298869200000 , -6.8549277434419] , [ 1301544000000 , -6.9925308360918] , [ 1304136000000 , -8.3216548655839] , [ 1306814400000 , -7.7682867271435] , [ 1309406400000 , -6.9244213301058] , [ 1312084800000 , -5.7407624451404] , [ 1314763200000 , -2.1813149077927] , [ 1317355200000 , 2.9407596325999] , [ 1320033600000 , -1.1130607112134] , [ 1322629200000 , -2.0274822307752] , [ 1325307600000 , -1.8372559072154] , [ 1327986000000 , -4.0732815531148] , [ 1330491600000 , -6.4417038470291]]
+  },
+  {
+    "key": "Series 3",
+    "values": [ [ 1025409600000 , 0] , [ 1028088000000 , -6.3382185140371] , [ 1030766400000 , -5.9507873460847] , [ 1033358400000 , -11.569146943813] , [ 1036040400000 , -5.4767332317425] , [ 1038632400000 , 0.50794682203014] , [ 1041310800000 , -5.5310285460542] , [ 1043989200000 , -5.7838296963382] , [ 1046408400000 , -7.3249341615649] , [ 1049086800000 , -6.7078630712489] , [ 1051675200000 , 0.44227126150934] , [ 1054353600000 , 7.2481659343222] , [ 1056945600000 , 9.2512381306992] , [ 1059624000000 , 11.341210982529] , [ 1062302400000 , 14.734820409020] , [ 1064894400000 , 12.387148007542] , [ 1067576400000 , 18.436471461827] , [ 1070168400000 , 19.830742266977] , [ 1072846800000 , 22.643205829887] , [ 1075525200000 , 26.693972514363] , [ 1078030800000 , 29.489903107308] , [ 1080709200000 , 30.756096054034] , [ 1083297600000 , 27.992822746720] , [ 1085976000000 , 29.225852107431] , [ 1088568000000 , 30.156836480689] , [ 1091246400000 , 24.859678459498] , [ 1093924800000 , 24.151326522641] , [ 1096516800000 , 26.974088564049] , [ 1099195200000 , 30.587369307288] , [ 1101790800000 , 35.952410049136] , [ 1104469200000 , 42.723169856608] , [ 1107147600000 , 40.104326572110] , [ 1109566800000 , 42.034940590574] , [ 1112245200000 , 41.201940741519] , [ 1114833600000 , 35.959307673456] , [ 1117512000000 , 40.234785495828] , [ 1120104000000 , 43.347252675906] , [ 1122782400000 , 49.122142270314] , [ 1125460800000 , 46.336213226596] , [ 1128052800000 , 45.738022352292] , [ 1130734800000 , 40.782535587694] , [ 1133326800000 , 46.298919327736] , [ 1136005200000 , 46.525174496692] , [ 1138683600000 , 49.369518277658] , [ 1141102800000 , 51.359233230659] , [ 1143781200000 , 54.290790853085] , [ 1146369600000 , 56.370809889665] , [ 1149048000000 , 52.347251720842] , [ 1151640000000 , 52.651049262704] , [ 1154318400000 , 49.006082346714] , [ 1156996800000 , 53.833722685976] , [ 1159588800000 , 57.368751084016] , [ 1162270800000 , 62.620657436870] , [ 1164862800000 , 67.843814831233] , [ 1167541200000 , 70.696236558827] , [ 1170219600000 , 75.281054033390] , [ 1172638800000 , 75.494257592448] , [ 1175313600000 , 80.620943351778] , [ 1177905600000 , 87.289875534061] , [ 1180584000000 , 93.299043821956] , [ 1183176000000 , 91.015859689151] , [ 1185854400000 , 88.392797582470] , [ 1188532800000 , 94.699212813219] , [ 1191124800000 , 103.50183124741] , [ 1193803200000 , 111.30811970524] , [ 1196398800000 , 101.36138850420] , [ 1199077200000 , 98.665003256909] , [ 1201755600000 , 87.999132307989] , [ 1204261200000 , 85.315653328802] , [ 1206936000000 , 82.146119346213] , [ 1209528000000 , 90.093146599737] , [ 1212206400000 , 99.385987481068] , [ 1214798400000 , 84.763092203314] , [ 1217476800000 , 82.910191547323] , [ 1220155200000 , 90.191781675161] , [ 1222747200000 , 66.188819887335] , [ 1225425600000 , 47.259186154933] , [ 1228021200000 , 40.548648265024] , [ 1230699600000 , 42.458784966634] , [ 1233378000000 , 41.462207260082] , [ 1235797200000 , 35.224936113579] , [ 1238472000000 , 40.810117767284] , [ 1241064000000 , 55.041351655012] , [ 1243742400000 , 59.168485702020] , [ 1246334400000 , 60.474654847301] , [ 1249012800000 , 67.306616497709] , [ 1251691200000 , 70.539019993440] , [ 1254283200000 , 77.571962668603] , [ 1256961600000 , 72.108784451998] , [ 1259557200000 , 80.269048905849] , [ 1262235600000 , 84.754250235173] , [ 1264914000000 , 83.053938255703] , [ 1267333200000 , 88.067497980334] , [ 1270008000000 , 97.556993569060] , [ 1272600000000 , 96.744762710807] , [ 1275278400000 , 87.146301147104] , [ 1277870400000 , 76.113331725206] , [ 1280548800000 , 84.745960774176] , [ 1283227200000 , 80.883421033110] , [ 1285819200000 , 98.377963136001] , [ 1288497600000 , 104.16094587057] , [ 1291093200000 , 101.92699168281] , [ 1293771600000 , 109.16314556604] , [ 1296450000000 , 115.31506669000] , [ 1298869200000 , 126.55944572261] , [ 1301544000000 , 118.47392959295] , [ 1304136000000 , 121.44619467743] , [ 1306814400000 , 120.38970188330] , [ 1309406400000 , 114.99946573061] , [ 1312084800000 , 110.95959856356] , [ 1314763200000 , 86.186386929240] , [ 1317355200000 , 62.100425398325] , [ 1320033600000 , 78.680507428540] , [ 1322629200000 , 73.876351797642] , [ 1325307600000 , 70.866962301942] , [ 1327986000000 , 80.863709250982] , [ 1330491600000 , 86.946444823715]]
+  },
+  {
+    "key": "Series 4",
+    "values": [ [ 1025409600000 , -7.0674410638835] , [ 1028088000000 , -14.663359292964] , [ 1030766400000 , -14.104393060540] , [ 1033358400000 , -23.114477037218] , [ 1036040400000 , -16.774256687841] , [ 1038632400000 , -11.902028464000] , [ 1041310800000 , -16.883038668422] , [ 1043989200000 , -19.104223676831] , [ 1046408400000 , -20.420523282736] , [ 1049086800000 , -19.660555051587] , [ 1051675200000 , -13.106911231646] , [ 1054353600000 , -8.2448460302143] , [ 1056945600000 , -7.0313058730976] , [ 1059624000000 , -5.1485118700389] , [ 1062302400000 , -3.0011028761469] , [ 1064894400000 , -4.1367265281467] , [ 1067576400000 , 1.5425209565025] , [ 1070168400000 , 2.7673533607299] , [ 1072846800000 , 7.7077114755360] , [ 1075525200000 , 9.7565015112434] , [ 1078030800000 , 11.396888609473] , [ 1080709200000 , 10.013964745578] , [ 1083297600000 , 8.0558890950562] , [ 1085976000000 , 9.6081966657458] , [ 1088568000000 , 11.918590426432] , [ 1091246400000 , 7.9945345523982] , [ 1093924800000 , 8.3201276776796] , [ 1096516800000 , 9.8283954846342] , [ 1099195200000 , 11.527125859650] , [ 1101790800000 , 16.413657596527] , [ 1104469200000 , 20.393798297928] , [ 1107147600000 , 17.456308413907] , [ 1109566800000 , 20.087778400999] , [ 1112245200000 , 17.988336990817] , [ 1114833600000 , 15.378490151331] , [ 1117512000000 , 19.474322935730] , [ 1120104000000 , 20.013851070354] , [ 1122782400000 , 24.749943726975] , [ 1125460800000 , 23.558710274826] , [ 1128052800000 , 24.558915040889] , [ 1130734800000 , 22.355860488034] , [ 1133326800000 , 27.138026265756] , [ 1136005200000 , 27.202220808591] , [ 1138683600000 , 31.219437344964] , [ 1141102800000 , 31.392355525125] , [ 1143781200000 , 33.373099232542] , [ 1146369600000 , 35.095277582309] , [ 1149048000000 , 30.923356507615] , [ 1151640000000 , 31.083717332561] , [ 1154318400000 , 31.290690671561] , [ 1156996800000 , 34.247769216679] , [ 1159588800000 , 37.411073177620] , [ 1162270800000 , 42.079177096411] , [ 1164862800000 , 44.978191659648] , [ 1167541200000 , 46.713271025310] , [ 1170219600000 , 49.203892437699] , [ 1172638800000 , 46.684723471826] , [ 1175313600000 , 48.385458973500] , [ 1177905600000 , 54.660197840305] , [ 1180584000000 , 60.311838415602] , [ 1183176000000 , 57.583282204682] , [ 1185854400000 , 52.425398898751] , [ 1188532800000 , 54.663538086985] , [ 1191124800000 , 60.181844325224] , [ 1193803200000 , 62.877219773621] , [ 1196398800000 , 55.760611512951] , [ 1199077200000 , 54.735280367784] , [ 1201755600000 , 45.495912959474] , [ 1204261200000 , 40.934919015876] , [ 1206936000000 , 40.303777633187] , [ 1209528000000 , 47.403740368773] , [ 1212206400000 , 49.951960898839] , [ 1214798400000 , 37.534590035098] , [ 1217476800000 , 36.405758293321] , [ 1220155200000 , 38.545373001858] , [ 1222747200000 , 26.106358664455] , [ 1225425600000 , 4.2658006768744] , [ 1228021200000 , -3.5517839867557] , [ 1230699600000 , -2.0878920761513] , [ 1233378000000 , -10.408879093829] , [ 1235797200000 , -19.924242196038] , [ 1238472000000 , -12.906491912782] , [ 1241064000000 , -3.9774866468346] , [ 1243742400000 , 1.0319171601402] , [ 1246334400000 , 1.3109350357718] , [ 1249012800000 , 9.1668309061935] , [ 1251691200000 , 13.121178985954] , [ 1254283200000 , 17.578680237511] , [ 1256961600000 , 14.971294355085] , [ 1259557200000 , 21.551327027338] , [ 1262235600000 , 24.592328423819] , [ 1264914000000 , 20.158087829555] , [ 1267333200000 , 24.135661929185] , [ 1270008000000 , 31.815205405903] , [ 1272600000000 , 34.389524768466] , [ 1275278400000 , 23.785555857522] , [ 1277870400000 , 17.082756649072] , [ 1280548800000 , 25.248007727100] , [ 1283227200000 , 19.415179069165] , [ 1285819200000 , 30.413636349327] , [ 1288497600000 , 35.357952964550] , [ 1291093200000 , 35.886413535859] , [ 1293771600000 , 45.003601951959] , [ 1296450000000 , 48.274893564020] , [ 1298869200000 , 53.562864914648] , [ 1301544000000 , 54.108274337412] , [ 1304136000000 , 58.618190111927] , [ 1306814400000 , 56.806793965598] , [ 1309406400000 , 54.135477252994] , [ 1312084800000 , 50.735258942442] , [ 1314763200000 , 42.208170945813] , [ 1317355200000 , 31.617916826724] , [ 1320033600000 , 46.492005006737] , [ 1322629200000 , 46.203116922145] , [ 1325307600000 , 47.541427643137] , [ 1327986000000 , 54.518998440993] , [ 1330491600000 , 61.099720234693]]
+  }
+];
+
+
+  nv.addGraph(function() {
+  
+  
+    var chart = nv.models.cumulativeLineChart()
+                  .x(function(d) { return d[0] })
+                  .y(function(d) { return d[1]/100 }) //adjusting, 100% is 1.00, not 100 as it is in the data
+                  .color(d3.scale.category10().range())
+                  .useInteractiveGuideline(true)
+                  ;
+ 
+     chart.xAxis
+        .tickValues([1078030800000,1122782400000,1167541200000,1251691200000])
+        .tickFormat(function(d) {
+            return d3.time.format('%x')(new Date(d))
+          });
+ 
+    chart.yAxis
+        .tickFormat(d3.format(',.1%'));
+ 
+    d3.select('#cumu_chart svg')
+        .datum(cumu_data)
+        .call(chart);
+ 
+    //TODO: Figure out a good way to do this automatically
+    nv.utils.windowResize(chart.update);
+ 
+    return chart;
+  });
+  
+  
+  //Regular pie chart example
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(true);
+ 
+    d3.select("#pie1_chart svg")
+        .datum(exampleData1())
+        .transition().duration(350)
+        .call(chart);
+ 
+  return chart;
+});
+
+
+//Donut chart example
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(true)     //Display pie labels
+      .labelThreshold(.05)  //Configure the minimum slice size for labels to show up
+      .labelType("percent") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+      .donut(true)          //Turn on Donut mode. Makes pie chart look tasty!
+      .donutRatio(0.35)     //Configure how big you want the donut hole size to be.
+      ;
+ 
+    d3.select("#don1_chart svg")
+        .datum(exampleData1())
+        .transition().duration(350)
+        .call(chart);
+ 
+  return chart;
+});
+
+nv.addGraph(function() {
+  var chart = nv.models.pieChart()
+      .x(function(d) { return d.label })
+      .y(function(d) { return d.value })
+      .showLabels(true)     //Display pie labels
+      .labelThreshold(.05)  //Configure the minimum slice size for labels to show up
+      .labelType("percent") //Configure what type of data to show in the label. Can be "key", "value" or "percent"
+      .donut(true)          //Turn on Donut mode. Makes pie chart look tasty!
+      .donutRatio(0.45)     //Configure how big you want the donut hole size to be.
+      ;
+ 
+    d3.select("#don2_chart svg")
+        .datum(exampleData2())
+        .transition().duration(350)
+        .call(chart);
+ 
+  return chart;
+});
+ 
+//Pie chart example data. Note how there is only a single array of key-value pairs.
+function exampleData1() {
+  return  [
+      { 
+        "label": "FaceBook",
+        "value" : 79.765957771107
+		
+      } , 
+      { 
+        "label": "Twitter",
+        "value" : 12
+      } , 
+      { 
+        "label": "Ping",
+        "value" : 32.807804682612
+      } , 
+      { 
+        "label": "Pintrust",
+        "value" : 16.45946739256
+      } , 
+      { 
+        "label": "Google+",
+        "value" : 0.19434030906893
+      } , 
+      { 
+        "label": "Linkedin",
+        "value" : 18.079782601442
+      } , 
+      { 
+        "label": "Instagram",
+        "value" : 13.925743130903
+      } , 
+      { 
+        "label": "Meetup",
+        "value" : 5.1387322875705
+      }
+    ];
+}
+
+function exampleData2() {
+  return  [
+      { 
+        "label": "Australia",
+        "value" : 29.765957771107
+      } , 
+      { 
+        "label": "India",
+        "value" : 52
+      } , 
+      { 
+        "label": "China",
+        "value" : 32.807804682612
+      } , 
+      { 
+        "label": "USA",
+        "value" : 16.45946739256
+      } , 
+      { 
+        "label": "Brazil",
+        "value" : 0.19434030906893
+      } , 
+      { 
+        "label": "Mexico",
+        "value" : 98.079782601442
+      } , 
+      { 
+        "label": "United Kingdom",
+        "value" : 13.925743130903
+      } 
+      
+    ];
+}
+
+drawBulletChart();
+
+function drawBulletChart(){
+nv.addGraph(function() {  
+  var chart = nv.models.bulletChart();
+ 
+  d3.select('#bull_chart svg')
+      .datum(exampleDataBullet())
+      .transition().duration(1000)
+      .call(chart);
+ 
+  return chart;
+});
+}
+ 
+function exampleDataBullet() {
+  return {
+  	"title":"Revenue",		//Label the bullet chart
+  	"subtitle":"US$, in thousands",		//sub-label for bullet chart
+  	"ranges":[150,225,300],	 //Minimum, mean and maximum values.
+  	"measures":[220],		 //Value representing current measurement (the thick blue line in the example)
+  	"markers":[250]			 //Place a marker on the chart (the white triangle marker)
+  };
+}
+
+ 
+ </script>
+
+</body></html>

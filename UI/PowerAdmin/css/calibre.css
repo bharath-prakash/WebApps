@@ -234,7 +234,7 @@ text-align: center;
 .ajax-dropdown {
 position: absolute;
 display: none;
-z-index: 504;
+
 top: 48px;
 left: 16px;
 width: 344px;
@@ -606,7 +606,7 @@ width:194px;
 left: 0;
 background-color: rgba(58, 96, 148, 0.66);
 min-height: 560px;
-z-index:1005;
+
 overflow:visible;
 height:100%;
 }
@@ -621,7 +621,7 @@ font-size: 13px;
 line-height: .5em;
 list-style: none;
 position: relative;
-z-index:1004;
+
 
 }
 #left-panel ul li {
@@ -705,23 +705,24 @@ font-size:1.5em;
 content: "\f0d9";
 font-family: FontAwesome;
 display: block;
-height: 27px;
+height: 30px;
 line-height: normal;
-width: 27px;
+width: 37px;
 position: absolute;
-right: -21px;
-font-size: 20px;
+right: -26px;
+font-size: 35px;
 color: #eee;
+top:2px;
 }
 
 #left-panel>ul>li>a:hover{
   color: #1f496d;
 }
 
-#left-panel>ul>li>a>i {
+#left-panel>ul>li>a>i:first-child{
 margin-right: 5px;
 width: 15px;
-display: inline-block;
+display: inline-block!important;
 text-align: center;
 position: relative;
 }
@@ -835,9 +836,9 @@ height: 30px;
 line-height: 30px;
 margin: 0;
 padding: 0;
-position: absolute;
-right: 20px;
-top: 62px;
+position: relative;
+float: right;
+top: -30px;
 width: 30px;
 z-index: 2;
 }
@@ -857,7 +858,7 @@ text-align: center;
 position: absolute;
 left: 15px;
 top: 11px;
-z-index: 1;
+
 
 }
 
@@ -904,12 +905,14 @@ position: relative;
 
 .page-content{
 
-margin-left:185px;
+margin-left:195px;
+
+padding: 8px 20px 24px;
 
 }
 
 .breadcrumb{
-margin-left:185px;
+margin-left:194px;
 position:relative;
 }
 
@@ -918,8 +921,8 @@ color:#4E83B6;
 padding:0 10px;
 }
 
-.breadcrumb > i {
-padding:0 10px 0 0;
+.breadcrumb  i {
+padding:0 10px 0 5px;
 }
 
 .shortcuts{
@@ -933,6 +936,7 @@ color:white;
 .page-title {
 border-bottom:1px dotted silver;
 margin-left:10px;
+margin-bottom: 10px;
 }
 .page-title span{
 font-size:16px;
@@ -964,13 +968,14 @@ text-align: right;
 list-style: none;
 float:left;
 padding-left: 0px!important;
-
+padding-right: 0px!important;
 }
 
 #site-updates  li h5{
 display:block;
 text-transform: uppercase;
 padding-left: 0px;
+text-align: center;
 }
 
 #site-updates  li div{
@@ -1024,8 +1029,8 @@ margin-left: 50px;
 
 .power-widget  .power-widget-header span:first-child{
   position: absolute;
-top: -20px;
-left: -20px;
+top: -7px;
+left: -10px;
 z-index: 2;
 }
 
@@ -1140,6 +1145,7 @@ display:block;
 
 .todo-list ul{
 padding-left: 0px;
+margin:0px;
 }
 
 .todo-list ul li {
@@ -1216,6 +1222,7 @@ padding-top: 10px;
 .task-status > ul{
   list-style: none;
   padding-left: 0px;
+  margin: 0px;
 }
 
 .task-status > ul > li{
@@ -1241,11 +1248,11 @@ left:auto;
 }
 
 .text-color-red{
-  color:red!important;
+  color:#a90329!important;
 }
 
 .text-color-blue{
-  color:blue!important;
+  color:#57889c!important;
 }
 
 .text-color-yellow{
@@ -1257,12 +1264,17 @@ left:auto;
 }
 
 .text-color-green{
-  color:green!important;
+  color:#71843f!important;
+}
+
+.text-color-orange {
+color: #ff892a!important;
 }
 
 .chat-window > ul{
   list-style: none;
   padding-left: 0px;
+  margin:0px;
 }
 
 .chat-window >ul >li{
@@ -1428,9 +1440,10 @@ height: 100%;
 position: fixed;
 top: 0;
 left: 0;
-z-index: 99999;
+z-index: 9999;
 margin: 0px!important;
-overflow: scroll;
+overflow-x: hidden;
+overflow-y: scroll;
 }
 
 
@@ -1643,4 +1656,362 @@ white-space: nowrap;
 padding: 5px;
 border: 1px solid white;
 z-index: 10000;
+}
+
+body{
+overflow-x:hidden;
+overflow-y:scroll;
+
+}
+
+
+#left-panel ul li a i:nth-child(2) {
+font-size: 14px;
+margin-right: 4px;
+
+  }
+
+
+
+  #left-panel ul li.active a .fa-angle-double-right {
+    display: block;
+  }
+
+
+  .music-dropdown{
+position: absolute;
+display: none;
+top: 48px;
+left: 16px;
+border-radius: 0;
+-webkit-box-shadow: 10px 10px 20px rgba(52, 52, 58, 0.25);
+box-shadow: 10px 10px 20px rgba(52, 52, 58, 0.25);
+moz-box-shadow :10px 10px 20px rgba(52, 52, 58, 0.25);
+padding: 10px;
+background: #fff;
+border: 1px solid #b3b3b3
+-webkit-box-sizing: content-box;
+width:500px;
+height: 110px;
+right:-100px!important;
+
+  }
+
+  .music-dropdown.dropdown-menu.dropdown-caret::after{
+    right:120px!important;
+  }
+
+.music-dropdown > span:first-child{
+position: absolute;
+top: -28px;
+left: -28px;
+background-color: transparent!important;
+color: #27484F!important;
+  }
+
+  .music-dropdown .fa{
+    cursor: hand;
+  }
+
+  .music-dropdown .player_control{
+
+    position: relative;
+    top:28px;
+    box-shadow:  1px 1px 5px white inset;
+    -moz-box-shadow:1px 1px 5px white inset;
+    -webkit-box-shadow:1px 1px 5px white inset;
+  }
+
+  .music-dropdown .player_control i{
+
+    padding: 10px;
+  }
+
+.music-dropdown .player_status{
+  position: relative;
+margin-left: 150px;
+top: -4px;
+width: 325px;
+}
+  
+  .music-dropdown .player_song{
+    color:white;
+    top: 27px;
+    position: relative;
+    
+  }
+
+  .music-dropdown .player_options{
+    position: absolute;
+right: 20px;
+top: 4px;
+  }
+
+  .player_status > span:first-child{
+    position: absolute;
+  }
+
+  .player_status > span:last-child{
+    position: absolute;
+right: 2px;
+bottom: 0px;
+  }
+
+  .player_status .progress {
+    width: 250px;
+margin-left: 35px;
+  }
+
+  .music-dropdown .player_options i{
+    padding: 5px;
+    padding-right: 20px;
+    margin-right: 20px;
+    box-shadow:  1px 1px 5px white inset;     
+    -moz-box-shadow:1px 1px 5px white inset;
+    -webkit-box-shadow:1px 1px 5px white inset;
+  }
+
+
+
+.power-widget-body .morris-hover.morris-default-style{
+position: absolute;
+top: 10px!important;
+}
+
+
+
+
+.icon-holder{
+  position: absolute;
+top: 10px;
+left: 45px;
+
+}
+
+.power-box{
+  padding: 0px;
+-webkit-box-shadow: none;
+box-shadow: none;
+margin: 3px 0px;
+border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+.power-box-header{  
+  box-sizing: content-box;
+position: relative;
+min-height: 38px;
+background: rgb(247, 247, 247);
+color: rgb(154, 159, 162);
+border: 1px solid;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+padding-left: 12px;
+}
+
+.power-box-body{
+  border-right-width: 1px;
+border-bottom-width: 1px;
+border-left-width: 1px;
+border-right-style: solid;
+border-bottom-style: solid;
+border-left-style: solid;
+border-right-color: rgb(204, 204, 204);
+border-bottom-color: rgb(204, 204, 204);
+border-left-color: rgb(204, 204, 204);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+border-top: 0px;
+background-color: rgb(255, 255, 255);
+}
+
+.power-box-main{
+  padding: 12px;
+}
+
+.power-box-toolbar {
+display: inline-block;
+padding: 0px 10px;
+line-height: 37px;
+float: right;
+position: relative;
+}
+
+.power-box-header > .power-box-caption, .power-box-header > :first-child {
+line-height: 36px;
+padding: 0px;
+margin: 0px;
+display: inline;
+}
+
+.list-unstyled, .list-inline {
+margin-left: 0;
+}
+
+
+.blue {
+color: #478fca!important;
+}
+
+.bigger-110 {
+font-size: 110%;
+}
+.purple {
+color: #a069c3!important;
+}
+
+.list-unstyled>li>[class*="icon-"]:first-child, .list-inline>li>[class*="icon-"]:first-child {
+width: 18px;
+text-align: center;
+}
+.spaced>li {
+margin-top: 9px;
+margin-bottom: 9px;
+}
+
+.green {
+color: #69aa46!important;
+}
+
+
+.spaced2>li {
+margin-top: 15px;
+margin-bottom: 15px;
+}
+
+hr{
+  border-top: 1px solid #E2E2E2;
+}
+
+ul, ol {
+margin: 0 0 10px 25px;
+padding: 0;
+}
+
+.smaller-80 {
+font-size: 80%;
+}
+
+.power-box-toolbar::before {
+display: inline-block;
+content: '';
+position: absolute;
+top: 3px;
+bottom: 3px;
+left: -1px;
+border: 1px solid rgb(217, 217, 217);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+}
+
+.power-box-toolbar label {
+display: inline-block;
+vertical-align: middle;
+margin-bottom: 0px;
+}
+
+input[type="checkbox"].power-switch {
+width: 55px;
+height: 25px;
+}
+
+input[type="checkbox"].power-switch + .lbl {
+position: relative;
+margin: 0px 4px;
+min-height: 24px;
+}
+
+input[type="checkbox"].power-switch:checked + .lbl::before {
+content: '\f087';
+text-indent: 6px;
+color: rgb(255, 255, 255);
+border-color: rgb(183, 211, 229);
+background-color: rgb(255, 137, 60);
+}
+
+input[type="checkbox"].power-switch + .lbl::before {
+font-family: FontAwesome;
+content: '\f088';
+text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+box-shadow: none;
+border: 0px;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+font-weight: lighter;
+font-size: 16px;
+border-radius: 12px;
+display: inline-block;
+background-color: rgb(136, 136, 136);
+color: rgb(242, 242, 242);
+width: 52px;
+height: 22px;
+line-height: 20px;
+text-indent: 32px;
+transition: background 0.1s ease;
+-webkit-transition: background 0.1s ease;
+}
+input[type="checkbox"].power-switch:checked + .lbl::before {
+text-indent: 9px;
+color: rgb(255, 255, 255);
+background-color: rgb(138, 178, 201);
+border-color: rgb(70, 143, 204);
+}
+
+input[type="checkbox"].power, input[type="radio"].power {
+opacity: 0;
+position: absolute;
+z-index: 12;
+width: 18px;
+height: 18px;
+cursor: pointer;
+}
+
+input[type="checkbox"].power.power-switch:checked + .lbl::after {
+left: 32px;
+background-color: rgb(255, 255, 255);
+border: 4px solid rgb(255, 255, 255);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+text-shadow: rgba(0, 200, 0, 0.247059) 0px -1px 0px;
+}
+
+input[type="checkbox"].power.power-switch + .lbl::after {
+content: '';
+text-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+position: absolute;
+top: 1px;
+left: 3px;
+border-radius: 12px;
+box-shadow: rgba(0, 0, 0, 0.247059) 0px -1px 0px;
+width: 18px;
+height: 18px;
+text-align: center;
+background-color: rgb(242, 242, 242);
+border: 4px solid rgb(242, 242, 242);
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+transition: left 0.2s ease;
+-webkit-transition: left 0.2s ease;
+}
+
+.power-widget.power-widget-color-blueDark .power-widget-header {
+background: #4C4F53;
+color: #FFF;
 }

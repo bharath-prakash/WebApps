@@ -1,0 +1,928 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Power Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/calibre.css" rel="stylesheet">
+	<link href="css/rss_ticker.css" rel="stylesheet">
+	<link href="css/power-responsive.css" rel="stylesheet">
+	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	<link href="css/prettify.css" rel="stylesheet" type="text/css">
+	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	  <style>
+		
+	
+		
+	</style>
+	  
+    <!-- Custom styles for this template
+    <link href="navbar-static-top.css" rel="stylesheet">
+ -->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+  </head>
+
+  <body >
+  
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" id="hide-menu" class="navbar-toggle" data-toggle="collapse" data-target="#left-panel">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  <div class="visible-xs">
+		   <ul class="phone-bar" >
+		   	<li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
+			 <i class="fa fa-search fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-message-collapse">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-feed-collapse">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			</li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-user-collapse">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			<span class="visible-sm">Welcome, Andy</span>
+			 <b class="caret"></b>
+			</a>
+			 
+			
+			</li>
+          </ul>
+       
+		  </div>
+        </div>
+        <!--- Notification Dropdown-->
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+		   <li>
+		  <form action="search.html" class="header-search pull-right">
+					<input type="text" placeholder="Find reports and more" id="search-fld">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+		  
+		  </li>
+		  <!--music bar-->
+		  <li><a id="" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-music fa-lg fa-fw"></i> 
+			 
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret music-dropdown action-dropdown inverse">
+			  <span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-play fa-inverse fa-stack-1x"></i>
+</span>
+<div class="player_options">
+<i class="fa fa-fw fa-lg fa-volume-up fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-volume-down fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-random fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-repeat fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-heart fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-plus fa-inverse "></i>
+</div>
+<div class="player_song">
+
+<span><marquee>Bon Jovi - It's My Life...</marquee></span>
+</div>
+<div class="player_control"> <i class="fa fa-inverse fa-2x fa-backward"></i> <i class="fa fa-inverse fa-2x fa-pause"></i> <i class="fa fa-inverse fa-2x fa-forward"></i></div>
+
+<div class="player_status"> 
+<span>00:00</span>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<span>05:20</span>
+</div>
+			
+              
+              </div>
+			 </li>
+		  <!--music bar end-->
+		  
+            <li><a id="activity" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 
+			 <b class="badge">12</b>
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="">
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+			  </div>
+			 <div class="action-content custom-scroll">
+								
+								<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			 </li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			 <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="input-group">
+                        <input type="text" id="rss_url" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			
+			</li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			Welcome, Andy
+			 <b class="caret"></b>
+			</a>
+			 <ul class="dropdown-menu dropdown-caret">
+			    <li><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></li>
+                <li><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></li>
+				<li class="divider"></li>
+                <li><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></li>
+                
+              </ul>
+			
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <!--- Notification Dropdown End-->
+        <!--- Notificaion Collapse -->
+       <div class="navbar-message-collapse collapse">
+			  
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default lbl_notify_messages" id="lbl_notify_messages">
+				          <input type="radio" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default lbl_notify_alerts" id="lbl_notify_alerts">
+				          <input type="radio" name="notify_alerts" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default lbl_notify_tasks" id="lbl_notify_tasks">
+				          <input type="radio" name="notify_tasks" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+
+			 <div class="action-content custom-scroll">
+						
+						<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; Loading..." class="btn btn-default pull-right" >
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              
+ 
+        </div><!--/.nav-collapse -->
+        <!--- Notificaion Collapse End -->
+
+         <div  class="navbar-feed-collapse collapse">
+			  <div class="input-group">
+                        <input type="text"  id="rss_url-navcoll" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub-navcoll" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content-navcoll" style="align-content: center;">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+     
+	 <div class="navbar-user-collapse collapse">
+			  
+			 <div class="dropdown-header">Welcome, Andy</div>
+			    <div><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></div>
+                <div><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></div>
+				<hr/><div><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></div>
+                
+             
+        </div><!--/.navbar-user-collapse -->
+     
+      <div  class="navbar-search-collapse collapse ">
+      	<div class="row">
+      		 <form action="#" class="phone-search">
+					<input type="text" placeholder="Find reports and more" id="search-fld" class="col-md-8 col-xs-12">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+			</div>
+              </div>
+	  
+	  </div>
+    </div>
+<div class="main-container">
+<div class="main-container-inner">
+<div id="left-panel" class="main-navbar">
+
+		<div class="shortcuts">
+		<div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn " style="height:34px;">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-facebook"></i> 
+				        </label>
+				        <label class="btn ">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-twitter"></i> 
+				        </label>
+				        <label class="btn ">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-linkedin"></i>  
+				        </label>
+				    </div>
+		</div>
+				<ul>
+					<li >
+						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span>
+						</a>
+					</li>
+					
+					<li >
+						<a href="#" ><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
+						<ul >
+							<li >
+								<a href="nvdchart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
+							</li>
+							<li >
+								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
+							</li>							
+							<li >
+								<a href="rickshaw.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
+							</li>	
+						</ul>
+					</li>
+					<li class="active">
+						<a href="#" title="Typography"><i class="fa fa-lg fa-fw fa-text-width"></i> <span class="menu-item-parent">Typography</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Normal Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Data Tables</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Layouts</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Validation</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Form Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Form Plugins</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Wizards</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Editors</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Dropzone <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">UI Elements</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>General Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Buttons</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Icons<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-plane"></i> Font Awesome</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Grid</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Tree View</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Nestable Lists</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>JQuery UI</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 2nd Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 4th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+												<ul>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 5th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+														<ul>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> Folder<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Calendar</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Gallery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="menu-item-parent">Google Map Skins</span><span class="badge bg-color-greenLight pull-right inbox-badge">9</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-windows"></i> <span class="menu-item-parent">Miscellaneous</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Pricing Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Invoice</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Login</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Register</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Locked Screen</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 404</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 500</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Blank Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Email Template</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Search Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>CK Editor</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			
+			
+
+		</div>
+<div class="breadcrumb"> <span class="home"> <i class="fa fa-home fa-fw fa-lg"></i> Home</span> <i class="fa fa-angle-double-right"></i> Typography  </div>
+   
+<div class="page-content">
+<div class="container">
+
+
+
+
+<div class="row page-title">
+
+<div class="col-xs-12 col-sm-4 col-lg-5">
+<h3 class=""> Typography <span> > This is page-header (.page-title > h3)  </span></h3> 
+</div>
+
+<div class="col-xs-12 col-sm-8 col-lg-7">
+
+<ul id="site-updates" class="">
+			<li class="col-xs-4">
+				<h5 class="col-xs-12 col-sm-6 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
+				<div class=" col-xs-6 bar txt-color-blue hidden-xs"></div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-12  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<div id="traffic" class="col-xs-6 txt-color-purple hidden-xs">
+				</div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-12  col-sm-6 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div id="orders" class=" col-xs-6 txt-color-greenDark hidden-xs"></div>
+			</li>
+		</ul>
+
+</div>
+
+
+</div>
+
+
+<div class="row">
+							<div class="col-xs-12">
+								<!-- PAGE CONTENT BEGINS -->
+
+								<div class="row">
+									<div class="col-sm-6">
+										<h4>Headings &amp; Paragraphs</h4>
+
+										<hr>
+										<h1>h1. Heading 1</h1>
+										<p class="lead">
+											Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.
+										</p>
+										<h2>h2. Heading 2</h2>
+										<p>
+											Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.
+										</p>
+										<h3>h3. Heading 3</h3>
+										<p>
+											Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.
+										</p>
+										<h4>h4. Heading 4</h4>
+										<h5>h5. Heading 5</h5>
+										<h6>h6. Heading 6</h6>
+									</div><!-- /span -->
+
+									<div class="col-sm-6">
+										<div class="power-box">
+											<div class="power-box-header">
+												<h4>Lists</h4>
+											</div>
+
+											<div class="power-box-body">
+												<div class="power-box-main">
+													<div class="row">
+														<div class="col-sm-6">
+															<ul>
+																<li>Unordered List Item</li>
+
+																<li>
+																	<small>List Item in small tag</small>
+																</li>
+
+																<li>
+																	<b>List Item in bold tag</b>
+																</li>
+
+																<li>
+																	<i>List Item in italics tag</i>
+																</li>
+
+																<li>
+																	<ul class="list-unstyled">
+																		<li>
+																			<i class="fa fa-caret-right blue"></i>
+																			Nested List Item
+																		</li>
+
+																		<li>
+																			<i class="fa fa-caret-right blue"></i>
+																			Nested List Item
+																		</li>
+
+																		<li>
+																			<i class="fa fa-caret-right blue"></i>
+																			Nested List Item
+																		</li>
+																	</ul>
+																</li>
+																<li>Unordered List Item which is a longer item and may break into more lines.</li>
+
+																<li>
+																	<strong>List Item in strong tag</strong>
+																</li>
+
+																<li>
+																	<em>List Item in emphasis tag</em>
+																</li>
+															</ul>
+														</div>
+
+														<div class="col-sm-6">
+															<ol>
+																<li>Ordered List Item</li>
+																<li class="text-primary">.text-primary Ordered List Item</li>
+																<li class="text-danger">.text-danger Ordered List Item</li>
+
+																<li class="text-success">
+																	<b>.text-success</b>
+																	Ordered List Item
+																</li>
+																<li class="text-warning">.text-warning Ordered List Item</li>
+																<li class="text-muted">.text-muted Ordered List Item</li>
+															</ol>
+														</div>
+													</div>
+
+													<hr>
+													<div class="row">
+														<div class="col-xs-12">
+															<ul class="list-unstyled spaced">
+																<li>
+																	<i class="fa fa-bell-o bigger-110 purple"></i>
+																	List with custom icons and more space
+																</li>
+
+																<li>
+																	<i class="fa fa-check bigger-110 text-color-green"></i>
+																	Unordered List Item # 2
+																</li>
+
+																<li>
+																	<i class="fa fa-times bigger-110 text-color-red"></i>
+																	Unordered List Item # 3
+																</li>
+															</ul>
+
+															<ul class="list-unstyled spaced2">
+																<li>
+																	<i class="fa fa-circle text-color-green"></i>
+																	Even more space
+																</li>
+
+																<li class="text-warning bigger-110 text-color-orange">
+																	<i class="fa fa-warning"></i>
+																	Unordered List Item # 5
+																</li>
+
+																<li class="muted">
+																	<i class="fa fa-angle-right bigger-110"></i>
+																	Unordered List Item # 6
+																</li>
+
+																<li>
+																	<ul class="list-inline">
+																		<li>
+																			<i class="fa fa-share green bigger-110"></i>
+																			Inline List Item # 1
+																		</li>
+																		<li>List Item # 2</li>
+																		<li>List Item # 3</li>
+																	</ul>
+																</li>
+															</ul>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div><!-- /span -->
+								</div>
+
+								<hr>
+								<div class="row">
+									<div class="col-sm-4">
+										<div class="power-box">
+											<div class="power-box-header ">
+												<h4 class="smaller">
+													<i class="fa fa-quote-left smaller-80"></i>
+													BlockQuote &amp; Address
+												</h4>
+											</div>
+
+											<div class="power-box-body">
+												<div class="power-box-main">
+													<div class="row">
+														<div class="col-xs-12">
+															<blockquote class="pull-right">
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+																<small>
+																	Someone famous
+																	<cite title="Source Title">Source Title</cite>
+																</small>
+															</blockquote>
+														</div>
+													</div>
+
+													<div class="row">
+														<div class="col-xs-12">
+															<blockquote>
+																<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+
+																<small>
+																	Someone famous
+																	<cite title="Source Title">Source Title</cite>
+																</small>
+															</blockquote>
+														</div>
+													</div>
+
+													<hr>
+													<address>
+														<strong>Twitter, Inc.</strong>
+
+														<br>
+														795 Folsom Ave, Suite 600
+														<br>
+														San Francisco, CA 94107
+														<br>
+														<abbr title="Phone">P:</abbr>
+														(123) 456-7890
+													</address>
+
+													<address>
+														<strong>Full Name</strong>
+
+														<br>
+														<a href="mailto:#">first.last@example.com</a>
+													</address>
+												</div>
+											</div>
+										</div>
+									</div>
+
+									<div class="col-sm-8">
+										<div class="row">
+											<div class="col-xs-12">
+												<div class="power-box">
+													<div class="power-box-header">
+														<h4 class="smaller">Definition List</h4>
+
+														<div class="power-box-toolbar">
+															<label>
+																<small class="green">
+																	<b>Horizontal</b>
+																</small>
+
+																<input id="id-check-horizontal" type="checkbox" class="power power-switch">
+																<span class="lbl"></span>
+															</label>
+														</div>
+													</div>
+
+													<div class="power-box-body">
+														<div class="power-box-main">
+															<code class="pull-right" id="dt-list-code">&lt;dl&gt;</code>
+
+															<dl id="dt-list-1" >
+																<dt>Description lists</dt>
+																<dd>A description list is perfect for defining terms.</dd>
+																<dt>Euismod</dt>
+																<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+																<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+																<dt>Malesuada porta</dt>
+																<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+																<dt>Felis euismod semper eget lacinia</dt>
+																<dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+															</dl>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+
+										<div class="space-6"></div>
+
+										<div class="row">
+											<div class="col-xs-12">
+												<div class="power-box">
+													<div class="power-box-header">
+														<h4 class="smaller">
+															<i class="fa fa-code"></i>
+															Code view
+														</h4>
+													</div>
+
+													<div class="power-box-body">
+														<div class="power-box-main">
+															<pre class="prettyprint linenums prettyprinted" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"muted"</span><span class="tag">&gt;</span><span class="pln">Fusce dapibus, tellus ac cursus commodo.</span><span class="tag">&lt;/p&gt;</span></li><li class="L1"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-warning"</span><span class="tag">&gt;</span><span class="pln">Etiam porta sem malesuada.</span><span class="tag">&lt;/p&gt;</span></li><li class="L2"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-error"</span><span class="tag">&gt;</span><span class="pln">Donec ullamcorper nulla non metus auctor fringilla.</span><span class="tag">&lt;/p&gt;</span></li><li class="L3"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-info"</span><span class="tag">&gt;</span><span class="pln">Aenean eu leo quam.</span><span class="tag">&lt;/p&gt;</span></li><li class="L4"><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"text-success"</span><span class="tag">&gt;</span><span class="pln">Duis mollis.</span><span class="tag">&lt;/p&gt;</span></li></ol></pre>
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- PAGE CONTENT ENDS -->
+							</div><!-- /.col -->
+						</div>
+
+ </div>
+
+   
+<div id="push"></div>
+    </div>
+</div>
+ </div>
+
+	
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+	<script src="js/powerapp.js"></script>
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	
+	<script src="js/jquery-ui.custom.min.js"></script>
+
+	<script src="js/rickshaw/Rickshaw.js"></script>
+
+ <script type="text/javascript">
+$(document)
+    .ready(function () {
+
+  $('#id-check-horizontal').removeAttr('checked').on('click', function(){
+					$('#dt-list-1').toggleClass('dl-horizontal').prev().html(this.checked ? '&lt;dl class="dl-horizontal"&gt;' : '&lt;dl&gt;');
+				});
+
+});  
+ </script>
+
+</body></html>

@@ -91,6 +91,45 @@
 				</form>
 		  
 		  </li>
+		  <!--music bar-->
+		  <li><a id="" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-music fa-lg fa-fw"></i> 
+			 
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret music-dropdown action-dropdown inverse">
+			  <span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-play fa-inverse fa-stack-1x"></i>
+</span>
+<div class="player_options">
+<i class="fa fa-fw fa-lg fa-volume-up fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-volume-down fa-inverse "></i>  
+  <i class="fa fa-fw fa-lg fa-random fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-repeat fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-heart fa-inverse "></i>
+  <i class="fa fa-fw fa-lg fa-plus fa-inverse "></i>
+</div>
+<div class="player_song">
+
+<span><marquee>Bon Jovi - It's My Life...</marquee></span>
+</div>
+<div class="player_control"> <i class="fa fa-inverse fa-2x fa-backward"></i> <i class="fa fa-inverse fa-2x fa-pause"></i> <i class="fa fa-inverse fa-2x fa-forward"></i></div>
+
+<div class="player_status"> 
+<span>00:00</span>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<span>05:20</span>
+</div>
+			
+              
+              </div>
+			 </li>
+		  <!--music bar end-->
             <li><a id="activity" href="#" class="dropdown-toggle" data-toggle="dropdown">
 			 <i class="fa fa-bell fa-lg fa-fw"></i> 
 			 <b class="badge">12</b>
@@ -164,7 +203,7 @@
 			 <ul class="dropdown-menu dropdown-caret">
 			    <li><a href="#" >
 				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x fa-fw"></i>
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
 				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
 				</span>
 				
@@ -173,7 +212,7 @@
                 <li><a href="#">
 				
 					<span class="fa-stack fa-lg" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
 				</span>
 				
@@ -181,7 +220,7 @@
 				<li class="divider"></li>
                 <li><a href="#">
 				<span class="fa-stack fa-lg" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
 				</span>
 				
@@ -254,7 +293,7 @@
 			 <div class="dropdown-header">Welcome, Andy</div>
 			    <div><a href="#" >
 				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x fa-fw"></i>
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
 				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
 				</span>
 				
@@ -263,14 +302,14 @@
                 <div><a href="#">
 				
 					<span class="fa-stack fa-lg" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
 				</span>
 				
 				Settings</a></div>
 				<hr/><div><a href="#">
 				<span class="fa-stack fa-lg" style="font-size:11px;">
-				<i class="fa fa-circle fa-stack-2x"></i>
+				<i class="fa fa-square fa-stack-2x"></i>
 				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
 				</span>
 				
@@ -312,21 +351,22 @@
 		</div>
 				<ul>
 					<li class="active">
-						<a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span></a>
+						<a href="#" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span>
+						</a>
 					</li>
 					
 					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-bar-chart-o"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
+						<a href="#"><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
 						<ul>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Flot Chart</a>
+								<a href="nvdchart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Morris Charts</a>
-							</li>
+								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
+							</li>	
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Inline Charts</a>
-							</li>
+								<a href="rickshaw.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
+							</li>							
 						</ul>
 					</li>
 					<li>
@@ -527,24 +567,24 @@
 <div class="row page-title">
 
 <div class="col-xs-12 col-sm-4 col-lg-5">
-<h3 class=""> <i class="fa-fw fa fa-dashboard"></i> Dashboard <span> > Overview & Statistics</span></h3> 
+<h3 class=""> Dashboard <span> <i class="fa fa-angle-right"></i> Overview & Statistics</span></h3> 
 </div>
 
 <div class="col-xs-12 col-sm-8 col-lg-7">
 
 <ul id="site-updates" class="">
 			<li class="col-xs-4">
-				<h5 class="col-xs-6 col-sm-12 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
-				<div class=" col-xs-6 bar txt-color-blue hidden-mobile hidden-md hidden-sm"></div>
+				<h5 class="col-xs-12 col-sm-6 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
+				<div class=" col-xs-6 bar txt-color-blue hidden-xs"></div>
 			</li>
 			<li class="col-xs-4">
-				<h5 class="col-xs-6  col-sm-12 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
-				<div id="traffic" class="col-xs-6 txt-color-purple hidden-mobile hidden-md hidden-sm">
+				<h5 class="col-xs-12  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<div id="traffic" class="col-xs-6 txt-color-purple hidden-xs">
 				</div>
 			</li>
 			<li class="col-xs-4">
-				<h5 class="col-xs-6  col-sm-12 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
-				<div id="orders" class=" col-xs-6 txt-color-greenDark hidden-mobile hidden-md hidden-sm"></div>
+				<h5 class="col-xs-12  col-sm-6 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div id="orders" class=" col-xs-6 txt-color-greenDark hidden-xs"></div>
 			</li>
 		</ul>
 
@@ -559,8 +599,8 @@
 
 <div class="power-widget-header">
 
-<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
 </span>
 <div class="">
@@ -613,8 +653,8 @@
 <div class="power-widget">
 
 <div class="power-widget-header">
-	<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-list fa-inverse fa-stack-1x"></i>
 </span>
 
@@ -683,8 +723,8 @@
 <div class="power-widget">
 
 <div class="power-widget-header">
-	<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-calendar fa-inverse fa-stack-1x"></i>
 </span>
 <div class=""><h4>Calendar</h4></div>
@@ -714,8 +754,8 @@
 <div class="power-widget">
 
 <div class="power-widget-header">
-	<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-flag fa-inverse fa-stack-1x"></i>
 </span>
 <div class=""><h4>Task Status</h4></div>
@@ -801,8 +841,8 @@
 <div class="power-widget">
 
 <div class="power-widget-header">
-	<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-comments fa-inverse fa-stack-1x"></i>
 </span>
 <div class=""><h4>Communicator</h4></div>
@@ -890,8 +930,8 @@
 <div class="power-widget">
 
 <div class="power-widget-header">
-	<span class="fa-stack fa-3x">
-  <i class="fa fa-circle fa-stack-2x"></i>
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
   <i class="fa fa-location-arrow fa-inverse fa-stack-1x"></i>
 </span>
 <div class=""><h4>Geographic View</h4></div>
@@ -1028,33 +1068,7 @@
 										</ul>
 									</div></td>
 								</tr>
-								<tr>
-									<td><a href="javascript:void(0);">Turkey</a></td>
-									<td><i class="fa fa-usd"></i>&nbsp;11476</td>
-									<td class="text-align-center">
-									<div id="listing_sparkline_tr"></div>
-									</td>
-									
-									<td class="text-align-center">
-									<div id="listing_piechart_tr" class="display-inline"></div>
-									<div class="btn-group display-inline pull-right text-align-left hidden-md hidden-sm hidden-xs">
-										<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-cog fa-lg"></i>
-										</button>
-										<ul class="dropdown-menu dropdown-menu-xs pull-right">
-											<li>
-												<a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> <u>D</u>elete</a>
-											</li>
-											<li class="divider"></li>
-											<li class="text-align-center">
-												<a href="javascript:void(0);">Cancel</a>
-											</li>
-										</ul>
-									</div></td>
-								</tr>
+							
 								
 									<tr>
 									<td><a href="javascript:void(0);">China</a></td>
@@ -1111,33 +1125,7 @@
 										</ul>
 									</div></td>
 								</tr>
-									<tr>
-									<td><a href="javascript:void(0);">Bangladesh</a></td>
-									<td><i class="fa fa-usd"></i>&nbsp;1002</td>
-									<td class="text-align-center">
-									<div id="listing_sparkline_bd"></div>
-									</td>
-									
-									<td class="text-align-center">
-									<div id="listing_piechart_bd" class="display-inline"></div>
-									<div class="btn-group display-inline pull-right text-align-left hidden-md hidden-sm hidden-xs">
-										<button class="btn btn-sm btn-default dropdown-toggle" data-toggle="dropdown">
-											<i class="fa fa-cog fa-lg"></i>
-										</button>
-										<ul class="dropdown-menu dropdown-menu-xs pull-right">
-											<li>
-												<a href="javascript:void(0);"><i class="fa fa-file fa-lg fa-fw txt-color-greenLight"></i> <u>P</u>DF</a>
-											</li>
-											<li>
-												<a href="javascript:void(0);"><i class="fa fa-times fa-lg fa-fw txt-color-red"></i> <u>D</u>elete</a>
-											</li>
-											<li class="divider"></li>
-											<li class="text-align-center">
-												<a href="javascript:void(0);">Cancel</a>
-											</li>
-										</ul>
-									</div></td>
-								</tr>
+								
 							</tbody>
 							<tfoot>
 								<tr>
@@ -1204,10 +1192,7 @@
 	<script src="js/jquery-jvectormap-world-mill-en.js"></script>
  <script type="text/javascript">
 
-   $('.bar').sparkline([16, 18, 20,17,21,23,19,21,22,23 ], { type: 'bar', height:'26px',barWidth:'6px',tooltipClassname:'jqtooltip_custom'});
-   $('#traffic').sparkline([89,121,80, 90,89,88,92,67 ], { type: 'bar',barColor:'#88A2BB', barWidth:'6px', height:'26px',tooltipClassname:'jqtooltip_custom'});
-   $('#orders').sparkline([13, 18, 13, 14,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'26px',barWidth:'6px',tooltipClassname:'jqtooltip_custom'});
-   $('#listing_sparkline1').sparkline([12,43,21,35, 2, -5,5,23,12,21 ], { type: 'bar' ,barColor:'#dc4b06;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
+    $('#listing_sparkline1').sparkline([12,43,21,35, 2, -5,5,23,12,21 ], { type: 'bar' ,barColor:'#dc4b06;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_sparkline_au').sparkline([43,22,31, 12, 2,-20,23,12,21 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_piechart1').sparkline([234977,620267], { type: 'pie' ,height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_piechart_au').sparkline([14873,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
@@ -1216,16 +1201,12 @@
    $('#listing_piechart_ind').sparkline([331671,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_sparkline_br').sparkline([12,22,21, 12, 12,-20,23,11,1 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_piechart_br').sparkline([23476,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-   $('#listing_sparkline_tr').sparkline([12,22,21, 12, 12,-20,23,11,1 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-   $('#listing_piechart_tr').sparkline([11476,620267], { type: 'pie',piecolor:'#57889C',height:'21px',tooltipbarWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-
+   
    $('#listing_sparkline_cn').sparkline([71,90,131, 25, 22,-52,72,211,31 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_piechart_cn').sparkline([1446,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_sparkline_ca').sparkline([87,52,43,82, 112,-22,22,41,122 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
    $('#listing_piechart_ca').sparkline([1346,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-    $('#listing_sparkline_bd').sparkline([17,12,13,12, 10,-22,22,31,18 ], { type: 'bar' ,barColor:'#57889C;',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-   $('#listing_piechart_bd').sparkline([1002,620267], { type: 'pie',piecolor:'#57889C',height:'21px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-   
+    
   var histcatexplong = [
   {
     "key" : "Existing Customers" ,
@@ -1537,7 +1518,86 @@ function renderVectorMap() {
 	        }
 	    });
 	}
+renderVectorMap();
 
+var date = new Date();
+		var d = date.getDate();
+		var m = date.getMonth();
+		var y = date.getFullYear();
+		
+		$('#calendar').fullCalendar({
+			height: 700,
+			header: {
+				left: 'title'				
+			},
+			editable: true,
+			events: [
+				{
+					title: 'All Day Meeting',
+					start: new Date(y, m, 1),
+					className: ["event", "bg-color-greenLight"],
+					icon: 'fa-check'
+				},
+				{
+					title: 'Customer requirement workshop',
+					start: new Date(y, m, d-5),
+					end: new Date(y, m, d-2),
+					 className: ["event", "bg-color-red"],
+	                icon: 'fa-lock'
+				},
+				{
+					id: 999,
+					title: 'Weekly Meeting',
+					start: new Date(y, m, d-3, 16, 0),
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
+				},
+				{
+					id: 999,
+					title: 'Weekly Meeting',
+					start: new Date(y, m, d+4, 16, 0),
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
+				},
+				{
+					title: 'Meeting',
+					start: new Date(y, m, d, 10, 30),
+					allDay: false
+				},
+				{
+					title: 'Lunch',
+					start: new Date(y, m, d, 12, 0),
+					end: new Date(y, m, d, 14, 0),
+					allDay: false,
+					 className: ["event", "bg-color-blue"],
+	                icon: 'fa-clock-o'
+				},
+				{
+					title: 'Birthday Party',
+					start: new Date(y, m, d+1, 19, 0),
+					end: new Date(y, m, d+1, 22, 30),
+					allDay: false
+				},
+				{
+					title: 'Click for Google',
+					start: new Date(y, m, 28),
+					end: new Date(y, m, 29),
+					url: 'http://google.com/'
+				}
+			],
+			 eventRender: function (event, element, icon) {
+	                if (!event.description == "") {
+	                    element.find('.fc-event-title').append("<br/><span class='ultra-light'>" + event.description +
+	                        "</span>");
+	                }
+	                if (!event.icon == "") {
+	                    element.find('.fc-event-title').append("<i class='air air-top-right fa " + event.icon +
+	                        " '></i>");
+	                }
+	            }
+		});
 
  </script>
 
