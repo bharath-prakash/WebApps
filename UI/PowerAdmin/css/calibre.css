@@ -1445,7 +1445,7 @@ height: 100%;
 position: fixed;
 top: 0;
 left: 0;
-z-index: 9999;
+z-index: 999;
 margin: 0px!important;
 overflow-x: hidden;
 overflow-y: scroll;
@@ -1660,7 +1660,7 @@ text-align: left;
 white-space: nowrap;
 padding: 5px;
 border: 1px solid white;
-z-index: 10000;
+z-index: 1000;
 }
 
 body{
@@ -2016,16 +2016,71 @@ transition: left 0.2s ease;
 -webkit-transition: left 0.2s ease;
 }
 
-.power-widget.power-widget-color-blueDark .power-widget-header {
+.power-widget.power-widget-color-greyDark .power-widget-header {
 background: #4C4F53;
 color: #FFF;
 }
 
 
-.power-widget.power-widget-color-blueDark .power-widget-header .controls{
-color: white;
+.power-widget.power-widget-color-greyDark .power-widget-header .controls{
+color: white!important;
 }
 
 .power-widget-body{
 	padding:10px;
+}
+
+
+table thead th{
+  font-size: 14px;
+  text-align: center;
+}
+
+table{
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+
+table tr td{
+  font-size: 12px;
+  text-align: center;
+}
+
+
+.power-widget.power-widget-color-greenDark .power-widget-header {
+background: #25694B;
+color: #FFF;
+}
+
+
+.power-widget.power-widget-color-greenDark .power-widget-header .controls{
+color: white!important;
+}
+
+
+.power-widget.power-widget-color-blueDark .power-widget-header {
+background: #142549;
+color: #FFF;
+}
+
+
+.power-widget.power-widget-color-blueDark .power-widget-header .controls{
+color: white!important;
+}
+
+.modal-dialog{
+  background-color: #eef0f0;
+border-radius: 4px;
+}
+
+.modal-dialog table{
+  background-color: white;
+border-radius: 1px;
+}
+
+.label-inverse, .badge-inverse {
+background-color: rgb(51, 51, 51);
+} 
+
+.power-widget code{
+  white-space: normal!important;
 }
