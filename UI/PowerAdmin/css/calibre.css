@@ -240,8 +240,8 @@ left: 16px;
 width: 344px;
 height: 435px;
 border-radius: 0;
--webkit-box-shadow: 0 2px 4px rgba(30,30,100,.25);
-box-shadow: 0 2px 4px rgba(30,30,100,.25);
+-webkit-box-shadow: 10px 10px 6px rgba(142, 138, 138,0.6);
+box-shadow: 10px 10px 6px rgba(142, 138, 138,0.6);
 padding: 10px;
 background: #fff;
 border: 1px solid #b3b3b3
@@ -1689,9 +1689,9 @@ display: none;
 top: 48px;
 left: 16px;
 border-radius: 0;
--webkit-box-shadow: 10px 10px 20px rgba(52, 52, 58, 0.25);
-box-shadow: 10px 10px 20px rgba(52, 52, 58, 0.25);
-moz-box-shadow :10px 10px 20px rgba(52, 52, 58, 0.25);
+-webkit-box-shadow: 10px 10px 10px rgba(52, 52, 58, 0.8);
+box-shadow: 10px 10px 10px rgba(52, 52, 58, 0.8);
+moz-box-shadow :10px 10px 10px rgba(52, 52, 58, 0.8);
 padding: 10px;
 background: #fff;
 border: 1px solid #b3b3b3
@@ -1699,6 +1699,8 @@ border: 1px solid #b3b3b3
 width:500px;
 height: 110px;
 right:-100px!important;
+background-color: white!important;
+color: #31485E;
 
   }
 
@@ -1722,9 +1724,10 @@ color: #27484F!important;
 
     position: relative;
     top:28px;
-    box-shadow:  1px 1px 5px white inset;
-    -moz-box-shadow:1px 1px 5px white inset;
-    -webkit-box-shadow:1px 1px 5px white inset;
+    box-shadow:  1px 1px 5px #31485E ;
+    -moz-box-shadow:1px 1px 5px #31485E ;
+    -webkit-box-shadow:1px 1px 5px #31485E ;
+    color:#31485E;
   }
 
   .music-dropdown .player_control i{
@@ -1737,10 +1740,12 @@ color: #27484F!important;
 margin-left: 150px;
 top: -4px;
 width: 325px;
+color: #31485E!important;
+background-color: white!important;
 }
   
   .music-dropdown .player_song{
-    color:white;
+    color:#31485E;
     top: 27px;
     position: relative;
     
@@ -1771,9 +1776,9 @@ margin-left: 35px;
     padding: 5px;
     padding-right: 20px;
     margin-right: 20px;
-    box-shadow:  1px 1px 5px white inset;     
-    -moz-box-shadow:1px 1px 5px white inset;
-    -webkit-box-shadow:1px 1px 5px white inset;
+    box-shadow:  1px 1px 5px #31485E ;     
+    -moz-box-shadow:1px 1px 5px #31485E ;
+    -webkit-box-shadow:1px 1px 5px #31485E ;
   }
 
 
