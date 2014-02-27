@@ -262,7 +262,7 @@ $(document).ready(function() {
 				
 				
 				$("#dt_basic thead input").keyup(function() {
-			oTable1.fnFilter(this.value, oTable.oApi._fnVisibleToColumnIndex(oTable.fnSettings(), $("thead input").index(this)));
+			oTable1.fnFilter(this.value, oTable1.oApi._fnVisibleToColumnIndex(oTable1.fnSettings(), $("thead input").index(this)));
 		});
 
 		$("#dt_basic thead input").each(function(i) {
@@ -309,13 +309,17 @@ $(document).ready(function() {
 	
 	
 	
+	
+	
+	updateDataTable();
+	$('#example_filter input[type="text"]').keyup(function(){
+	
+	oTable.fnFilter($(this).val());
+	});
 	$('#dt_basic_dyno_filter input[type="text"]').keyup(function(){
 	
 	oTable2.fnFilter($(this).val());
 	});
-	
-	
-	updateDataTable();
 	
 	
 } );
