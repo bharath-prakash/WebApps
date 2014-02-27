@@ -157,6 +157,7 @@ $('#calendar-buttons #btn-prev').click(function () {
    $('#traffic').sparkline([89,87,90,100,78,88,101,80, 90,89,88,92,67 ], { type: 'bar',barColor:'#88A2BB', barWidth:'4px', height:'26px',tooltipClassname:'jqtooltip_custom'});
    $('#orders').sparkline([13, 18, 13,12,16,17,18,19, 14,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'26px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
 
+   
 
 
 	});
