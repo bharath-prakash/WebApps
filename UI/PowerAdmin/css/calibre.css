@@ -272,6 +272,7 @@ font-weight: 400;
 .navbar-message-collapse,.navbar-feed-collapse{
 background-color:white;
 margin-bottom :20px;
+margin-left: 10px;
 }
 
 .navbar-feed-collapse .input-group{
@@ -301,6 +302,7 @@ border-bottom-left-radius: 6px;
 -webkit-box-shadow: rgba(0, 0, 0, 0.0627451) 0px 1px 4px;
 box-shadow: rgba(0, 0, 0, 0.0627451) 0px 1px 4px;
 margin-bottom: 20px;
+margin-left: 10px;
 
 }
 
@@ -845,6 +847,7 @@ z-index: 2;
 
 .navbar-search-collapse{
   padding: 0 20px 10px 20px;
+  margin-left: 10px;
 }
 
 #left-panel ul li a .fa-angle-double-right{
@@ -906,10 +909,9 @@ position: relative;
 .page-content{
 
 margin-left:195px;
-
-padding: 8px 20px 24px;
-
 }
+
+
 
 .breadcrumb{
 margin-left:194px;
@@ -939,8 +941,13 @@ margin-left:10px;
 margin-bottom: 10px;
 }
 .page-title span{
-font-size:16px;
+font-size:14px;
 }
+
+.page-title div h3{
+  font-size: 21px;
+}
+
 
 .main-container .breadcrumb{
 margin-bottom:0px; 
@@ -976,11 +983,14 @@ display:block;
 text-transform: uppercase;
 padding-left: 0px;
 text-align: center;
+overflow: hidden;
+font-size: 12px;  
 }
 
 #site-updates  li div{
 padding-left: 0px;
 padding-top: 12px;
+overflow: hidden;
 }
 
 #site-updates  li h5 span{
@@ -2248,4 +2258,34 @@ border-right: 0px!important;
     background-color: rgb(247, 249, 250);
   }*/
 
-  
+
+.navbar-header div.visible-xs ul.phone-bar{
+  margin-left: 0px!important;
+}
+
+.container{
+ /* padding-left: 0px!important;*/
+}
+
+.container .page-title{
+  margin-left: 0px!important;
+}
+
+.container .row .power-widget{
+  margin-left: 0px!important;
+}
+
+.page-title.row div{
+  padding-left: 0px!important;
+} 
+
+table thead tr th{
+background-color: rgb(243, 243, 243);
+text-align: left;
+}
+
+
+table tbody tr td{
+
+text-align: left;
+}

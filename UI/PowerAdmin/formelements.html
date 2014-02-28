@@ -17,39 +17,9 @@
 	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
 	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
 	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
-	  <link href="css/rickshaw/detail.css" rel="stylesheet" type="text/css">
-	  <link href="css/rickshaw/graph.css" rel="stylesheet" type="text/css">
-	  <link href="css/rickshaw/legend.css" rel="stylesheet" type="text/css">
-	  <link type="text/css" rel="stylesheet" href="css/rickshaw/extensions.css?v=2">
 	  <style>
 		
-		.swatch {
-			display: inline-block;
-			width: 10px;
-			height: 10px;
-			margin: 0 8px 0 0;
-		}
-		.label {
-			display: inline-block;
-			color: black!important;
-		}
-		.line {
-			display: inline-block;
-			
-		}
-		#legend2 {
-			text-align: center;
-		}
-		.rickshaw_graph .detail {
-			background: none;
-			
-		}
-		
 	
-	
-	.scaled_chart > div{
-	padding: 0px!important
-	}
 		
 	</style>
 	  
@@ -143,7 +113,7 @@
 <i class="fa fa-fw fa-lg fa-volume-up  "></i>  
   <i class="fa fa-fw fa-lg fa-volume-down "></i>  
   <i class="fa fa-fw fa-lg fa-random "></i>
-  <i class="fa fa-fw fa-lg fa-repeat "></i>
+  <i class="fa fa-fw fa-lg fa-repeat"></i>
   <i class="fa fa-fw fa-lg fa-heart "></i>
   <i class="fa fa-fw fa-lg fa-plus "></i>
 </div>
@@ -151,7 +121,7 @@
 
 <span><marquee>Bon Jovi - It's My Life...</marquee></span>
 </div>
-<div class="player_control"> <i class="fa  fa-2x fa-backward"></i> <i class="fa fa-2x fa-pause"></i> <i class="fa fa-2x fa-forward"></i></div>
+<div class="player_control"> <i class="fa fa-2x fa-backward"></i> <i class="fa fa-2x fa-pause"></i> <i class="fa fa-2x fa-forward"></i></div>
 
 <div class="player_status"> 
 <span>00:00</span>
@@ -394,15 +364,15 @@
 					</li>
 					
 					<li >
-						<a href="#" class="open"><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-up"></em></b></a>
-						<ul style="display:block;">
+						<a href="#" class="open"><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
+						<ul >
 							<li >
 								<a href="nvdchart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
 							</li>
 							<li >
 								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
 							</li>							
-							<li class="active">
+							<li >
 								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
 							</li>	
 						</ul>
@@ -415,39 +385,31 @@
 						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
 						<ul>
 							<li>
-								<a href="normaltable.html"><i class="fa fa-angle-double-right"></i>Simple Tables</a>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i><span>Normal Tables</span></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Data Tables</a>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i><span>Data Tables</span></a>
 							</li>
 						</ul>
 					</li>
 					<li>
-						<a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
-						<ul>
-							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Elements</a>
+						<a href="#"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-up"></em></b></a>
+						<ul style="display:block;">
+							<li class="active">
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Elements</span></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Layouts</a>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Layouts</span></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Smart Form Validation</a>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Validation</span></a>
+							</li>
+							
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Wizards</span></a>
 							</li>
 							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Form Elements</a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Form Plugins</a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Wizards</a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Bootstrap Editors</a>
-							</li>
-							<li>
-								<a href="#"><i class="fa fa-angle-double-right"></i>Dropzone <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Dropzone</span> <span class="badge pull-right inbox-badge bg-color-yellow">new</span></a>
 							</li>
 						</ul>
 					</li>
@@ -609,7 +571,7 @@
 <div class="row page-title">
 
 <div class="col-xs-12 col-sm-4 col-lg-5">
-<h3 class=""> Rickshaw Charts <span> <i class="fa fa-angle-right"></i> realtime charts.  </span></h3> 
+<h3 class=""> <i class="fa-fw fa "></i> Page title <span> > breif description.  </span></h3> 
 </div>
 
 <div class="col-xs-12 col-sm-8 col-lg-7">
@@ -621,7 +583,7 @@
 			</li>
 			<li class="col-xs-4">
 				<h5 class="col-xs-6  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
-				<div id="traffic" class="col-xs-6 txt-color-purple ">
+				<div id="traffic" class="col-xs-6 txt-color-purple">
 				</div>
 			</li>
 			<li class="col-xs-4">
@@ -634,250 +596,12 @@
 
 
 </div>
-
-<div class="row">
-<div class="col-xs-12">
-<div class="power-widget">
-
-<div class="power-widget-header">
-
-<span class="fa-stack fa-2x">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
-</span>
-<div class="">
-
-
-	<h4>Real Time Chart </h4></div>
-<div class="controls"><i class="fa fa-minus-square"></i></div>
-</div>
-
-<div class="power-widget-body" >
-
-<div id="content" >
-<div class="row" >
-<div class="col-xs-3">
-	<form id="side_panel">
-		<h1>Random Data in the Future</h1>
-		<section><div id="legend"></div></section>
-		<section>
-			<div id="renderer_form" class="toggler">
-				<input type="radio" name="renderer" id="area" value="area" checked>
-				<label for="area">area</label>
-				<input type="radio" name="renderer" id="bar" value="bar">
-				<label for="bar">bar</label>
-				<input type="radio" name="renderer" id="line" value="line">
-				<label for="line">line</label>
-				<input type="radio" name="renderer" id="scatter" value="scatterplot">
-				<label for="scatter">scatter</label>
-			</div>
-		</section>
-		<section>
-			<div id="offset_form">
-				<label for="stack">
-					<input type="radio" name="offset" id="stack" value="zero" checked>
-					<span>stack</span>
-				</label>
-				<label for="stream">
-					<input type="radio" name="offset" id="stream" value="wiggle">
-					<span>stream</span>
-				</label>
-				<label for="pct">
-					<input type="radio" name="offset" id="pct" value="expand">
-					<span>pct</span>
-				</label>
-				<label for="value">
-					<input type="radio" name="offset" id="value" value="value">
-					<span>value</span>
-				</label>
-			</div>
-			<div id="interpolation_form">
-				<label for="cardinal">
-					<input type="radio" name="interpolation" id="cardinal" value="cardinal" checked>
-					<span>cardinal</span>
-				</label>
-				<label for="linear">
-					<input type="radio" name="interpolation" id="linear" value="linear">
-					<span>linear</span>
-				</label>
-				<label for="step">
-					<input type="radio" name="interpolation" id="step" value="step-after">
-					<span>step</span>
-				</label>
-			</div>
-		</section>
-		<section>
-			<h6>Smoothing</h6>
-			<div id="smoother"></div>
-		</section>
-		<section></section>
-	</form>
-</div>
-<div class="col-xs-8" >
-	<div id="chart_container" >
-	
-		<div id="chart" style="height: 400px;" ></div>
-		<div id="timeline"></div>
-		<div id="preview" style="height: 94px;"></div>
-	</div>
-	</div>
-	<div class="col-xs-1"></div>
-</div>
-</div>
-
-  
-   
-
-  
-  </div>
- 
-</div>
-</div>
-</div>
-
-
-
-<div class="row">
-<div class="col-xs-12">
-<div class="power-widget">
-
-<div class="power-widget-header">
-	<span class="fa-stack fa-2x">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-bars fa-inverse fa-stack-1x"></i>
-</span>
-
-<div class=""><h4>Scaled Series</h4></div>
-<div class="controls"><i class="fa fa-minus-square"></i></div>
-</div>
-
-<div class="power-widget-body">
-<div class="row scaled_chart">
-<div class="col-xs-1">
- <div id="axis0" style="height:400px;"></div>
- </div>
- <div class="col-xs-10">
-<div id="chart3" style="height:400px;"></div>
-</div>
-<div class="col-xs-1">
-<div id="axis1" style="height:400px;"></div>
-</div>
-</div>
-  </div>
-</div>
-</div>
-</div>
-
-
-<div class="row">
-<div class="col-xs-12">
-<div class="power-widget">
-
-<div class="power-widget-header">
-	<span class="fa-stack fa-2x">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-bars fa-inverse fa-stack-1x"></i>
-</span>
-
-<div class=""><h4>Log Scale </h4></div>
-<div class="controls"><i class="fa fa-minus-square"></i></div>
-</div>
-
-<div class="power-widget-body">
-<div class="row scaled_chart">
-<div class="col-xs-1">
-<div id="y_axis" style="height:400px;"></div>
- 
- </div>
- <div class="col-xs-10">
-<div id="chart4" style="height:400px;"></div>
-</div>
-<div class="col-xs-1">
-<div id="y_axis_2" style="height:400px;"></div>
-</div>
-</div>
-  </div>
-</div>
-</div>
-</div>
-
-<div class="row">
-<div class="col-xs-12 col-sm-6 col-md-6">
-<div class="power-widget">
-
-<div class="power-widget-header">
-
-<span class="fa-stack fa-2x">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
-</span>
-<div class="">
-
-
-	<h4>Hover details Formatting </h4></div>
-<div class="controls"><i class="fa fa-minus-square"></i></div>
-</div>
-
-<div class="power-widget-body" style="position: relative;">
-
- <div id="chart1" style="height:400px;"></div>
-	<div id="legend_container1">
-		<div id="smoother1" title="Smoothing"></div>
-		<div id="legend1"></div>
-	</div>
-	<div id="slider1"></div>
-  
-   
-
-  
-  </div>
- 
-</div>
-</div>
-
-<div class="col-xs-12 col-sm-6 col-md-6">
-<div class="power-widget">
-
-<div class="power-widget-header">
-
-<span class="fa-stack fa-2x">
-  <i class="fa fa-square fa-stack-2x"></i>
-  <i class="fa fa-bar-chart-o fa-inverse fa-stack-1x"></i>
-</span>
-<div class="">
-
-
-	<h4>Subclassed Hover Behavior + Bottom Legend</h4></div>
-<div class="controls"><i class="fa fa-minus-square"></i></div>
-</div>
-
-<div class="power-widget-body" style="position: relative;">
-
-
-   <div id="chart2" style="height:364px;" ></div><br>
-	<div id="legend2"></div>
-
-  
-  </div>
- 
-</div>
-</div>
-
-</div>
+<!-- page content-->
 
 
 
 
-
-
-
-
-
-
-
-
-
-
+<!--page content ends-->
  </div>
 
    
@@ -904,494 +628,10 @@
 	<script src="js/jquery-ui.custom.min.js"></script>
 
 	<script src="js/rickshaw/Rickshaw.js"></script>
-	<!--<script src="js/rickshaw/Rickshaw.Class.js"></script>
-	<script src="js/rickshaw/Rickshaw.Compat.ClassList.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.Area.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.Line.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.Bar.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.ScatterPlot.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Renderer.Stack.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.RangeSlider.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.RangeSlider.Preview.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.HoverDetail.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Annotate.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Legend.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Axis.Time.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Behavior.Series.Toggle.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Behavior.Series.Order.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Behavior.Series.Highlight.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Smoother.js"></script>
-	<script src="js/rickshaw/Rickshaw.Fixtures.Time.js"></script>
-	<script src="js/rickshaw/Rickshaw.Fixtures.Time.Local.js"></script>
-	<script src="js/rickshaw/Rickshaw.Fixtures.Number.js"></script>
-	<script src="js/rickshaw/Rickshaw.Fixtures.RandomData.js"></script>
-	<script src="js/rickshaw/Rickshaw.Fixtures.Color.js"></script>
-	<script src="js/rickshaw/Rickshaw.Color.Palette.js"></script>
-	<script src="js/rickshaw/Rickshaw.Graph.Axis.Y.js"></script>-->
-	<script src="js/rickshaw/extensions.js"></script>
+
  <script type="text/javascript">
 
   
-  // set up our data series with 150 random data points
-
-var seriesData = [ [], [], [], [], [], [], [], [], [] ];
-var random = new Rickshaw.Fixtures.RandomData(150);
-
-for (var i = 0; i < 150; i++) {
-	random.addData(seriesData);
-}
-
-var palette = new Rickshaw.Color.Palette( { scheme: 'classic9' } );
-
-// instantiate our graph!
-
-var graph = new Rickshaw.Graph( {
-	element: document.getElementById("chart"),
-	width: 700,
-	height: 500,
-	renderer: 'area',
-	stroke: true,
-	preserve: true,
-	series: [
-		{
-			color: palette.color(),
-			data: seriesData[0],
-			name: 'Moscow'
-		}, {
-			color: palette.color(),
-			data: seriesData[1],
-			name: 'Shanghai'
-		}, {
-			color: palette.color(),
-			data: seriesData[2],
-			name: 'Amsterdam'
-		}, {
-			color: palette.color(),
-			data: seriesData[3],
-			name: 'Paris'
-		}, {
-			color: palette.color(),
-			data: seriesData[4],
-			name: 'Tokyo'
-		}, {
-			color: palette.color(),
-			data: seriesData[5],
-			name: 'London'
-		}, {
-			color: palette.color(),
-			data: seriesData[6],
-			name: 'New York'
-		}
-	]
-} );
-
-graph.render();
-
-var preview = new Rickshaw.Graph.RangeSlider.Preview( {
-	graph: graph,
-	element: document.getElementById('preview'),
-	
-} );
-
-var hoverDetail = new Rickshaw.Graph.HoverDetail( {
-	graph: graph,
-	xFormatter: function(x) {
-		return new Date(x * 1000).toString();
-	}
-} );
-
-var annotator = new Rickshaw.Graph.Annotate( {
-	graph: graph,
-	element: document.getElementById('timeline')
-} );
-
-var legend = new Rickshaw.Graph.Legend( {
-	graph: graph,
-	element: document.getElementById('legend')
-
-} );
-
-var shelving = new Rickshaw.Graph.Behavior.Series.Toggle( {
-	graph: graph,
-	legend: legend
-} );
-
-var order = new Rickshaw.Graph.Behavior.Series.Order( {
-	graph: graph,
-	legend: legend
-} );
-
-var highlighter = new Rickshaw.Graph.Behavior.Series.Highlight( {
-	graph: graph,
-	legend: legend
-} );
-
-var smoother = new Rickshaw.Graph.Smoother( {
-	graph: graph,
-	element: $('#smoother')
-} );
-
-var ticksTreatment = 'glow';
-
-var xAxis = new Rickshaw.Graph.Axis.Time( {
-	graph: graph,
-	ticksTreatment: ticksTreatment,
-	timeFixture: new Rickshaw.Fixtures.Time.Local()
-} );
-
-xAxis.render();
-
-var yAxis = new Rickshaw.Graph.Axis.Y( {
-	graph: graph,
-	tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-	ticksTreatment: ticksTreatment
-} );
-
-yAxis.render();
-
-
-var controls = new RenderControls( {
-	element: document.querySelector('#side_panel'),
-	graph: graph
-} );
-
-// add some data every so often
-
-var messages = [
-	"Changed home page welcome message",
-	"Minified JS and CSS",
-	"Changed button color from blue to green",
-	"Refactored SQL query to use indexed columns",
-	"Added additional logging for debugging",
-	"Fixed typo",
-	"Rewrite conditional logic for clarity",
-	"Added documentation for new methods"
-];
-
-setInterval( function() {
-	random.removeData(seriesData);
-	random.addData(seriesData);
-	graph.update();
-
-}, 1000 );
-
-function addAnnotation(force) {
-	if (messages.length > 0 && (force || Math.random() >= 0.95)) {
-		annotator.add(seriesData[2][seriesData[2].length-1].x, messages.shift());
-		annotator.update();
-	}
-}
-
-addAnnotation(true);
-setTimeout( function() { setInterval( addAnnotation, 6000 ) }, 6000 );
-
-var previewXAxis = new Rickshaw.Graph.Axis.Time({
-	graph: preview.previews[0],
-	timeFixture: new Rickshaw.Fixtures.Time.Local(),
-	ticksTreatment: ticksTreatment
-});
-
-previewXAxis.render();
-
-// set up our data series with 50 random data points
-
-var seriesData1 = [ [], [], [] ];
-var random1 = new Rickshaw.Fixtures.RandomData(150);
-
-for (var i = 0; i < 150; i++) {
-	random1.addData(seriesData1);
-}
-
-// instantiate our graph!
-
-var graph1 = new Rickshaw.Graph( {
-	element: document.getElementById("chart1"),
-	width: 500,
-	height: 400,
-	renderer: 'line',
-	series: [
-		{
-			color: "#c05020",
-			data: seriesData[0],
-			name: 'New York'
-		}, {
-			color: "#30c020",
-			data: seriesData[1],
-			name: 'London'
-		}, {
-			color: "#6060c0",
-			data: seriesData[2],
-			name: 'Tokyo'
-		}
-	]
-} );
-
-graph1.render();
-
-var hoverDetail1 = new Rickshaw.Graph.HoverDetail( {
-	graph: graph1,
-	formatter: function(series, x, y) {
-		var date = '<span class="date">' + new Date(x * 1000).toUTCString() + '</span>';
-		var swatch = '<span class="detail_swatch" style="background-color: ' + series.color + '"></span>';
-		var content = swatch + series.name + ": " + parseInt(y) + '<br>' + date;
-		return content;
-	}
-} );
-
-
-setInterval( function() {
-	random1.removeData(seriesData1);
-	random1.addData(seriesData1);
-	graph1.update();
-
-}, 500 );
-
-// set up our data series with 50 random data points
-
-var seriesData2 = [ [], [], [] ];
-var random2 = new Rickshaw.Fixtures.RandomData(150);
-
-for (var i = 0; i < 150; i++) {
-	random2.addData(seriesData2);
-}
-
-// instantiate our graph!
-
-var graph2 = new Rickshaw.Graph( {
-	element: document.getElementById("chart2"),
-	width: 500,
-	height: 400,
-	renderer: 'line',
-	series: [
-		{
-			color: "#c05020",
-			data: seriesData[0],
-			name: 'New York'
-		}, {
-			color: "#30c020",
-			data: seriesData[1],
-			name: 'London'
-		}, {
-			color: "#6060c0",
-			data: seriesData[2],
-			name: 'Tokyo'
-		}
-	]
-} );
-
-graph2.render();
-
-var legend2 = document.querySelector('#legend2');
-
-var Hover2 = Rickshaw.Class.create(Rickshaw.Graph.HoverDetail, {
-
-	render: function(args) {
-
-		legend2.innerHTML = args.formattedXValue;
-
-		args.detail.sort(function(a, b) { return a.order - b.order }).forEach( function(d) {
-
-			var line = document.createElement('div');
-			line.className = 'line';
-
-			var swatch = document.createElement('div');
-			swatch.className = 'swatch';
-			swatch.style.backgroundColor = d.series.color;
-
-			var label = document.createElement('div');
-			label.className = 'label';
-			label.innerHTML = d.name + ": " + d.formattedYValue;
-
-			line.appendChild(swatch);
-			line.appendChild(label);
-
-			legend2.appendChild(line);
-
-			var dot = document.createElement('div');
-			dot.className = 'dot';
-			dot.style.top = graph2.y(d.value.y0 + d.value.y) + 'px';
-			dot.style.borderColor = d.series.color;
-
-			this.element.appendChild(dot);
-
-			dot.className = 'dot active';
-
-			this.show();
-
-		}, this );
-        }
-});
-
-var hover_2 = new Hover2( { graph: graph2 } ); 
-
-
-setInterval( function() {
-	random2.removeData(seriesData2);
-	random2.addData(seriesData2);
-	graph2.update();
-
-}, 300 );
-
-/* Scales */
-
-
-var data3, graph3, i, max, min, point, random3, scales3, series3, _i, _j, _k, _l, _len, _len1, _len2, _ref;
-
-data3 = [[], []];
-
-random3 = new Rickshaw.Fixtures.RandomData(12 * 4);
-
-for (i = _i = 0; _i < 100; i = ++_i) {
-  random3.addData(data3);
-}
-
-scales3 = [];
-
-_ref = data3[1];
-for (_j = 0, _len = _ref.length; _j < _len; _j++) {
-  point = _ref[_j];
-  point.y *= point.y;
-}
-
-for (_k = 0, _len1 = data3.length; _k < _len1; _k++) {
-  series3 = data3[_k];
-  min = Number.MAX_VALUE;
-  max = Number.MIN_VALUE;
-  for (_l = 0, _len2 = series3.length; _l < _len2; _l++) {
-    point = series3[_l];
-    min = Math.min(min, point.y);
-    max = Math.max(max, point.y);
-  }
-  if (_k === 0) {
-    scales3.push(d3.scale.linear().domain([min, max]).nice());
-  } else {
-    scales3.push(d3.scale.pow().domain([min, max]).nice());
-  }
-}
-
-graph3 = new Rickshaw.Graph({
-  element: document.getElementById("chart3"),
-  renderer: 'line',
-  series: [
-    {
-      color: 'steelblue',
-      data: data3[0],
-      name: 'Online Sales',
-      scale: scales3[0]
-    }, {
-      color: 'lightblue',
-      data: data3[1],
-      name: 'Instore Sales',
-      scale: scales3[1]
-    }
-  ]
-});
-
-new Rickshaw.Graph.Axis.Y.Scaled({
-  element: document.getElementById('axis0'),
-  graph: graph3,
-  orientation: 'left',
-  scale: scales3[0],
-  tickFormat: Rickshaw.Fixtures.Number.formatKMBT
-});
-
-new Rickshaw.Graph.Axis.Y.Scaled({
-  element: document.getElementById('axis1'),
-  graph: graph3,
-  grid: false,
-  orientation: 'right',
-  scale: scales3[1],
-  tickFormat: Rickshaw.Fixtures.Number.formatKMBT
-});
-
-new Rickshaw.Graph.Axis.Time({
-  graph: graph3
-});
-
-new Rickshaw.Graph.HoverDetail({
-  graph: graph3
-});
-
-graph3.render();
-
-setInterval( function() {
-	random3.removeData(data3);
-	random3.addData(data3);
-	graph3.update();
-
-}, 300 );
-
-/*------------------------Log Scale --------------------*/
-
-var random4 = new Rickshaw.Fixtures.RandomData(12 * 60 * 60);
-
-var series4 = [[]];
-
-for (var i = 0; i < 300; i++) {
-  random4.addData(series4);
-}
-var data4 = series4[0]
-
-var min = Number.MAX_VALUE;
-var max = Number.MIN_VALUE;
-for (i = 0; i < series4[0].length; i++) {
-  min = Math.min(min, series4[0][i].y);
-  max = Math.max(max, series4[0][i].y);
-}
-
-var logScale = d3.scale.log().domain([min/4, max]);
-var linearScale = d3.scale.linear().domain([min, max]).range(logScale.range());
-var graph4 = new Rickshaw.Graph( {
-  element: document.getElementById("chart4"),
-  renderer: 'line',
-  series: [
-    {
-      color: 'blue',
-      data: JSON.parse(JSON.stringify(data4)),
-      name: 'Log View',
-      scale: logScale
-    },
-    {
-      color: 'red',
-      data: JSON.parse(JSON.stringify(data4)),
-      name: 'Linear View',
-      scale: linearScale
-    }
-  ]
-} );
-
-new Rickshaw.Graph.Axis.Y.Scaled( {
-  graph: graph4,
-  orientation: 'left',
-  tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-  element: document.getElementById('y_axis'),
-  scale: logScale
-} );
-
-new Rickshaw.Graph.Axis.Y.Scaled( {
-  graph: graph4,
-  orientation: 'right',
-  tickFormat: Rickshaw.Fixtures.Number.formatKMBT,
-  element: document.getElementById('y_axis_2'),
-  scale: linearScale,
-  grid: false
-} );
-
-new Rickshaw.Graph.HoverDetail(
-{
-  graph: graph4
-} );
-
-graph4.render();
-
-setInterval( function() {
-	random4.removeData(series4);
-	random4.addData(series4);
-	graph4.update();
-
-}, 1000 );
   
  </script>
 

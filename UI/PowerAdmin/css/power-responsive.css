@@ -79,29 +79,29 @@ display:none;
 @media (max-width: 499px ){
 
 .phone-bar li:nth-child(3){
-  display:none;
+  
 }
 }
 
 @media (max-width: 440px ){
 
 .phone-bar li:nth-child(1){
-	display:none;
+	
 }
 }
 
 
-@media (max-width: 381px ){
+@media (max-width: 281px ){
 
 .phone-bar li:nth-child(2){
-	display:none;	
+	
 }
 }
 
 @media (max-width: 321px ){
 
 .phone-bar {
-	display:none;	
+	
 }
 }
 
@@ -113,3 +113,18 @@ font-size: 12px;
 }
 
   }
+
+  @media (max-width: 474px ){
+
+#site-updates  li div{
+  display: none;
+  
+}
+
+#site-updates  li h5{
+  width: 100%;
+  
+}
+
+
+}
