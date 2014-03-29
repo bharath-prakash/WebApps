@@ -1398,20 +1398,20 @@ line-height: 33px;
 overflow: hidden;
 }
 
-.textarea-controls .smart-form .checkbox {
+.textarea-controls .power-form .checkbox {
 padding-left: 22px!important;
 }
 
-.smart-form .checkbox:last-child, .smart-form .radio:last-child {
+.power-form .checkbox:last-child, .power-form .radio:last-child {
 margin-bottom: 0;
 }
 
-.smart-form .checkbox input, .smart-form .radio input {
+.power-form .checkbox input, .power-form .radio input {
 position: absolute;
 left: -9999px;
 }
 
-.smart-form .checkbox i, .smart-form .radio i {
+.power-form .checkbox i, .power-form .radio i {
 position: absolute;
 top: 3px;
 left: 0;
@@ -1424,13 +1424,13 @@ border-style: solid;
 background: #FFF;
 }
 
-.smart-form .checkbox i, .smart-form .icon-append, .smart-form .icon-prepend, .smart-form .input input, .smart-form .radio i, .smart-form .select select, .smart-form .textarea textarea, .smart-form .toggle i {
+.power-form .checkbox i, .power-form .icon-append, .power-form .icon-prepend, .power-form .input input, .power-form .radio i, .power-form .select select, .power-form .textarea textarea, .power-form .toggle i {
 border-color: #BDBDBD;
 transition: border-color .3s;
 -webkit-transition: border-color .3s;
 }
 
-.smart-form .checkbox input+i:after {
+.power-form .checkbox input+i:after {
 content: '\f00c';
 top: -1px;
 left: 1px;
@@ -2550,4 +2550,81 @@ content: "OFF";
 .power-form .button.state-disabled, .power-form .checkbox.state-disabled, .power-form .input.state-disabled input, .power-form .radio.state-disabled, .power-form .select.state-disabled, .power-form .textarea.state-disabled, .power-form .toggle.state-disabled {
 cursor: default!important;
 opacity: .6!important;
+}
+
+
+.power-form .input-file .button {
+position: absolute;
+top: 4px;
+right: 4px;
+float: none;
+height: 22px;
+margin: 0;
+padding: 0 14px;
+font-size: 13px;
+line-height: 22px;
+}
+
+
+.power-form .button {
+background-color: #3276B1;
+opacity: .8;
+transition: opacity .2s;
+-webkit-transition: opacity .2s;
+}
+
+
+.power-form .button {
+float: right;
+height: 31px;
+overflow: hidden;
+margin: 10px 0 0 5px;
+padding: 0 25px;
+outline: 0;
+border: 0;
+font: 300 15px/31px 'Open Sans',Helvetica,Arial,sans-serif;
+text-decoration: none;
+color: #fff;
+cursor: pointer;
+}
+
+
+.power-form .input-file .button input {
+position: absolute;
+top: 0;
+right: 0;
+padding: 0;
+font-size: 30px;
+cursor: pointer;
+opacity: 0;
+}
+
+
+.power-form .icon-append, .power-form .icon-prepend {
+color: #A2A2A2;
+}
+
+
+.power-form .checkbox i, .power-form .icon-append, .power-form .icon-prepend, .power-form .input input, .power-form .radio i, .power-form .select select, .power-form .textarea textarea, .power-form .toggle i {
+border-color: #BDBDBD;
+transition: border-color .3s;
+-webkit-transition: border-color .3s;
+}
+
+.power-form .icon-append {
+right: 5px;
+padding-left: 3px;
+border-left-width: 1px;
+border-left-style: solid;
+}
+
+
+.power-form .icon-append, .power-form .icon-prepend {
+position: absolute;
+top: 5px;
+width: 22px;
+height: 22px;
+font-size: 14px;
+line-height: 22px;
+text-align: center;
 }
