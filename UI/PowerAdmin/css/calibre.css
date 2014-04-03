@@ -2628,3 +2628,92 @@ font-size: 14px;
 line-height: 22px;
 text-align: center;
 }
+
+.power-form .icon-prepend {
+left: 5px;
+padding-right: 3px;
+border-right-width: 1px;
+border-right-style: solid;
+}
+
+
+.power-form .input .icon-prepend + input, .power-form .textarea .icon-prepend + textarea {
+padding-left: 37px;
+}
+
+
+
+.power-form .tooltip {
+position: absolute;
+z-index: 99999;
+left: -9999px;
+padding: 2px 8px 3px;
+font-size: 11px;
+line-height: 16px;
+font-weight: 400;
+background: rgba(0, 0, 0, .9);
+color: white;
+opacity: 0;
+transition: margin .3s,opacity .3s;
+-webkit-transition: margin .3s,opacity .3s;
+}
+
+
+.power-form .tooltip-top-right::after {
+top: 100%;
+right: 11px;
+border-top: 4px solid rgba(0, 0, 0, .9);
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}
+
+.power-form .tooltip::after {
+content: '';
+position: absolute;
+}
+
+
+.power-form .input .icon-append + input, .power-form .textarea .icon-append + textarea {
+padding-right: 37px;
+}
+
+.power-form .input .icon-append + input:focus + b.tooltip {
+  opacity: 1;
+  
+}
+
+.power-form .tooltip-top-right {
+bottom: 100%;
+margin-bottom: 10px;
+
+
+}
+
+.power-form .tooltip-bottom-right {
+top: 100%;
+margin-top: 15px;
+}
+
+.power-form .tooltip-right {
+top: 4px;
+white-space: nowrap;
+margin-left: 15px;
+}
+
+.power-form .tooltip-right::after {
+top: 6px;
+right: 100%;
+border-top: 4px solid transparent;
+border-right: 4px solid rgba(0, 0, 0, .9);
+border-bottom: 4px solid transparent;
+}
+
+.power-form .tooltip-bottom-right::after {
+bottom: 100%;
+right: 11px;
+border-right: 4px solid transparent;
+border-bottom: 4px solid rgba(0, 0, 0, .9);
+border-left: 4px solid transparent;
+}
+
+
