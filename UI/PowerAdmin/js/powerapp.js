@@ -153,9 +153,9 @@ $('#calendar-buttons #btn-prev').click(function () {
 	});
 
 	
-	 $('.bar').sparkline([6, 12,21,28,16,17,9, 20,17,21,23,19,21,22,23 ], { type: 'bar', height:'26px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
-   $('#traffic').sparkline([89,87,90,100,78,88,101,80, 90,89,88,92,67 ], { type: 'bar',barColor:'#88A2BB', barWidth:'4px', height:'26px',tooltipClassname:'jqtooltip_custom'});
-   $('#orders').sparkline([13, 18, 13,12,16,17,18,19, 14,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'26px',barWidth:'4px',tooltipClassname:'jqtooltip_custom'});
+	 $('.bar').sparkline([6, 12,21,28,16,17,9, 20,17,21,23,19,21,22,23 ], { type: 'bar', height:'28px',barWidth:'6px',tooltipClassname:'jqtooltip_custom'});
+   $('#traffic').sparkline([89,87,90,100,78,88,101,80, 90,89,88,92,67 ], { type: 'bar',barColor:'#88A2BB', barWidth:'6px', height:'28px',tooltipClassname:'jqtooltip_custom'});
+   $('#orders').sparkline([13, 18, 23,22,26,27,18,19, 24,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'28px',barWidth:'6px',tooltipClassname:'jqtooltip_custom'});
 
    
 
