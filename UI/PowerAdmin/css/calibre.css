@@ -2042,7 +2042,7 @@ color: white!important;
 }
 
 .power-widget-body{
-overflow:hidden;
+/*overflow:hidden;*/
 }
 
 .power-widget-body  table.table-bordered > thead > tr>th:first-child,.power-widget-body  table.table-bordered > tbody > tr>td:first-child{
@@ -2677,7 +2677,7 @@ position: absolute;
 padding-right: 37px;
 }
 
-.power-form .input .icon-append + input:focus + b.tooltip {
+.power-form .input input:focus + .tooltip ,.power-form .textarea textarea:focus + .tooltip{
   opacity: 1;
   
 }
@@ -2717,3 +2717,108 @@ border-left: 4px solid transparent;
 }
 
 
+.power-form .input input:focus+.tooltip-top-right,.power-form .textarea textarea:focus+.tooltip-top-right
+{  right:0;
+  left:auto;
+  margin-bottom:5px
+}
+
+
+.power-form .input input:focus+.tooltip-top-left,.power-form .textarea textarea:focus+.tooltip-top-left
+{right:auto;
+  left:0;
+  margin-bottom:5px
+}
+
+.power-form .input input:focus+.tooltip-right,.power-form .textarea textarea:focus+.tooltip-right
+{
+  left:100%;
+  margin-left:5px
+}
+
+.power-form .input input:focus+.tooltip-left,.power-form .textarea textarea:focus+.tooltip-left
+{
+  right:100%;
+  left:auto;
+  margin-right:5px
+}
+
+.power-form .input input:focus+.tooltip-bottom-right,.power-form .textarea textarea:focus+.tooltip-bottom-right
+{
+  right:0;
+  left:auto;
+  margin-top:5px
+}
+
+.power-form .input input:focus+.tooltip-bottom-left,.power-form .textarea textarea:focus+.tooltip-bottom-left{right:auto;left:0;margin-top:5px}
+
+
+.power-form .tooltip-top-left:after {
+top: 100%;
+left: 11px;
+border-top: 4px solid rgba(0,0,0,.9);
+border-right: 4px solid transparent;
+border-left: 4px solid transparent;
+}
+
+.power-form .tooltip-bottom-left:after {
+bottom: 100%;
+left: 11px;
+border-right: 4px solid transparent;
+border-bottom: 4px solid rgba(0,0,0,.9);
+border-left: 4px solid transparent;
+}
+
+.power-form .tooltip-left:after {
+top: 6px;
+left: 100%;
+border-top: 4px solid transparent;
+border-bottom: 4px solid transparent;
+border-left: 4px solid rgba(0,0,0,.9);
+}
+
+.power-form .tooltip-left {
+top: 4px;
+white-space: nowrap;
+margin-right: 15px;
+}
+
+.power-form .tooltip-top-left {
+bottom: 100%;
+margin-bottom: 15px;
+}
+
+.power-form .tooltip-bottom-left {
+top: 100%;
+margin-top: 15px;
+}
+
+
+.power-form .rating{margin-bottom:4px;font-size:13px;line-height:25px;color:#404040}
+.power-form .rating:last-child{margin-bottom:0}
+.power-form .rating input{position:absolute;left:-9999px}
+.power-form .rating label{display:block;float:right;height:17px;margin-top:5px;padding:0 2px;font-size:17px;line-height:17px;cursor:pointer}
+
+.power-form .rating label{color:#ccc;transition:color .3s;-webkit-transition:color .3s}
+
+
+.power-form .rating input+label:hover,.power-form .rating input+label:hover~label{color:#3276B1}
+
+.power-form .rating input:checked~label{color:#3276B1}
+
+.power-form .rating.state-error+em{margin-top:-4px;margin-bottom:4px}
+
+.power-form .inline-group {
+margin: 0 -30px -4px 0;
+}
+
+.power-form .inline-group .checkbox, .power-form .inline-group .radio {
+float: left;
+margin-right: 30px;
+}
+
+.power-form .icon-prepend{top:3px!important}
+
+.power-form .inline-group .radio + .radio,.power-form .inline-group .checkbox + .checkbox{
+  margin-top: 10px!important;
+}
