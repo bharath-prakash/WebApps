@@ -3,7 +3,7 @@ $(document)
 
 var headerHeight = 54;
 var screenHeight = $(window).height();
-var bodyHeight = screenHeight - headerHeight;
+var bodyHeight = (screenHeight - headerHeight)*3;
 $('#left-panel').css('min-height',bodyHeight+'px');
 
 	 $this = $('#activity > .badge');
@@ -158,6 +158,133 @@ $('#calendar-buttons #btn-prev').click(function () {
    $('#orders').sparkline([13, 18, 23,22,26,27,18,19, 24,21,23,12,21 ], { type: 'bar' ,barColor:'#46D646',height:'28px',barWidth:'6px',tooltipClassname:'jqtooltip_custom'});
 
    
+   $('.power-widget').parent().each(function(i,value){
+   $(value).addClass('widget-column');
+   });
+   
+   
+ $( ".widget-column" ).sortable({
+      connectWith: ".widget-column",
+      handle: ".power-widget-header",
+      cancel: ".icon-minus",
+      placeholder: "portlet-placeholder"
+    });
+
+ if ($.fn.mask) {
+		$('[data-mask]').each(function() {
+
+			var $this = $(this);
+			var mask = $this.attr('data-mask') || 'error...', mask_placeholder = $this.attr('data-mask-placeholder') || 'X';
+
+			$this.mask(mask, {
+				placeholder : mask_placeholder
+			});
+		})
+	}
+
+	createSettings();
+
+	$('#power-setting-control')
+    .click(function () {
+        //console.log('setting');
+        $('.power-setting')
+            .toggleClass('activate');
+    })
+
+
+    /*
+ * FIXED HEADER
+ */
+$('input[type="checkbox"]#fixed-header')
+    .click(function () {
+        if ($(this)
+            .is(':checked')) {
+            //checked
+            $('body').addClass("fixed-header");
+            
+        } else {
+            //unchecked
+            $('input[type="checkbox"]#fixed-navigation').prop('checked', false);
+            $('input[type="checkbox"]#fixed-container').prop('checked', false);
+
+                 $('body').removeClass("fixed-header");
+                 $('body').removeClass("fixed-navigation");
+
+           
+
+        }
+    });
+
+    /*
+ * FIXED NAV
+ */
+$('input[type="checkbox"]#fixed-navigation')
+    .click(function () {
+        if ($(this)
+            .is(':checked')) {
+
+            //checked
+            $('input[type="checkbox"]#fixed-header').prop('checked', true);            
+
+            //apply
+           $('body').addClass("fixed-header");
+            $('body').addClass("fixed-navigation");
+
+            $('input[type="checkbox"]#fixed-container').prop('checked', false);
+            $('body').removeClass("container");
+
+        } else {
+            //unchecked
+            $('body').removeClass("fixed-navigation");
+        }
+    });
+
+var smartbgimage =
+    "<h6 class='margin-top-10 semi-bold'>Background</h6>"+
+    "<img src='img/wallpapers/mountain-mist-h-20-mini.jpg' data-htmlbg-url='img/wallpapers/mountain-mist-h-20.jpg' width='22' height='22' class='margin-right-5 bordered cursor-pointer'><img src='img/wallpapers/hazy-winter-h-20-mini.jpg' data-htmlbg-url='img/wallpapers/hazy-winter-h-20.jpg' width='22' height='22' class='margin-right-5 bordered cursor-pointer'><img src='img/wallpapers/seascape-afternoon-h-20-mini.jpg' data-htmlbg-url='img/wallpapers/seascape-afternoon-h-20.jpg' width='22' height='22' class='margin-right-5 bordered cursor-pointer'><img src='img/wallpapers/trees-and-snow-h-20-mini.jpg' data-htmlbg-url='img/wallpapers/trees-and-snow-h-20.jpg' width='22' height='22' class='margin-right-5 bordered cursor-pointer'><img src='img/wallpapers/water-drops-h-20-mini.jpg' data-htmlbg-url='img/wallpapers/water-drops-h-20.jpg' width='22' height='22' class='margin-right-5 bordered cursor-pointer'>";
+    $("#smart-bgimages")
+    .fadeOut();
+
+
+/*
+ * INSIDE CONTAINER
+ */
+$('input[type="checkbox"]#fixed-container')
+    .click(function () {
+        if ($(this)
+            .is(':checked')) {
+            //checked
+            $('body').addClass("power-container");
+            $('input[type="checkbox"]#fixed-navigation').prop('checked', false);
+            $('body').removeClass("fixed-navigation");
+            if (smartbgimage) {
+                $("#smart-bgimages")
+                    .append(smartbgimage)
+                    .fadeIn(1000);
+                $("#smart-bgimages img")
+                    .bind("click", function () {
+                        var $this = $(this);
+                        var $html = $('html')
+                        bgurl = ($this.data("htmlbg-url"));
+                        $html.css("background-image", "url(" +
+                            bgurl + ")");
+                    })
+
+                smartbgimage = null;
+            } else {
+                $("#smart-bgimages")
+                    .fadeIn(1000);
+            }
+
+
+        } else {
+            //unchecked
+            $('body').removeClass("power-container");
+            $("#smart-bgimages")
+                .fadeOut();
+            // console.log("container off");
+        }
+    });
 
 
 	});
@@ -489,3 +616,29 @@ if($(elem).parent().hasClass('btn-group')){
 	
 	
 	function getRandomInt(c,d){return Math.floor(Math.random()*(d-c+1))+c}
+
+	function createSettings(){
+
+		var htmlContent = '<div class="power-setting">'+
+'<span id="power-setting-control"><i class="fa fa-cog txt-color-blueDark"></i></span> '+
+'<form>'+
+'<legend class="no-padding margin-bottom-10">Layout Options</legend>'+
+'<section>'+
+'<label><input name="subscription" id="fixed-header" type="checkbox" class="checkbox style-0"><span>Fixed header</span></label>'+
+'<label><input type="checkbox" name="terms" id="fixed-navigation" class="checkbox style-0"><span>Fixed Navigation</span></label>'+
+'<label><input type="checkbox" name="terms" id="fixed-container" class="checkbox style-0"><span>Inside <b>.container</b> <div class="font-xs text-right">(non-responsive)</div></span></label>'+
+'<span id="smart-bgimages" style="display: none;"></span></section>'+
+'<h6 class="margin-top-10 semi-bold margin-bottom-5">Skins</h6>'+
+'<section id="smart-styles">'+
+'<a href="javascript:void(0);" id="smart-style-0"  class="btn btn-block btn-xs txt-color-white margin-right-5" style="background-color:#3A6094;"><i class="fa fa-check fa-fw" id="skin-checked"></i>Power Default</a>'+
+'<a href="javascript:void(0);" id="smart-style-1"  class="btn btn-block btn-xs txt-color-white" style="background:#3A4558;">Dark Elegance</a>'+
+'<a href="javascript:void(0);" id="smart-style-2"  class="btn btn-xs btn-block txt-color-darken margin-top-5" style="background:#fff;">Ultra Light</a>'+
+'<a href="javascript:void(0);" id="smart-style-3"  class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#f78c40">Google Skin</a></section>'+
+'</form> '+
+'</div>';
+
+	$('body').append(htmlContent);
+
+	}
+
+

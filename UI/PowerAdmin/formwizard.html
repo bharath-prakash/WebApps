@@ -1,0 +1,1379 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Power Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/calibre.css" rel="stylesheet">
+	<link href="css/rss_ticker.css" rel="stylesheet">
+	<link href="css/power-responsive.css" rel="stylesheet">
+	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	  <style>
+		
+	
+		
+	</style>
+	  
+    <!-- Custom styles for this template
+    <link href="navbar-static-top.css" rel="stylesheet">
+ -->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+  </head>
+
+  <body >
+  
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" id="hide-menu" class="navbar-toggle" data-toggle="collapse" data-target="#left-panel">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  <div class="visible-xs">
+		   <ul class="phone-bar" >
+		   	<li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
+			 <i class="fa fa-search fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-message-collapse">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-feed-collapse">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			</li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-user-collapse">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			<span class="visible-sm">Welcome, Andy</span>
+			 <b class="caret"></b>
+			</a>
+			 
+			
+			</li>
+          </ul>
+       
+		  </div>
+        </div>
+        <!--- Notification Dropdown-->
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+		   <li>
+		  <form action="search.html" class="header-search pull-right">
+					<input type="text" placeholder="Find reports and more" id="search-fld">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+		  
+		  </li>
+		  <!--music bar-->
+		  <li><a id="" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-music fa-lg fa-fw"></i> 
+			 
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret music-dropdown action-dropdown inverse">
+			  <span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-play fa-inverse fa-stack-1x"></i>
+</span>
+<div class="player_options">
+<i class="fa fa-fw fa-lg fa-volume-up  "></i>  
+  <i class="fa fa-fw fa-lg fa-volume-down "></i>  
+  <i class="fa fa-fw fa-lg fa-random "></i>
+  <i class="fa fa-fw fa-lg fa-repeat"></i>
+  <i class="fa fa-fw fa-lg fa-heart "></i>
+  <i class="fa fa-fw fa-lg fa-plus "></i>
+</div>
+<div class="player_song">
+
+<span><marquee>Bon Jovi - It's My Life...</marquee></span>
+</div>
+<div class="player_control"> <i class="fa fa-2x fa-backward"></i> <i class="fa fa-2x fa-pause"></i> <i class="fa fa-2x fa-forward"></i></div>
+
+<div class="player_status"> 
+<span>00:00</span>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<span>05:20</span>
+</div>
+			
+              
+              </div>
+			 </li>
+		  <!--music bar end-->
+		  
+            <li><a id="activity" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 
+			 <b class="badge">12</b>
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="">
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+			  </div>
+			 <div class="action-content custom-scroll">
+								
+								<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			 </li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			 <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="input-group">
+                        <input type="text" id="rss_url" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			
+			</li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			Welcome, Andy
+			 <b class="caret"></b>
+			</a>
+			 <ul class="dropdown-menu dropdown-caret">
+			    <li><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></li>
+                <li><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></li>
+				<li class="divider"></li>
+                <li><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></li>
+                
+              </ul>
+			
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <!--- Notification Dropdown End-->
+        <!--- Notificaion Collapse -->
+       <div class="navbar-message-collapse collapse">
+			  
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default lbl_notify_messages" id="lbl_notify_messages">
+				          <input type="radio" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default lbl_notify_alerts" id="lbl_notify_alerts">
+				          <input type="radio" name="notify_alerts" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default lbl_notify_tasks" id="lbl_notify_tasks">
+				          <input type="radio" name="notify_tasks" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+
+			 <div class="action-content custom-scroll">
+						
+						<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; Loading..." class="btn btn-default pull-right" >
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              
+ 
+        </div><!--/.nav-collapse -->
+        <!--- Notificaion Collapse End -->
+
+         <div  class="navbar-feed-collapse collapse">
+			  <div class="input-group">
+                        <input type="text"  id="rss_url-navcoll" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub-navcoll" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content-navcoll" style="align-content: center;">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+     
+	 <div class="navbar-user-collapse collapse">
+			  
+			 <div class="dropdown-header">Welcome, Andy</div>
+			    <div><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></div>
+                <div><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></div>
+				<hr/><div><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></div>
+                
+             
+        </div><!--/.navbar-user-collapse -->
+     
+      <div  class="navbar-search-collapse collapse ">
+      	<div class="row">
+      		 <form action="#" class="phone-search">
+					<input type="text" placeholder="Find reports and more" id="search-fld" class="col-md-8 col-xs-12">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+			</div>
+              </div>
+	  
+	  </div>
+    </div>
+<div class="main-container">
+<div class="main-container-inner">
+<div id="left-panel" class="main-navbar">
+
+		<div class="shortcuts">
+		<div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn " style="height:34px;">
+				           <i class="fa fa-facebook"></i> 
+				        </label>
+				        <label class="btn ">
+				          <i class="fa fa-twitter"></i> 
+				        </label>
+				        <label class="btn ">
+				          <i class="fa fa-linkedin"></i>  
+				        </label>
+				    </div>
+		</div>
+				<ul>
+					<li >
+						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span>
+						</a>
+					</li>
+					
+					<li >
+						<a href="#" ><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
+						<ul >
+							<li >
+								<a href="nvdchart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
+							</li>
+							<li >
+								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
+							</li>							
+							<li >
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
+							</li>	
+						</ul>
+					</li>
+					<li>
+						<a href="typography.html" title="Typography"><i class="fa fa-lg fa-fw fa-text-width"></i> <span class="menu-item-parent">Typography</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i>Normal Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i><span>Data Tables</span> </a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="open"><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul style="display:block;">
+							<li>
+								<a href="formelements.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Elements</span></a>
+							</li>
+							<li>
+								<a href="formlayouts.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Layouts</span></a>
+							</li>
+							<li class="active">
+								<a href="formwizard.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Wizards</span></a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">UI Elements</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>General Elements</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Buttons</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Icons<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-plane"></i> Font Awesome</a>
+									</li>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="glyphicon glyphicon-plane"></i> Glyph Icons</a>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Grid</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Tree View</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Nestable Lists</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>JQuery UI</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 2nd Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 4th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+												<ul>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 5th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+														<ul>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> Folder<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Calendar</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Gallery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="menu-item-parent">Google Map Skins</span><span class="badge bg-color-greenLight pull-right inbox-badge">9</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-windows"></i> <span class="menu-item-parent">Miscellaneous</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Pricing Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Invoice</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Login</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Register</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Locked Screen</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 404</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 500</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Blank Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Email Template</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Search Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>CK Editor</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			
+			
+
+		</div>
+<div class="breadcrumb"> <span class="home"> <i class="fa fa-home fa-fw fa-lg"></i> Home</span> <i class="fa fa-angle-double-right"></i> Forms <i class="fa fa-angle-double-right"></i> Wizards </div>
+   
+<div class="page-content">
+<div class="container">
+
+
+
+
+<div class="row page-title">
+
+<div class="col-xs-12 col-sm-4 col-lg-5">
+<h3 class=""> <i class="fa fa-fw fa-lg fa-pencil-square-o "></i> Form Wizards <span>   </span></h3> 
+</div>
+
+<div class="col-xs-12 col-sm-8 col-lg-7">
+
+<ul id="site-updates" class="">
+			<li class="col-xs-4">
+				<h5 class="col-xs-6 col-sm-6 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
+				<div class=" col-xs-6 bar txt-color-blue"></div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-6  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<div id="traffic" class="col-xs-6 txt-color-purple">
+				</div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-6  col-sm-6 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div id="orders" class=" col-xs-6 txt-color-greenDark "></div>
+			</li>
+		</ul>
+
+</div>
+
+
+</div>
+
+
+
+ <!-- page content-->
+
+<div class="row">
+
+	<div class="col-sm-12 col-md-12 col-lg-6">
+
+<div class="power-widget power-widget-color-greyDark">
+
+<div class="power-widget-header">
+
+<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x text-color-blue"></i>
+  <i class="fa fa-check fa-inverse fa-stack-1x"></i>
+</span>
+<div class="">
+
+
+	<h4>Very Basic Wizard Example  </h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body col-sm-12">
+<form id="power-wizard-1" novalidate="novalidate">
+								<div id="bootstrap-wizard-1" class="col-sm-12">
+									<div class="form-bootstrapWizard">
+										<ul class="bootstrapWizard form-wizard">
+											<li class="active" data-target="#step1">
+												<a href="#tab1" data-toggle="tab"> <span class="step">1</span> <span class="title">Basic information</span> </a>
+											</li>
+											<li data-target="#step2">
+												<a href="#tab2" data-toggle="tab"> <span class="step">2</span> <span class="title">Billing information</span> </a>
+											</li>
+											<li data-target="#step3">
+												<a href="#tab3" data-toggle="tab"> <span class="step">3</span> <span class="title">Domain Setup</span> </a>
+											</li>
+											<li data-target="#step4">
+												<a href="#tab4" data-toggle="tab"> <span class="step">4</span> <span class="title">Save Form</span> </a>
+											</li>
+										</ul>
+										<div class="clearfix"></div>
+									</div>
+									<div class="tab-content" style="margin-top: 20px;">
+										<div class="tab-pane active" id="tab1">
+											<br>
+											<h4><strong>Step 1 </strong> - Basic Information</h4>
+
+											<div class="row">
+
+												<div class="col-sm-12">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-envelope fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" placeholder="email@address.com" type="text" name="email" id="email">
+
+														</div>
+													</div>
+
+												</div>
+
+											</div>
+
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" placeholder="First Name" type="text" name="fname" id="fname">
+
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-user fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" placeholder="Last Name" type="text" name="lname" id="lname">
+
+														</div>
+													</div>
+												</div>
+											</div>
+
+										</div>
+										<div class="tab-pane" id="tab2">
+											<br>
+											<h3><strong>Step 2</strong> - Billing Information</h3>
+
+											<div class="row">
+												<div class="col-sm-4">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-flag fa-lg fa-fw"></i></span>
+															<select name="country" class="form-control input-md">
+																<option value="" selected="selected">Select Country</option>
+																<option value="United States">United States</option>
+																<option value="United Kingdom">United Kingdom</option>
+																<option value="Afghanistan">Afghanistan</option>
+																<option value="Albania">Albania</option>
+																<option value="Algeria">Algeria</option>
+																<option value="American Samoa">American Samoa</option>
+																<option value="Andorra">Andorra</option>
+																<option value="Angola">Angola</option>
+																<option value="Anguilla">Anguilla</option>
+																<option value="Antarctica">Antarctica</option>
+																<option value="Antigua and Barbuda">Antigua and Barbuda</option>
+																<option value="Argentina">Argentina</option>
+																<option value="Armenia">Armenia</option>
+																<option value="Aruba">Aruba</option>
+																<option value="Australia">Australia</option>
+																<option value="Austria">Austria</option>
+																<option value="Azerbaijan">Azerbaijan</option>
+																<option value="Bahamas">Bahamas</option>
+																<option value="Bahrain">Bahrain</option>
+																<option value="Bangladesh">Bangladesh</option>
+																<option value="Barbados">Barbados</option>
+																<option value="Belarus">Belarus</option>
+																<option value="Belgium">Belgium</option>
+																<option value="Belize">Belize</option>
+																<option value="Benin">Benin</option>
+																<option value="Bermuda">Bermuda</option>
+																<option value="Bhutan">Bhutan</option>
+																<option value="Bolivia">Bolivia</option>
+																<option value="Bosnia and Herzegovina">Bosnia and Herzegovina</option>
+																<option value="Botswana">Botswana</option>
+																<option value="Bouvet Island">Bouvet Island</option>
+																<option value="Brazil">Brazil</option>
+																<option value="British Indian Ocean Territory">British Indian Ocean Territory</option>
+																<option value="Brunei Darussalam">Brunei Darussalam</option>
+																<option value="Bulgaria">Bulgaria</option>
+																<option value="Burkina Faso">Burkina Faso</option>
+																<option value="Burundi">Burundi</option>
+																<option value="Cambodia">Cambodia</option>
+																<option value="Cameroon">Cameroon</option>
+																<option value="Canada">Canada</option>
+																<option value="Cape Verde">Cape Verde</option>
+																<option value="Cayman Islands">Cayman Islands</option>
+																<option value="Central African Republic">Central African Republic</option>
+																<option value="Chad">Chad</option>
+																<option value="Chile">Chile</option>
+																<option value="China">China</option>
+																<option value="Christmas Island">Christmas Island</option>
+																<option value="Cocos (Keeling) Islands">Cocos (Keeling) Islands</option>
+																<option value="Colombia">Colombia</option>
+																<option value="Comoros">Comoros</option>
+																<option value="Congo">Congo</option>
+																<option value="Congo, The Democratic Republic of The">Congo, The Democratic Republic of The</option>
+																<option value="Cook Islands">Cook Islands</option>
+																<option value="Costa Rica">Costa Rica</option>
+																<option value="Cote D'ivoire">Cote D'ivoire</option>
+																<option value="Croatia">Croatia</option>
+																<option value="Cuba">Cuba</option>
+																<option value="Cyprus">Cyprus</option>
+																<option value="Czech Republic">Czech Republic</option>
+																<option value="Denmark">Denmark</option>
+																<option value="Djibouti">Djibouti</option>
+																<option value="Dominica">Dominica</option>
+																<option value="Dominican Republic">Dominican Republic</option>
+																<option value="Ecuador">Ecuador</option>
+																<option value="Egypt">Egypt</option>
+																<option value="El Salvador">El Salvador</option>
+																<option value="Equatorial Guinea">Equatorial Guinea</option>
+																<option value="Eritrea">Eritrea</option>
+																<option value="Estonia">Estonia</option>
+																<option value="Ethiopia">Ethiopia</option>
+																<option value="Falkland Islands (Malvinas)">Falkland Islands (Malvinas)</option>
+																<option value="Faroe Islands">Faroe Islands</option>
+																<option value="Fiji">Fiji</option>
+																<option value="Finland">Finland</option>
+																<option value="France">France</option>
+																<option value="French Guiana">French Guiana</option>
+																<option value="French Polynesia">French Polynesia</option>
+																<option value="French Southern Territories">French Southern Territories</option>
+																<option value="Gabon">Gabon</option>
+																<option value="Gambia">Gambia</option>
+																<option value="Georgia">Georgia</option>
+																<option value="Germany">Germany</option>
+																<option value="Ghana">Ghana</option>
+																<option value="Gibraltar">Gibraltar</option>
+																<option value="Greece">Greece</option>
+																<option value="Greenland">Greenland</option>
+																<option value="Grenada">Grenada</option>
+																<option value="Guadeloupe">Guadeloupe</option>
+																<option value="Guam">Guam</option>
+																<option value="Guatemala">Guatemala</option>
+																<option value="Guinea">Guinea</option>
+																<option value="Guinea-bissau">Guinea-bissau</option>
+																<option value="Guyana">Guyana</option>
+																<option value="Haiti">Haiti</option>
+																<option value="Heard Island and Mcdonald Islands">Heard Island and Mcdonald Islands</option>
+																<option value="Holy See (Vatican City State)">Holy See (Vatican City State)</option>
+																<option value="Honduras">Honduras</option>
+																<option value="Hong Kong">Hong Kong</option>
+																<option value="Hungary">Hungary</option>
+																<option value="Iceland">Iceland</option>
+																<option value="India">India</option>
+																<option value="Indonesia">Indonesia</option>
+																<option value="Iran, Islamic Republic of">Iran, Islamic Republic of</option>
+																<option value="Iraq">Iraq</option>
+																<option value="Ireland">Ireland</option>
+																<option value="Israel">Israel</option>
+																<option value="Italy">Italy</option>
+																<option value="Jamaica">Jamaica</option>
+																<option value="Japan">Japan</option>
+																<option value="Jordan">Jordan</option>
+																<option value="Kazakhstan">Kazakhstan</option>
+																<option value="Kenya">Kenya</option>
+																<option value="Kiribati">Kiribati</option>
+																<option value="Korea, Democratic People's Republic of">Korea, Democratic People's Republic of</option>
+																<option value="Korea, Republic of">Korea, Republic of</option>
+																<option value="Kuwait">Kuwait</option>
+																<option value="Kyrgyzstan">Kyrgyzstan</option>
+																<option value="Lao People's Democratic Republic">Lao People's Democratic Republic</option>
+																<option value="Latvia">Latvia</option>
+																<option value="Lebanon">Lebanon</option>
+																<option value="Lesotho">Lesotho</option>
+																<option value="Liberia">Liberia</option>
+																<option value="Libyan Arab Jamahiriya">Libyan Arab Jamahiriya</option>
+																<option value="Liechtenstein">Liechtenstein</option>
+																<option value="Lithuania">Lithuania</option>
+																<option value="Luxembourg">Luxembourg</option>
+																<option value="Macao">Macao</option>
+																<option value="Macedonia, The Former Yugoslav Republic of">Macedonia, The Former Yugoslav Republic of</option>
+																<option value="Madagascar">Madagascar</option>
+																<option value="Malawi">Malawi</option>
+																<option value="Malaysia">Malaysia</option>
+																<option value="Maldives">Maldives</option>
+																<option value="Mali">Mali</option>
+																<option value="Malta">Malta</option>
+																<option value="Marshall Islands">Marshall Islands</option>
+																<option value="Martinique">Martinique</option>
+																<option value="Mauritania">Mauritania</option>
+																<option value="Mauritius">Mauritius</option>
+																<option value="Mayotte">Mayotte</option>
+																<option value="Mexico">Mexico</option>
+																<option value="Micronesia, Federated States of">Micronesia, Federated States of</option>
+																<option value="Moldova, Republic of">Moldova, Republic of</option>
+																<option value="Monaco">Monaco</option>
+																<option value="Mongolia">Mongolia</option>
+																<option value="Montserrat">Montserrat</option>
+																<option value="Morocco">Morocco</option>
+																<option value="Mozambique">Mozambique</option>
+																<option value="Myanmar">Myanmar</option>
+																<option value="Namibia">Namibia</option>
+																<option value="Nauru">Nauru</option>
+																<option value="Nepal">Nepal</option>
+																<option value="Netherlands">Netherlands</option>
+																<option value="Netherlands Antilles">Netherlands Antilles</option>
+																<option value="New Caledonia">New Caledonia</option>
+																<option value="New Zealand">New Zealand</option>
+																<option value="Nicaragua">Nicaragua</option>
+																<option value="Niger">Niger</option>
+																<option value="Nigeria">Nigeria</option>
+																<option value="Niue">Niue</option>
+																<option value="Norfolk Island">Norfolk Island</option>
+																<option value="Northern Mariana Islands">Northern Mariana Islands</option>
+																<option value="Norway">Norway</option>
+																<option value="Oman">Oman</option>
+																<option value="Pakistan">Pakistan</option>
+																<option value="Palau">Palau</option>
+																<option value="Palestinian Territory, Occupied">Palestinian Territory, Occupied</option>
+																<option value="Panama">Panama</option>
+																<option value="Papua New Guinea">Papua New Guinea</option>
+																<option value="Paraguay">Paraguay</option>
+																<option value="Peru">Peru</option>
+																<option value="Philippines">Philippines</option>
+																<option value="Pitcairn">Pitcairn</option>
+																<option value="Poland">Poland</option>
+																<option value="Portugal">Portugal</option>
+																<option value="Puerto Rico">Puerto Rico</option>
+																<option value="Qatar">Qatar</option>
+																<option value="Reunion">Reunion</option>
+																<option value="Romania">Romania</option>
+																<option value="Russian Federation">Russian Federation</option>
+																<option value="Rwanda">Rwanda</option>
+																<option value="Saint Helena">Saint Helena</option>
+																<option value="Saint Kitts and Nevis">Saint Kitts and Nevis</option>
+																<option value="Saint Lucia">Saint Lucia</option>
+																<option value="Saint Pierre and Miquelon">Saint Pierre and Miquelon</option>
+																<option value="Saint Vincent and The Grenadines">Saint Vincent and The Grenadines</option>
+																<option value="Samoa">Samoa</option>
+																<option value="San Marino">San Marino</option>
+																<option value="Sao Tome and Principe">Sao Tome and Principe</option>
+																<option value="Saudi Arabia">Saudi Arabia</option>
+																<option value="Senegal">Senegal</option>
+																<option value="Serbia and Montenegro">Serbia and Montenegro</option>
+																<option value="Seychelles">Seychelles</option>
+																<option value="Sierra Leone">Sierra Leone</option>
+																<option value="Singapore">Singapore</option>
+																<option value="Slovakia">Slovakia</option>
+																<option value="Slovenia">Slovenia</option>
+																<option value="Solomon Islands">Solomon Islands</option>
+																<option value="Somalia">Somalia</option>
+																<option value="South Africa">South Africa</option>
+																<option value="South Georgia and The South Sandwich Islands">South Georgia and The South Sandwich Islands</option>
+																<option value="Spain">Spain</option>
+																<option value="Sri Lanka">Sri Lanka</option>
+																<option value="Sudan">Sudan</option>
+																<option value="Suriname">Suriname</option>
+																<option value="Svalbard and Jan Mayen">Svalbard and Jan Mayen</option>
+																<option value="Swaziland">Swaziland</option>
+																<option value="Sweden">Sweden</option>
+																<option value="Switzerland">Switzerland</option>
+																<option value="Syrian Arab Republic">Syrian Arab Republic</option>
+																<option value="Taiwan, Province of China">Taiwan, Province of China</option>
+																<option value="Tajikistan">Tajikistan</option>
+																<option value="Tanzania, United Republic of">Tanzania, United Republic of</option>
+																<option value="Thailand">Thailand</option>
+																<option value="Timor-leste">Timor-leste</option>
+																<option value="Togo">Togo</option>
+																<option value="Tokelau">Tokelau</option>
+																<option value="Tonga">Tonga</option>
+																<option value="Trinidad and Tobago">Trinidad and Tobago</option>
+																<option value="Tunisia">Tunisia</option>
+																<option value="Turkey">Turkey</option>
+																<option value="Turkmenistan">Turkmenistan</option>
+																<option value="Turks and Caicos Islands">Turks and Caicos Islands</option>
+																<option value="Tuvalu">Tuvalu</option>
+																<option value="Uganda">Uganda</option>
+																<option value="Ukraine">Ukraine</option>
+																<option value="United Arab Emirates">United Arab Emirates</option>
+																<option value="United Kingdom">United Kingdom</option>
+																<option value="United States">United States</option>
+																<option value="United States Minor Outlying Islands">United States Minor Outlying Islands</option>
+																<option value="Uruguay">Uruguay</option>
+																<option value="Uzbekistan">Uzbekistan</option>
+																<option value="Vanuatu">Vanuatu</option>
+																<option value="Venezuela">Venezuela</option>
+																<option value="Viet Nam">Viet Nam</option>
+																<option value="Virgin Islands, British">Virgin Islands, British</option>
+																<option value="Virgin Islands, U.S.">Virgin Islands, U.S.</option>
+																<option value="Wallis and Futuna">Wallis and Futuna</option>
+																<option value="Western Sahara">Western Sahara</option>
+																<option value="Yemen">Yemen</option>
+																<option value="Zambia">Zambia</option>
+																<option value="Zimbabwe">Zimbabwe</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-map-marker fa-lg fa-fw"></i></span>
+															<select class="form-control input-md" name="city">
+																<option value="" selected="selected">Select City</option>
+																<option>Amsterdam</option>
+																<option>Atlanta</option>
+																<option>Baltimore</option>
+																<option>Boston</option>
+																<option>Buenos Aires</option>
+																<option>Calgary</option>
+																<option>Chicago</option>
+																<option>Denver</option>
+																<option>Dubai</option>
+																<option>Frankfurt</option>
+																<option>Hong Kong</option>
+																<option>Honolulu</option>
+																<option>Houston</option>
+																<option>Kuala Lumpur</option>
+																<option>London</option>
+																<option>Los Angeles</option>
+																<option>Melbourne</option>
+																<option>Mexico City</option>
+																<option>Miami</option>
+																<option>Minneapolis</option>
+															</select>
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-4">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-envelope-o fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" placeholder="Postal Code" type="text" name="postal" id="postal">
+														</div>
+													</div>
+												</div>
+											</div>
+											<div class="row">
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-phone fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" data-mask="+99 (999) 999-9999" data-mask-placeholder= "X" placeholder="+1" type="text" name="wphone" id="wphone">
+														</div>
+													</div>
+												</div>
+												<div class="col-sm-6">
+													<div class="form-group">
+														<div class="input-group">
+															<span class="input-group-addon"><i class="fa fa-mobile fa-lg fa-fw"></i></span>
+															<input class="form-control input-md" data-mask="+99 (999) 999-9999" data-mask-placeholder= "X" placeholder="+01" type="text" name="hphone" id="hphone">
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="tab-pane" id="tab3">
+											<br>
+											<h3><strong>Step 3</strong> - Domain Setup</h3>
+											<div class="alert alert-info fade in">
+												<button class="close" data-dismiss="alert">
+													x
+												</button>
+												<i class="fa-fw fa fa-info"></i>
+												<strong>Info!</strong> Place an info message box if you wish.
+											</div>
+											<div class="form-group">
+												<label>This is a label</label>
+												<input class="form-control input-md" placeholder="Another input box here..." type="text" name="etc" id="etc">
+											</div>
+										</div>
+										<div class="tab-pane" id="tab4">
+											<br>
+											<h3><strong>Step 4</strong> - Save Form</h3>
+											<br>
+											<h1 class="text-center text-success"><strong><i class="fa fa-check fa-lg"></i> Complete</strong></h1>
+											<h4 class="text-center">Click next to finish</h4>
+											<br>
+											<br>
+										</div>
+
+										<div class="form-actions">
+											<div class="row">
+												<div class="col-sm-12">
+													<ul class="pager wizard no-margin">
+														<!--<li class="previous first disabled">
+														<a href="javascript:void(0);" class="btn btn-lg btn-default"> First </a>
+														</li>-->
+														<li class="previous disabled">
+															<a href="javascript:void(0);" class="btn btn-lg btn-default"> Previous </a>
+														</li>
+														<!--<li class="next last">
+														<a href="javascript:void(0);" class="btn btn-lg btn-primary"> Last </a>
+														</li>-->
+														<li class="next">
+															<a href="javascript:void(0);" class="btn btn-lg txt-color-darken"> Next </a>
+														</li>
+													</ul>
+												</div>
+											</div>
+										</div>
+
+									</div>
+								</div>
+							</form>
+ 
+  
+  </div>
+ 
+</div>
+
+</div>
+
+<div class="col-sm-12 col-md-12 col-lg-6">
+
+<div class="power-widget">
+
+<div class="power-widget-header">
+
+<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x text-color-blue"></i>
+  <i class="fa fa-edit fa-inverse fa-stack-1x"></i>
+</span>
+<div class="">
+
+
+	<h4>Fuel Wizard</h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body fuelux" style="padding:20px;">
+
+ <div class="wizard" id="fuelux-wizard">
+							<ul class="steps">
+								<li data-target="#step1" class="active">
+									<span class="badge badge-info">1</span>Step 1<span class="chevron"></span>
+								</li>
+								<li data-target="#step2">
+									<span class="badge">2</span>Step 2<span class="chevron"></span>
+								</li>
+								<li data-target="#step3">
+									<span class="badge">3</span>Step 3<span class="chevron"></span>
+								</li>
+								<li data-target="#step4">
+									<span class="badge">4</span>Step 4<span class="chevron"></span>
+								</li>
+								<li data-target="#step5">
+									<span class="badge">5</span>Step 5<span class="chevron"></span>
+								</li>
+							</ul>
+							<div class="actions">
+								<button type="button" class="btn btn-sm btn-primary btn-prev">
+									<i class="fa fa-arrow-left"></i>Prev
+								</button>
+								<button type="button" class="btn btn-sm btn-success btn-next" data-last="Finish">
+									Next<i class="fa fa-arrow-right"></i>
+								</button>
+							</div>
+						</div>
+						<div class="step-content">
+							<form class="form-horizontal" id="" method="post">
+
+								<div class="step-pane active" id="step1" style="
+    margin-top: 20px;">
+									<h4><strong>Step 1 </strong> - Validation states</h4>
+
+									<!-- wizard form starts here -->
+									<fieldset>
+
+										<div class="form-group has-warning">
+											<label class="col-md-2 control-label">Input warning</label>
+											<div class="col-md-10">
+												<div class="input-group">
+													<input class="form-control" type="text">
+													<span class="input-group-addon"><i class="fa fa-warning"></i></span>
+												</div>
+												<span class="help-block">Something may have gone wrong</span>
+											</div>
+
+										</div>
+
+										<div class="form-group has-error">
+											<label class="col-md-2 control-label">Input error</label>
+											<div class="col-md-10">
+												<div class="input-group">
+													<input class="form-control" type="text">
+													<span class="input-group-addon"><i class="glyphicon glyphicon-remove-circle"></i></span>
+												</div>
+												<span class="help-block"><i class="fa fa-warning"></i> Please correct the error</span>
+											</div>
+										</div>
+
+										<div class="form-group has-success">
+											<label class="col-md-2 control-label">Input success</label>
+											<div class="col-md-10">
+												<div class="input-group">
+													<span class="input-group-addon"><i class="fa fa-dollar"></i></span>
+													<input class="form-control" type="text">
+													<span class="input-group-addon"><i class="fa fa-check"></i></span>
+												</div>
+												<span class="help-block">Something may have gone wrong</span>
+											</div>
+										</div>
+
+										<div class="form-group">
+											<label class="control-label col-md-2">Input icon success</label>
+											<div class="col-md-10">
+												<div class="row">
+													<div class="col-sm-12">
+
+														<div class="input-icon-left">
+															<i class="fa txt-color-green fa-check"></i>
+															<input class="form-control" placeholder="Left Icon" type="text">
+														</div>
+
+													</div>
+												</div>
+											</div>
+										</div>
+
+									</fieldset>
+
+								</div>
+
+								<div class="step-pane" id="step2">
+									<h4><strong>Step 2 </strong> - Alerts</h4>
+
+									<div class="alert alert-warning fade in">
+										<button class="close" data-dismiss="alert">
+										X
+										</button>
+										<i class="fa-fw fa fa-warning"></i>
+										<strong>Warning</strong> Your monthly traffic is reaching limit.
+									</div>
+
+									<div class="alert alert-success fade in">
+										<button class="close" data-dismiss="alert">
+										X
+										</button>
+										<i class="fa-fw fa fa-check"></i>
+										<strong>Success</strong> The page has been added.
+									</div>
+
+									<div class="alert alert-info fade in">
+										<button class="close" data-dismiss="alert">
+										X
+										</button>
+										<i class="fa-fw fa fa-info"></i>
+										<strong>Info!</strong> You have 198 unread messages.
+									</div>
+
+									<div class="alert alert-danger fade in">
+										<button class="close" data-dismiss="alert">
+											X
+										</button>
+										<i class="fa-fw fa fa-times"></i>
+										<strong>Error!</strong> The daily cronjob has failed.
+									</div>
+
+								</div>
+
+								<div class="step-pane" id="step3">
+									<h4><strong>Step 3 </strong> - Wizard continued</h4>
+									<br>
+									<br>
+									<h1 class="text-center text-primary"> This will be your Step 3 </h1>
+									<br>
+									<br>
+									<br>
+									<br>
+								</div>
+
+								<div class="step-pane" id="step4">
+									<h4><strong>Step 4 </strong> - Wizard continued...</h4>
+									<br>
+									<br>
+									<h1 class="text-center text-danger"> This will be your Step 4 </h1>
+									<br>
+									<br>
+									<br>
+									<br>
+								</div>
+
+								<div class="step-pane" id="step5">
+									<h4><strong>Step 5 </strong> - Finished!</h4>
+									<br>
+									<br>
+									<h1 class="text-center text-success"><i class="fa fa-check"></i> Congratulations!
+									<br>
+									<small>Click finish to end wizard</small></h1>
+									<br>
+									<br>
+									<br>
+									<br>
+								</div>
+
+							</form>
+						</div>
+  
+  </div>
+ 
+</div>
+</div>
+
+
+</div>
+
+<!-- page content ends -->
+ </div>
+
+   
+<div id="push"></div>
+    </div>
+</div>
+ </div>
+
+	
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery-form.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+	<script src="js/powerapp.js"></script>
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	<script src="js/jquery.bootstrap.wizard.min.js"></script>
+	
+<script src="js/wizard.js"></script>
+	
+<script src="js/SmartNotification.min.js"></script>
+	<script src="js/rickshaw/Rickshaw.js"></script>
+
+ <script type="text/javascript">
+
+$(document).ready(function(){
+
+var $validator = $("#power-wizard-1").validate({
+	    
+	    rules: {
+	      email: {
+	        required: true,
+	        email: "Your email address must be in the format of name@domain.com"
+	      },
+	      fname: {
+	        required: true
+	      },
+	      lname: {
+	        required: true
+	      },
+	      country: {
+	        required: true
+	      },
+	      city: {
+	        required: true
+	      },
+	      postal: {
+	        required: true,
+	        minlength: 4
+	      },
+	      wphone: {
+	        required: true,
+	        minlength: 10
+	      },
+	      hphone: {
+	        required: true,
+	        minlength: 10
+	      }
+	    },
+	    
+	    messages: {
+	      fname: "Please specify your First name",
+	      lname: "Please specify your Last name",
+	      email: {
+	        required: "We need your email address to contact you",
+	        email: "Your email address must be in the format of name@domain.com"
+	      }
+	    },
+	    
+	    highlight: function (element) {
+	      $(element).closest('.form-group').removeClass('has-success').addClass('has-error');
+	    },
+	    unhighlight: function (element) {
+	      $(element).closest('.form-group').removeClass('has-error').addClass('has-success');
+	    },
+	    errorElement: 'span',
+	    errorClass: 'help-block',
+	    errorPlacement: function (error, element) {
+	      if (element.parent('.input-group').length) {
+	        error.insertAfter(element.parent());
+	      } else {
+	        error.insertAfter(element);
+	      }
+	    }
+	  });
+	  
+	  $('#bootstrap-wizard-1').bootstrapWizard({
+	    'tabClass': 'form-wizard',
+	    'onNext': function (tab, navigation, index) {
+	      var $valid = $("#power-wizard-1").valid();
+	      if (!$valid) {
+	        $validator.focusInvalid();
+	        return false;
+	      } else {
+	        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).addClass(
+	          'complete');
+	        $('#bootstrap-wizard-1').find('.form-wizard').children('li').eq(index - 1).find('.step')
+	        .html('<i class="fa fa-check"></i>');
+	      }
+	    }
+	  });
+
+	    var wizard = $('#fuelux-wizard').wizard();
+	  
+	  wizard.on('finished', function (e, data) {
+	    //$("#fuelux-wizard").submit();
+	    //console.log("submitted!");
+	    $.smallBox({
+	      title: "Congratulations! Your form was submitted",
+	      content: "<i class='fa fa-clock-o'></i> <i>1 seconds ago...</i>",
+	      color: "#5F895F",
+	      iconSmall: "fa fa-check bounce animated",
+	      timeout: 4000
+	    });
+	    
+	  });
+
+
+});
+  
+  
+ </script>
+
+</body></html>

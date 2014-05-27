@@ -6001,3 +6001,21 @@ color:white;
 
 }
 
+
+
+
+@media (min-width: 768px) {
+  .power-container {
+    width: 746px;
+  }
+}
+@media (min-width: 992px) {
+  .power-container {
+    width: 966px;
+  }
+}
+@media (min-width: 1200px) {
+  .power-container {
+    width: 1166px;
+  }
+}
