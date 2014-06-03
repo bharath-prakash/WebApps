@@ -1,3 +1,11 @@
+var fixedHeader=localStorage.getItem('fixedHeader');
+var fixedNav=localStorage.getItem('fixedNav');
+var insideContainer=localStorage.getItem('insideContainer');
+var wallpaper=localStorage.getItem('wallpaper');
+
+
+
+
 $(document)
     .ready(function () {
 
@@ -201,7 +209,7 @@ $('input[type="checkbox"]#fixed-header')
             .is(':checked')) {
             //checked
             $('body').addClass("fixed-header");
-            
+            localStorage.setItem('fixedHeader',true);
         } else {
             //unchecked
             $('input[type="checkbox"]#fixed-navigation').prop('checked', false);
@@ -232,6 +240,8 @@ $('input[type="checkbox"]#fixed-navigation')
 
             $('input[type="checkbox"]#fixed-container').prop('checked', false);
             $('body').removeClass("container");
+            localStorage.setItem('fixedHeader',true);
+            localStorage.setItem('fixedNav',true);
 
         } else {
             //unchecked
@@ -276,6 +286,10 @@ $('input[type="checkbox"]#fixed-container')
                     .fadeIn(1000);
             }
 
+            localStorage.setItem('insideContainer',true);
+
+            
+
 
         } else {
             //unchecked
@@ -285,6 +299,19 @@ $('input[type="checkbox"]#fixed-container')
             // console.log("container off");
         }
     });
+
+
+if(fixedHeader){
+	$('input[type="checkbox"]#fixed-header').click();
+}
+
+if(fixedNav){
+	$('input[type="checkbox"]#fixed-navigation').click();
+}
+
+if(insideContainer){
+	$('input[type="checkbox"]#fixed-container').click();
+}
 
 
 	});
@@ -630,10 +657,10 @@ if($(elem).parent().hasClass('btn-group')){
 '<span id="smart-bgimages" style="display: none;"></span></section>'+
 '<h6 class="margin-top-10 semi-bold margin-bottom-5">Skins</h6>'+
 '<section id="smart-styles">'+
-'<a href="javascript:void(0);" id="smart-style-0"  class="btn btn-block btn-xs txt-color-white margin-right-5" style="background-color:#3A6094;"><i class="fa fa-check fa-fw" id="skin-checked"></i>Power Default</a>'+
-'<a href="javascript:void(0);" id="smart-style-1"  class="btn btn-block btn-xs txt-color-white" style="background:#3A4558;">Dark Elegance</a>'+
+'<a href="javascript:void(0);" id="smart-style-0"  class="btn btn-block btn-xs txt-color-white margin-right-5" style="background-color:#3A6094;"><i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>Power Default</a>'+
+'<a href="javascript:void(0);" id="smart-style-1"  class="btn btn-block btn-xs txt-color-white" style="background:#B34523;">Apple Flavour</a>'+
 '<a href="javascript:void(0);" id="smart-style-2"  class="btn btn-xs btn-block txt-color-darken margin-top-5" style="background:#fff;">Ultra Light</a>'+
-'<a href="javascript:void(0);" id="smart-style-3"  class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#f78c40">Google Skin</a></section>'+
+'<a href="javascript:void(0);" id="smart-style-3"  class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#727677;">Mettalic Skin</a></section>'+
 '</form> '+
 '</div>';
 

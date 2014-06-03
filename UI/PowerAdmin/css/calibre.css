@@ -459,6 +459,10 @@ padding: 10px!important;
 float: left!Important;
 }
 
+.pull-right {
+float: right!Important;
+}
+
 .margin-right-5 {
 margin-right: 5px!important;
 }
