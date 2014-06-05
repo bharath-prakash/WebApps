@@ -1,0 +1,1459 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Power Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/calibre.css" rel="stylesheet">
+	<link href="css/rss_ticker.css" rel="stylesheet">
+	<link href="css/power-responsive.css" rel="stylesheet">
+	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	  <style>
+		
+	
+		
+	</style>
+	  
+    <!-- Custom styles for this template
+    <link href="navbar-static-top.css" rel="stylesheet">
+ -->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+  </head>
+
+  <body >
+  
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" id="hide-menu" class="navbar-toggle" data-toggle="collapse" data-target="#left-panel">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  <div class="visible-xs">
+		   <ul class="phone-bar" >
+		   	<li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
+			 <i class="fa fa-search fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-message-collapse">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-feed-collapse">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			</li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-user-collapse">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			<span class="visible-sm">Welcome, Andy</span>
+			 <b class="caret"></b>
+			</a>
+			 
+			
+			</li>
+          </ul>
+       
+		  </div>
+        </div>
+        <!--- Notification Dropdown-->
+        <div class="navbar-collapse collapse">
+          
+          <ul class="nav navbar-nav navbar-right">
+		   <li>
+		  <form action="search.html" class="header-search pull-right">
+					<input type="text" placeholder="Find reports and more" id="search-fld">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+		  
+		  </li>
+		  <!--music bar-->
+		  <li><a id="" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-music fa-lg fa-fw"></i> 
+			 
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret music-dropdown action-dropdown inverse">
+			  <span class="fa-stack fa-3x">
+  <i class="fa fa-circle fa-stack-2x"></i>
+  <i class="fa fa-play fa-inverse fa-stack-1x"></i>
+</span>
+<div class="player_options">
+<i class="fa fa-fw fa-lg fa-volume-up  "></i>  
+  <i class="fa fa-fw fa-lg fa-volume-down "></i>  
+  <i class="fa fa-fw fa-lg fa-random "></i>
+  <i class="fa fa-fw fa-lg fa-repeat"></i>
+  <i class="fa fa-fw fa-lg fa-heart "></i>
+  <i class="fa fa-fw fa-lg fa-plus "></i>
+</div>
+<div class="player_song">
+
+<span><marquee>Bon Jovi - It's My Life...</marquee></span>
+</div>
+<div class="player_control"> <i class="fa fa-2x fa-backward"></i> <i class="fa fa-2x fa-pause"></i> <i class="fa fa-2x fa-forward"></i></div>
+
+<div class="player_status"> 
+<span>00:00</span>
+<div class="progress progress-striped">
+  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 20%">
+    <span class="sr-only">20% Complete</span>
+  </div>
+</div>
+<span>05:20</span>
+</div>
+			
+              
+              </div>
+			 </li>
+		  <!--music bar end-->
+		  
+            <li><a id="activity" href="#" class="dropdown-toggle" data-toggle="dropdown">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 
+			 <b class="badge">12</b>
+			 </a>
+			 
+			  <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="">
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_messages" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default">
+				          <input type="radio" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+			  </div>
+			 <div class="action-content custom-scroll">
+								
+								<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			 </li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			 <div  class="dropdown-menu dropdown-caret ajax-dropdown action-dropdown inverse">
+			  <div class="input-group">
+                        <input type="text" id="rss_url" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+			
+			</li>
+            <li><a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			Welcome, Andy
+			 <b class="caret"></b>
+			</a>
+			 <ul class="dropdown-menu dropdown-caret">
+			    <li><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></li>
+                <li><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></li>
+				<li class="divider"></li>
+                <li><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></li>
+                
+              </ul>
+			
+			</li>
+          </ul>
+        </div><!--/.nav-collapse -->
+        <!--- Notification Dropdown End-->
+        <!--- Notificaion Collapse -->
+       <div class="navbar-message-collapse collapse">
+			  
+			  <div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn btn-default lbl_notify_messages" id="lbl_notify_messages">
+				          <input type="radio" class="notify_messages"> <i class="fa fa-envelope"></i> (14)
+				        </label>
+				        <label class="btn btn-default lbl_notify_alerts" id="lbl_notify_alerts">
+				          <input type="radio" name="notify_alerts" id="notify_alerts" class="notify_alerts"><i class="fa fa-flag"></i> (3)
+				        </label>
+				        <label class="btn btn-default lbl_notify_tasks" id="lbl_notify_tasks">
+				          <input type="radio" name="notify_tasks" id="notify_tasks" class="notify_tasks"> <i class="fa fa-tasks"></i>  (4)
+				        </label>
+				    </div>
+
+			 <div class="action-content custom-scroll">
+						
+						<div class="alert alert-transparent">
+							<h4>Choose one of the above to view details</h4>
+							Detail content of each category will be loaded based on user access.
+						</div>
+						
+						<i class="fa fa-lock fa-4x fa-border"></i>
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; Loading..." class="btn btn-default pull-right" >
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              
+ 
+        </div><!--/.nav-collapse -->
+        <!--- Notificaion Collapse End -->
+
+         <div  class="navbar-feed-collapse collapse">
+			  <div class="input-group">
+                        <input type="text"  id="rss_url-navcoll" class="form-control" placeholder="RSS Feed URL">                            
+                        <span class="input-group-btn">
+                            <button class="btn btn-success" id="rss_sub-navcoll" type="button">Subscribe</button>
+                        </span>
+                    </div>
+			 <div class="action-content rssFeed" id="rss_feed_content-navcoll" style="align-content: center;">
+						
+						
+						
+					</div>
+                <span>
+						Last updated on: 1/7/2014 9:43AM
+						<button type="button" data-loading-text="&lt;i class='fa fa-refresh fa-spin'&gt;&lt;/i&gt; &lt;font size='2'&gt;Loading...&lt;/font&gt;" class="btn  btn-default pull-right">
+						  <i class="fa fa-refresh"></i>
+						</button>
+					</span>
+              </div>
+     
+	 <div class="navbar-user-collapse collapse">
+			  
+			 <div class="dropdown-header">Welcome, Andy</div>
+			    <div><a href="#" >
+				<span class="fa-stack fa-lg fa-fw" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x fa-fw"></i>
+				<i class="fa fa-user fa-stack-1x fa-inverse fa-fw"></i>
+				</span>
+				
+				
+				Profile</a></div>
+                <div><a href="#">
+				
+					<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-cog fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Settings</a></div>
+				<hr/><div><a href="#">
+				<span class="fa-stack fa-lg" style="font-size:11px;">
+				<i class="fa fa-square fa-stack-2x"></i>
+				<i class="fa fa-sign-out fa-stack-1x fa-inverse"></i>
+				</span>
+				
+				Logout</a></div>
+                
+             
+        </div><!--/.navbar-user-collapse -->
+     
+      <div  class="navbar-search-collapse collapse ">
+      	<div class="row">
+      		 <form action="#" class="phone-search">
+					<input type="text" placeholder="Find reports and more" id="search-fld" class="col-md-8 col-xs-12">
+					<button type="submit">
+						<i class="fa fa-search"></i>
+					</button>
+					<a href="javascript:void(0);" id="cancel-search-js" title="Cancel Search"><i class="fa fa-times"></i></a>
+				</form>
+			</div>
+              </div>
+	  
+	  </div>
+    </div>
+<div class="main-container">
+<div class="main-container-inner">
+<div id="left-panel" class="main-navbar">
+
+		<div class="shortcuts">
+		<div class="btn-group btn-group-justified" data-toggle="buttons">
+				        <label class="btn " style="height:34px;">
+				           <i class="fa fa-facebook"></i> 
+				        </label>
+				        <label class="btn ">
+				          <i class="fa fa-twitter"></i> 
+				        </label>
+				        <label class="btn ">
+				          <i class="fa fa-linkedin"></i>  
+				        </label>
+				    </div>
+		</div>
+				<ul>
+					<li >
+						<a href="index.html" title="Dashboard"><i class="fa fa-lg fa-fw fa-dashboard"></i> <span class="menu-item-parent">Dashboard</span>
+						</a>
+					</li>
+					
+					<li >
+						<a href="#" ><i class="fa fa-lg fa-fw fa-signal"></i> <span class="menu-item-parent">Graphs</span><b class="collapse-sign "><em class="fa fa-caret-down"></em></b></a>
+						<ul >
+							<li >
+								<a href="nvdchart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>NVD Chart</span></a>
+							</li>
+							<li >
+								<a href="morrischart.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>Morris Charts</span></a>
+							</li>							
+							<li >
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-bar-chart-o"></i><span>RickShaw Charts</span></a>
+							</li>	
+						</ul>
+					</li>
+					<li>
+						<a href="typography.html" title="Typography"><i class="fa fa-lg fa-fw fa-text-width"></i> <span class="menu-item-parent">Typography</span>
+						</a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-table"></i> <span class="menu-item-parent">Tables</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i>Normal Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-table"></i><span>Data Tables</span> </a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="#" ><i class="fa fa-lg fa-fw fa-pencil-square-o"></i> <span class="menu-item-parent">Forms</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul >
+							<li>
+								<a href="formelements.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Elements</span></a>
+							</li>
+							<li>
+								<a href="formlayouts.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Form Layouts</span></a>
+							</li>
+							<li >
+								<a href="formwizard.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-pencil-square-o"></i><span>Wizards</span></a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#" class="open"><i class="fa fa-lg fa-fw fa-desktop"></i> <span class="menu-item-parent">UI Elements</span><b class="collapse-sign"><em class="fa fa-caret-up"></em></b></a>
+						<ul style="display:block;">
+							<li class="active"> 
+								<a href="uielements.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-desktop"></i><span>General Elements</span></a>
+							</li>
+							<li >
+								<a href="uibuttons.html"><i class="fa fa-angle-double-right"></i><i class="fa fa-1x fa-fw fa-eye"></i><span>Buttons & Icons</span></a>
+							</li>
+							
+						</ul>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-folder-open"></i> <span class="menu-item-parent">6 Level Navigation</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 2nd Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 4th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+												<ul>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+													</li>
+													<li>
+														<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 5th Level<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+														<ul>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+															<li>
+																<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+															</li>
+														</ul>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> Folder<b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+
+								<ul>
+									<li>
+										<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-folder-open"></i> 3ed Level <b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+										<ul>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+											<li>
+												<a href="#"><i class="fa fa-angle-double-right"></i><i class="fa fa-fw fa-file-text"></i> File</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href=""><i class="fa fa-lg fa-fw fa-calendar"><em>3</em></i> <span class="menu-item-parent">Calendar</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-list-alt"></i> <span class="menu-item-parent">Widgets</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-picture-o"></i> <span class="menu-item-parent">Gallery</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-map-marker"></i> <span class="menu-item-parent">Google Map Skins</span><span class="badge bg-color-greenLight pull-right inbox-badge">9</span></a>
+					</li>
+					<li>
+						<a href="#"><i class="fa fa-lg fa-fw fa-windows"></i> <span class="menu-item-parent">Miscellaneous</span><b class="collapse-sign"><em class="fa fa-caret-down"></em></b></a>
+						<ul>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Typography</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Pricing Tables</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Invoice</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Login</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Register</a>
+							</li>
+							<li>
+								<a href="#" ><i class="fa fa-angle-double-right"></i>Locked Screen</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 404</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Error 500</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Blank Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Email Template</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>Search Page</a>
+							</li>
+							<li>
+								<a href="#"><i class="fa fa-angle-double-right"></i>CK Editor</a>
+							</li>
+						</ul>
+					</li>
+				</ul>
+			
+			
+
+		</div>
+<div class="breadcrumb"> <span class="home"> <i class="fa fa-home fa-fw fa-lg"></i> Home</span> <i class="fa fa-angle-double-right"></i> UI Elements <i class="fa fa-angle-double-right"></i> General Elements </div>
+   
+<div class="page-content">
+<div class="container">
+
+
+
+
+<div class="row page-title">
+
+<div class="col-xs-12 col-sm-4 col-lg-5">
+<h3 class=""> <i class="fa fa-fw fa-lg fa-desktop "></i> Common Elements<span>   </span></h3> 
+</div>
+
+<div class="col-xs-12 col-sm-8 col-lg-7">
+
+<ul id="site-updates" class="">
+			<li class="col-xs-4">
+				<h5 class="col-xs-6 col-sm-6 col-lg-6"> Sales <span class="txt-color-blue">$127,171</span></h5>
+				<div class=" col-xs-6 bar txt-color-blue"></div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-6  col-sm-6 col-lg-6 "> Traffic <span class="txt-color-purple"><i class="fa fa-arrow-circle-up"></i>&nbsp;45%</span></h5>
+				<div id="traffic" class="col-xs-6 txt-color-purple">
+				</div>
+			</li>
+			<li class="col-xs-4">
+				<h5 class="col-xs-6  col-sm-6 col-lg-6"> Orders <span class="txt-color-greenDark"><i class="fa fa-shopping-cart"></i>&nbsp;2447</span></h5>
+				<div id="orders" class=" col-xs-6 txt-color-greenDark "></div>
+			</li>
+		</ul>
+
+</div>
+
+
+</div>
+
+
+
+ <!-- page content-->
+
+<div class="row">
+						<div class="col-xs-12">
+							<!-- PAGE CONTENT BEGINS -->
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="tabbable">
+										<ul class="nav nav-tabs" id="myTab">
+											<li class="active">
+												<a data-toggle="tab" href="#home">
+													<i class="green ace-icon fa fa-home bigger-120"></i>
+													Home
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#profile">
+													Messages
+													<span class="badge badge-danger">4</span>
+												</a>
+											</li>
+
+											<li class="dropdown">
+												<a data-toggle="dropdown" class="dropdown-toggle" href="#">
+													Dropdown &nbsp;
+													<i class="ace-icon fa fa-caret-down bigger-110 width-auto"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-info">
+													<li>
+														<a data-toggle="tab" href="#dropdown1">@fat</a>
+													</li>
+
+													<li>
+														<a data-toggle="tab" href="#dropdown2">@mdo</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div id="home" class="tab-pane in active">
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+
+											<div id="profile" class="tab-pane">
+												<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+											</div>
+
+											<div id="dropdown1" class="tab-pane">
+												<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+											</div>
+
+											<div id="dropdown2" class="tab-pane">
+												<p>Trust fund seitan letterpress, keytar raw denim keffiyeh etsy art party before they sold out master cleanse gluten-free squid scenester freegan cosby sweater. Fanny pack portland seitan DIY, art party locavore wolf cliche high life echo park Austin.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+
+								<div class="vspace-6-sm"></div>
+
+								<div class="col-sm-6">
+									<div class="tabbable tabs-below">
+										<div class="tab-content">
+											<div id="home2" class="tab-pane in active">
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+
+											<div id="profile2" class="tab-pane">
+												<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+											</div>
+
+											<div id="dropdown12" class="tab-pane">
+												<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+											</div>
+										</div>
+
+										<ul class="nav nav-tabs" id="myTab2">
+											<li class="active">
+												<a data-toggle="tab" href="#home2">Home</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#profile2">Profile</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#dropdown12">More</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+							</div><!-- /.row -->
+
+							<div class="space"></div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="tabbable tabs-left">
+										<ul class="nav nav-tabs" id="myTab3">
+											<li class="active">
+												<a data-toggle="tab" href="#home3">
+													<i class="pink ace-icon fa fa-tachometer bigger-110"></i>
+													Home
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#profile3">
+													<i class="blue ace-icon fa fa-user bigger-110"></i>
+													Profile
+												</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#dropdown13">
+													<i class="ace-icon fa fa-rocket"></i>
+													More
+												</a>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div id="home3" class="tab-pane in active">
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+
+											<div id="profile3" class="tab-pane">
+												<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+
+											<div id="dropdown13" class="tab-pane">
+												<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+
+								<div class="vspace-6-sm"></div>
+
+								<div class="col-sm-6">
+									<div class="tabbable">
+										<ul class="nav nav-tabs padding-12 tab-color-blue background-blue" id="myTab4">
+											<li class="active">
+												<a data-toggle="tab" href="#home4">Home</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#profile4">Profile</a>
+											</li>
+
+											<li>
+												<a data-toggle="tab" href="#dropdown14">More</a>
+											</li>
+										</ul>
+
+										<div class="tab-content">
+											<div id="home4" class="tab-pane in active">
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+											</div>
+
+											<div id="profile4" class="tab-pane">
+												<p>Food truck fixie locavore, accusamus mcsweeney's marfa nulla single-origin coffee squid.</p>
+											</div>
+
+											<div id="dropdown14" class="tab-pane">
+												<p>Etsy mixtape wayfarers, ethical wes anderson tofu before they sold out mcsweeney's organic lomo retro fanny pack lo-fi farm-to-table readymade.</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<div class="hr hr-double hr-dotted hr18"></div>
+
+							<div class="row">
+								<div class="col-sm-6">
+									<h3 class="row header smaller lighter blue">
+										<span class="col-xs-6"> Accordion </span><!-- /.col -->
+
+										<span class="col-xs-6">
+											<span class="pull-right inline">
+												<span class="grey smaller-80 bolder">style:</span>
+
+												<span class="btn-toolbar inline middle no-margin">
+													<span id="accordion-style" data-toggle="buttons" class="btn-group no-margin">
+														<label class="btn btn-xs btn-yellow active">
+															<input type="radio" value="1">
+															1
+														</label>
+
+														<label class="btn btn-xs btn-yellow">
+															<input type="radio" value="2">
+															2
+														</label>
+													</span>
+												</span>
+											</span>
+										</span><!-- /.col -->
+									</h3>
+
+									<div id="accordion" class="accordion-style1 panel-group">
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+														<i class="ace-icon fa fa-angle-down bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+														&nbsp;Group Item #1
+													</a>
+												</h4>
+											</div>
+
+											<div class="panel-collapse collapse in" id="collapseOne">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+														<i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+														&nbsp;Group Item #2
+													</a>
+												</h4>
+											</div>
+
+											<div class="panel-collapse collapse" id="collapseTwo">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident.
+												</div>
+											</div>
+										</div>
+
+										<div class="panel panel-default">
+											<div class="panel-heading">
+												<h4 class="panel-title">
+													<a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+														<i class="ace-icon fa fa-angle-right bigger-110" data-icon-hide="ace-icon fa fa-angle-down" data-icon-show="ace-icon fa fa-angle-right"></i>
+														&nbsp;Group Item #3
+													</a>
+												</h4>
+											</div>
+
+											<div class="panel-collapse collapse" id="collapseThree">
+												<div class="panel-body">
+													Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et.
+												</div>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+
+								<div class="col-sm-6">
+									<h3 class="header smaller lighter green">Progress Bar</h3>
+
+									<div class="row">
+										<div class="col-xs-8">
+											<div class="progress" data-percent="66%">
+												<div class="progress-bar" style="width:66%;"></div>
+											</div>
+
+											<div class="progress progress-striped" data-percent="25%">
+												<div class="progress-bar progress-bar-success" style="width: 25%;"></div>
+											</div>
+
+											<div class="progress progress-small progress-striped active">
+												<div class="progress-bar progress-bar-warning" style="width: 40%;"></div>
+											</div>
+
+											<div class="progress progress-mini">
+												<div class="progress-bar progress-danger" style="width: 35%;"></div>
+											</div>
+
+											<div class="progress">
+												<div class="progress-bar progress-bar-success" style="width: 35%;"></div>
+
+												<div class="progress-bar progress-bar-warning" style="width: 20%;"></div>
+
+												<div class="progress-bar progress-bar-danger" style="width: 10%;"></div>
+											</div>
+
+											<div class="progress progress-striped">
+												<div class="progress-bar progress-bar-purple" style="width: 65%"></div>
+											</div>
+
+											<div class="progress progress-striped">
+												<div class="progress-bar progress-bar-pink" style="width: 40%"></div>
+											</div>
+
+											<div class="progress progress-striped active">
+												<div class="progress-bar progress-bar-yellow" style="width: 60%"></div>
+											</div>
+
+											<div class="progress progress-striped">
+												<div class="progress-bar progress-bar-inverse" style="width: 80%"></div>
+											</div>
+										</div><!-- /.col -->
+
+										<div class="col-xs-4 center">
+											<div class="easy-pie-chart percentage" data-percent="20" data-color="#D15B47" style="height: 75px; width: 75px; line-height: 74px; color: rgb(209, 91, 71);">
+												<span class="percent">20</span>%
+											<canvas height="75" width="75"></canvas></div>
+
+											<hr>
+											<div class="easy-pie-chart percentage" data-percent="55" data-color="#87CEEB" style="height: 75px; width: 75px; line-height: 74px; color: rgb(135, 206, 235);">
+												<span class="percent">55</span>%
+											<canvas height="75" width="75"></canvas></div>
+
+											<hr>
+											<div class="easy-pie-chart percentage" data-percent="90" data-color="#87B87F" style="height: 75px; width: 75px; line-height: 74px; color: rgb(135, 184, 127);">
+												<span class="percent">90</span>%
+											<canvas height="75" width="75"></canvas></div>
+										</div><!-- /.col -->
+									</div><!-- /.row -->
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<div class="widget-box">
+										<div class="widget-header">
+											<h4 class="smaller">
+												Tooltips
+												<small>different directions and colors</small>
+											</h4>
+										</div>
+
+										<div class="widget-body">
+											<div class="widget-main">
+												<p class="muted">
+													Tight pants next level keffiyeh
+													<a title="" data-rel="tooltip" href="#" data-original-title="Default tooltip">you probably</a>
+													haven't heard of them. Farm-to-table seitan, mcsweeney's fixie sustainable quinoa 8-bit american apparel
+													<a title="" data-rel="tooltip" href="#" data-original-title="Another tooltip">have a</a>
+													terry richardson vinyl chambray. A really ironic artisan
+													<a data-rel="tooltip" href="#" data-original-title="Another one here too">whatever</a>
+													keytar, scenester farm-to-table banksy Austin
+													<a title="" data-rel="tooltip" href="#" data-original-title="The last tip!">twitter</a>
+													handle.
+												</p>
+
+												<hr>
+
+												<p>
+													<span class="btn btn-sm" data-rel="tooltip" title="" data-original-title="Default">Default</span>
+													<span class="btn btn-warning btn-sm tooltip-warning" data-rel="tooltip" data-placement="left" title="" data-original-title="Left Warning">Left</span>
+													<span class="btn btn-success btn-sm tooltip-success" data-rel="tooltip" data-placement="right" title="" data-original-title="Right Success">Right</span>
+													<span class="btn btn-danger btn-sm tooltip-error" data-rel="tooltip" data-placement="top" title="" data-original-title="Top Danger">Top</span>
+													<span class="btn btn-info btn-sm tooltip-info" data-rel="tooltip" data-placement="bottom" title="" data-original-title="Bottm Info">Bottom</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+
+								<div class="col-sm-6">
+									<div class="widget-box">
+										<div class="widget-header">
+											<h4 class="smaller">Popovers</h4>
+										</div>
+
+										<div class="widget-body">
+											<div class="widget-main">
+												<p>
+													<span class="btn btn-sm" data-rel="popover" title="" data-content="Heads up! This alert needs your attention, but it's not super important." data-original-title="Default">Default</span>
+													<span class="btn btn-success btn-sm popover-success" data-rel="popover" data-placement="right" title="" data-content="Well done! You successfully read this important alert message." data-original-title="<i class='ace-icon fa fa-check green'></i> Right Success">Right</span>
+													<span class="btn btn-warning btn-sm popover-warning" data-rel="popover" data-placement="left" title="" data-content="Warning! Best check yo self, you're not looking too good." data-original-title="<i class='ace-icon fa fa-exclamation-triangle orange'></i> Left Warning">Left</span>
+												</p>
+
+												<p>
+													<span class="btn btn-danger btn-sm popover-error" data-rel="popover" data-placement="top" data-original-title="<i class='ace-icon fa fa-bolt red'></i> Top Danger" data-content="Oh snap! Change a few things up and try submitting again.">Top</span>
+													<span class="btn btn-info btn-sm popover-info" data-rel="popover" data-placement="bottom" title="" data-content="Heads up! This alert needs your attention, but it's not super important." data-original-title="Some Info">Bottom</span>
+													<span class="btn btn-inverse btn-sm popover-notitle" data-rel="popover" data-placement="bottom" data-content="Popover without a title!" data-original-title="" title="">No Title</span>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<h3 class="header smaller lighter green">
+										<i class="ace-icon fa fa-bullhorn"></i>
+										Alerts
+									</h3>
+
+									<div class="alert alert-danger">
+										<button type="button" class="close" data-dismiss="alert">
+											<i class="ace-icon fa fa-times"></i>
+										</button>
+
+										<strong>
+											<i class="ace-icon fa fa-times"></i>
+											Oh snap!
+										</strong>
+
+										Change a few things up and try submitting again.
+										<br>
+									</div>
+
+									<div class="alert alert-warning">
+										<button type="button" class="close" data-dismiss="alert">
+											<i class="ace-icon fa fa-times"></i>
+										</button>
+										<strong>Warning!</strong>
+
+										Best check yo self, you're not looking too good.
+										<br>
+									</div>
+
+									<div class="alert alert-block alert-success">
+										<button type="button" class="close" data-dismiss="alert">
+											<i class="ace-icon fa fa-times"></i>
+										</button>
+
+										<p>
+											<strong>
+												<i class="ace-icon fa fa-check"></i>
+												Well done!
+											</strong>
+											You successfully read this important alert message.
+										</p>
+
+										<p>
+											<button class="btn btn-sm btn-success">Do This</button>
+											<button class="btn btn-sm">Or This One</button>
+										</p>
+									</div>
+
+									<div class="alert alert-info">
+										<button type="button" class="close" data-dismiss="alert">
+											<i class="ace-icon fa fa-times"></i>
+										</button>
+										<strong>Heads up!</strong>
+
+										This alert needs your attention, but it's not super important.
+										<br>
+									</div>
+								</div><!-- /.col -->
+
+								<div class="col-sm-6">
+									<h3 class="row header smaller lighter orange">
+										<span class="col-sm-8">
+											<i class="ace-icon fa fa-bell"></i>
+											Gritter Notifications
+										</span><!-- /.col -->
+
+										<span class="col-sm-4">
+											<label class="pull-right inline">
+												<small class="muted">Dark:</small>
+
+												<input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5">
+												<span class="lbl middle"></span>
+											</label>
+										</span><!-- /.col -->
+									</h3>
+
+									<p>
+										<i>Click to see</i>
+									</p>
+
+									<p>
+										<button class="btn" id="gritter-regular">Regular</button>
+										<button class="btn btn-info" id="gritter-sticky">Sticky</button>
+										<button class="btn btn-success" id="gritter-without-image">Without Image</button>
+									</p>
+
+									<p>
+										<button class="btn btn-danger" id="gritter-error">Error</button>
+										<button class="btn btn-warning" id="gritter-max3">Max 3</button>
+										<button class="btn btn-primary" id="gritter-center">Center</button>
+										<button class="btn btn-inverse" id="gritter-remove">Remove</button>
+									</p>
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<hr>
+							<div class="row">
+								<div class="col-sm-6">
+									<div>
+										<h3 class="header smaller lighter purple">
+											Bootstrap Modals
+											<small>(Bootbox.js)</small>
+										</h3>
+
+										<p>
+											<button class="btn" id="bootbox-regular">Regular Dialog</button>
+											<button class="btn btn-info" id="bootbox-confirm">Confirm</button>
+											<button class="btn btn-success" id="bootbox-options">More Options</button>
+										</p>
+									</div><!-- /.row -->
+
+									<div class="space-24"></div>
+
+									<div class="row">
+										<div class="col-xs-12">
+											<h3 class="header smaller lighter grey">
+												<i class="ace-icon fa fa-spinner fa-spin orange bigger-125"></i>
+												Imageless Spinner
+												<small>(spin.js)</small>
+											</h3>
+										</div>
+
+										<div class="col-xs-12">
+											<i>Change a value to begin</i>
+
+											<div class="pull-right center spinner-preview" id="spinner-preview"></div>
+
+											<form class="form-horizontal" id="spinner-opts">
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Lines:</small>
+
+													<input class="hidden" type="text" name="lines" data-min="5" data-max="16" data-step="2" value="12" style="display: none;"><span class="ui-slider-small inline ui-slider- ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 72.72727272727273%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 72.72727272727273%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Length:</small>
+
+													<input class="hidden" type="text" name="length" data-min="0" data-max="30" value="7" style="display: none;"><span class="ui-slider-small inline ui-slider-green ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 23.333333333333332%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 23.333333333333332%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Width:</small>
+
+													<input class="hidden" type="text" name="width" data-min="2" data-max="20" value="4" style="display: none;"><span class="ui-slider-small inline ui-slider-red ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 11.11111111111111%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 11.11111111111111%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Radius:</small>
+
+													<input class="hidden" type="text" name="radius" data-min="0" data-max="40" value="10" style="display: none;"><span class="ui-slider-small inline ui-slider-purple ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 25%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 25%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Corners:</small>
+
+													<input class="hidden" type="text" name="corners" data-min="0" data-max="1" data-step="0.1" value="1" style="display: none;"><span class="ui-slider-small inline ui-slider-orange ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Rotate:</small>
+
+													<input class="hidden" type="text" name="rotate" data-min="0" data-max="90" value="0" style="display: none;"><span class="ui-slider-small inline ui-slider-dark ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Trail:</small>
+
+													<input class="hidden" type="text" name="trail" data-min="10" data-max="100" value="60" style="display: none;"><span class="ui-slider-small inline ui-slider- ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 55.55555555555556%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 55.55555555555556%;"></a></span>
+												</label>
+
+												<div class="space-0"></div>
+
+												<label class="inline">
+													<small class="lighter" style="display: inline-block; width: 60px;">Speed:</small>
+
+													<input class="hidden" type="text" name="speed" data-min="0.5" data-max="2.2" data-step="0.1" value="1" style="display: none;"><span class="ui-slider-small inline ui-slider-green ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 50%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></span>
+												</label>
+											</form>
+										</div><!-- /.row -->
+									</div><!-- /.row -->
+								</div><!-- /.col -->
+
+								<div class="col-sm-6">
+									<h3 class="header smaller lighter red">Bootstrap Wells</h3>
+
+									<div class="well">
+										<h4 class="green smaller lighter">Normal Well</h4>
+										Use the well as a simple effect on an element to give it an inset effect.
+									</div>
+
+									<div class="well well-lg">
+										<h4 class="blue">Large Well</h4>
+										Control padding and rounded corners with two optional modifier classes.
+									</div>
+									<div class="well well-sm"> This is a small well </div>
+								</div><!-- /.col -->
+							</div><!-- /.row -->
+
+							<div class="row">
+								<div class="col-sm-6">
+									<h3 class="header smaller lighter green">Dropdowns</h3>
+
+									<div class="dropdown dropdown-preview">
+										<ul class="dropdown-menu">
+											<li>
+												<a href="#" tabindex="-1">Action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Another action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Something else here</a>
+											</li>
+
+											<li class="divider"></li>
+
+											<li>
+												<a href="#" tabindex="-1">Separated link</a>
+											</li>
+										</ul>
+									</div>
+
+									<div class="dropdown dropdown-preview">
+										<ul class="dropdown-menu dropdown-danger">
+											<li>
+												<a href="#" tabindex="-1">Action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Another action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Something else here</a>
+											</li>
+
+											<li class="divider"></li>
+
+											<li class="dropdown-hover">
+												<a href="#" tabindex="-1" class="clearfix">
+													<span class="pull-left">More options</span>
+
+													<i class="ace-icon fa fa-caret-right pull-right"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-danger">
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<div class="dropup dropdown-preview">
+										<ul class="dropdown-menu dropdown-light">
+											<li>
+												<a href="#" tabindex="-1">Action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Another action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Something else here</a>
+											</li>
+
+											<li class="divider"></li>
+
+											<li class="dropup dropdown-hover">
+												<a href="#" tabindex="-1" class="clearfix">
+													<span class="pull-left">More options</span>
+
+													<i class="ace-icon fa fa-caret-right pull-right"></i>
+												</a>
+
+												<ul class="dropdown-menu pull-left">
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<div class="dropup dropdown-preview">
+										<ul class="dropdown-menu dropdown-purple">
+											<li>
+												<a href="#" tabindex="-1">Action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Another action</a>
+											</li>
+
+											<li>
+												<a href="#" tabindex="-1">Something else here</a>
+											</li>
+
+											<li class="divider"></li>
+
+											<li class="dropdown-hover dropup">
+												<a href="#" tabindex="-1" class="clearfix">
+													<span class="pull-left">More options</span>
+
+													<i class="ace-icon fa fa-caret-left pull-right"></i>
+												</a>
+
+												<ul class="dropdown-menu dropdown-menu-right">
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+
+													<li>
+														<a href="#" tabindex="-1">Second level link</a>
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</div>
+
+									<div class="dropdown dropdown-preview">
+										<ul class="dropdown-menu dropdown-icon-only dropdown-50 dropdown-light">
+											<li class="action-buttons">
+												<a href="#" tabindex="-1" class="center">
+													<i class="fa fa-flag blue bigger-130"></i>
+												</a>
+											</li>
+
+											<li class="action-buttons">
+												<a href="#" tabindex="-1" class="center">
+													<i class="fa fa-flag red bigger-130"></i>
+												</a>
+											</li>
+
+											<li class="action-buttons">
+												<a href="#" tabindex="-1" class="center">
+													<i class="fa fa-flag green bigger-130"></i>
+												</a>
+											</li>
+
+											<li class="action-buttons">
+												<a href="#" tabindex="-1" class="center">
+													<i class="fa fa-flag orange bigger-130"></i>
+												</a>
+											</li>
+										</ul>
+									</div>
+								</div>
+
+								<div class="col-sm-6">
+									<h3 class="row header smaller lighter blue">
+										<span class="col-sm-7">
+											<i class="ace-icon fa fa-th-large"></i>
+											Pills
+										</span><!-- /.col -->
+
+										<span class="col-sm-5">
+											<label class="pull-right inline">
+												<small class="muted">Stacked:</small>
+
+												<input id="id-pills-stacked" type="checkbox" class="ace ace-switch ace-switch-5">
+												<span class="lbl middle"></span>
+											</label>
+										</span><!-- /.col -->
+									</h3>
+
+									<ul class="nav nav-pills">
+										<li class="active">
+											<a href="#">Home</a>
+										</li>
+
+										<li class="disabled">
+											<a href="#">Profile</a>
+										</li>
+
+										<li>
+											<a href="#">Messages</a>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<script type="text/javascript">
+								var $path_assets = "assets";//this will be used in gritter alerts containing images
+							</script>
+
+							<!-- PAGE CONTENT ENDS -->
+						</div><!-- /.col -->
+					</div>
+ 
+<!-- page content ends -->
+ </div>
+
+   
+<div id="push"></div>
+    </div>
+</div>
+ </div>
+
+	
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery-form.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+	<script src="js/powerapp.js"></script>
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	<script src="js/jquery.bootstrap.wizard.min.js"></script>
+	
+<script src="js/wizard.js"></script>
+	
+<script src="js/SmartNotification.min.js"></script>
+	<script src="js/rickshaw/Rickshaw.js"></script>
+
+ <script type="text/javascript">
+
+$(document).ready(function(){
+
+});  
+  
+ </script>
+
+</body></html>

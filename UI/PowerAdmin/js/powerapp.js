@@ -218,7 +218,7 @@ $('input[type="checkbox"]#fixed-header')
                  $('body').removeClass("fixed-header");
                  $('body').removeClass("fixed-navigation");
 
-           
+           localStorage.removeItem('fixedHeader');
 
         }
     });
@@ -246,6 +246,9 @@ $('input[type="checkbox"]#fixed-navigation')
         } else {
             //unchecked
             $('body').removeClass("fixed-navigation");
+             localStorage.removeItem('fixedHeader');
+            localStorage.removeItem('fixedNav');
+
         }
     });
 
@@ -278,6 +281,7 @@ $('input[type="checkbox"]#fixed-container')
                         bgurl = ($this.data("htmlbg-url"));
                         $html.css("background-image", "url(" +
                             bgurl + ")");
+                         localStorage.setItem('wallpaper',bgurl);
                     })
 
                 smartbgimage = null;
@@ -297,6 +301,9 @@ $('input[type="checkbox"]#fixed-container')
             $("#smart-bgimages")
                 .fadeOut();
             // console.log("container off");
+
+            localStorage.removeItem('insideContainer');
+            localStorage.removeItem('wallpaper');
         }
     });
 
@@ -311,6 +318,11 @@ if(fixedNav){
 
 if(insideContainer){
 	$('input[type="checkbox"]#fixed-container').click();
+	if(wallpaper!=null){
+		 var $html = $('html')
+                        
+                        $html.css("background-image", "url(" +wallpaper+ ")");
+	}
 }
 
 
