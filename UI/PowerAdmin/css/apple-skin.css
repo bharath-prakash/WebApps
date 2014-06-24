@@ -1,0 +1,35 @@
+.navbar-default.navbar-static-top{
+	background-color: #EC8E70;
+}
+
+#left-panel{
+	background-color: #487C5D;
+}
+
+#left-panel ul li {
+overflow: hidden;
+border-bottom: 1px solid #B95217;
+border-top: 1px solid #E7946C;
+}
+
+
+
+#left-panel ul ul {
+margin: 0;
+display: none;
+background: #77B193;
+padding: 7px 0;
+}
+
+#left-panel>ul>li>a:hover {
+color: #EB784C;
+}
+
+#left-panel ul .active>a {
+color: #EB784C!important;
+
+}
+
+#left-panel ul li ul li a:hover {
+color: #EB784C!important;
+}

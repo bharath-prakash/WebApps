@@ -691,11 +691,15 @@ if($(elem).parent().hasClass('btn-group')){
 
 
 $(document).on("click","#smart-style-1",function(event){
-		$('.navbar-default.navbar-static-top').css('background-color','#EC8E70');
+		/*$('.navbar-default.navbar-static-top').css('background-color','#EC8E70');
 		$('#left-panel').css('background-color','#696665');
 		$('#left-panel ul li').css('border-bottom','1px solid #23272B');
 		$('#left-panel ul li').css('border-top','1px solid #ACADAF');
 
-		$('#left-panel ul ul').css('background','#898B8B');
+		$('#left-panel ul ul').css('background','#898B8B');*/
+
+
+			$('head').append('<link href="css/apple-skin.css" rel="stylesheet">');
+		
 
 	});
