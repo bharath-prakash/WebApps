@@ -15,8 +15,10 @@
 	<link href="css/power-responsive.css" rel="stylesheet">
 	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
 	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.gritter.css" rel="stylesheet" type="text/css">
 	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
 	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	  
 	  <style>
 		
 	
@@ -543,7 +545,7 @@
 <div class="row page-title">
 
 <div class="col-xs-12 col-sm-4 col-lg-5">
-<h3 class=""> <i class="fa fa-fw fa-lg fa-desktop "></i> Common Elements<span>   </span></h3> 
+<h3 class=""> <i class="fa fa-fw fa-lg fa-desktop "></i> General Elements<span>   </span></h3> 
 </div>
 
 <div class="col-xs-12 col-sm-8 col-lg-7">
@@ -699,6 +701,7 @@
 											<div id="home3" class="tab-pane in active">
 												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
 												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
+												<p>Raw denim you probably haven't heard of them jean shorts Austin.</p>
 											</div>
 
 											<div id="profile3" class="tab-pane">
@@ -756,25 +759,7 @@
 									<h3 class="row header smaller lighter blue">
 										<span class="col-xs-6"> Accordion </span><!-- /.col -->
 
-										<span class="col-xs-6">
-											<span class="pull-right inline">
-												<span class="grey smaller-80 bolder">style:</span>
-
-												<span class="btn-toolbar inline middle no-margin">
-													<span id="accordion-style" data-toggle="buttons" class="btn-group no-margin">
-														<label class="btn btn-xs btn-yellow active">
-															<input type="radio" value="1">
-															1
-														</label>
-
-														<label class="btn btn-xs btn-yellow">
-															<input type="radio" value="2">
-															2
-														</label>
-													</span>
-												</span>
-											</span>
-										</span><!-- /.col -->
+										
 									</h3>
 
 									<div id="accordion" class="accordion-style1 panel-group">
@@ -877,20 +862,20 @@
 											</div>
 										</div><!-- /.col -->
 
-										<div class="col-xs-4 center">
-											<div class="easy-pie-chart percentage" data-percent="20" data-color="#D15B47" style="height: 75px; width: 75px; line-height: 74px; color: rgb(209, 91, 71);">
+										<div class="col-xs-4 center" style="background-color:white;">
+											<div class="easy-pie-chart percentage" data-percent="20" data-color="#D15B47" style="height: 75px; width: 75px; line-height: 74px; color: rgb(209, 91, 71);margin-top: 20px;">
 												<span class="percent">20</span>%
-											<canvas height="75" width="75"></canvas></div>
+											</div>
 
 											<hr>
 											<div class="easy-pie-chart percentage" data-percent="55" data-color="#87CEEB" style="height: 75px; width: 75px; line-height: 74px; color: rgb(135, 206, 235);">
 												<span class="percent">55</span>%
-											<canvas height="75" width="75"></canvas></div>
+											</div>
 
 											<hr>
-											<div class="easy-pie-chart percentage" data-percent="90" data-color="#87B87F" style="height: 75px; width: 75px; line-height: 74px; color: rgb(135, 184, 127);">
+											<div class="easy-pie-chart percentage" data-percent="90" data-color="#87B87F" style="height: 75px; width: 75px; line-height: 74px; color: rgb(135, 184, 127);margin-bottom: 20px;">
 												<span class="percent">90</span>%
-											<canvas height="75" width="75"></canvas></div>
+											</div>
 										</div><!-- /.col -->
 									</div><!-- /.row -->
 								</div><!-- /.col -->
@@ -899,16 +884,18 @@
 							<hr>
 							<div class="row">
 								<div class="col-sm-6">
-									<div class="widget-box">
-										<div class="widget-header">
+									<div class="power-widget">
+										<div class="power-widget-header">
+											<div>
 											<h4 class="smaller">
 												Tooltips
 												<small>different directions and colors</small>
 											</h4>
+											</div>
 										</div>
 
-										<div class="widget-body">
-											<div class="widget-main">
+										<div class="power-widget-body">
+											<div class="widget-main" style="padding-left: 10px;">
 												<p class="muted">
 													Tight pants next level keffiyeh
 													<a title="" data-rel="tooltip" href="#" data-original-title="Default tooltip">you probably</a>
@@ -936,13 +923,15 @@
 								</div><!-- /.col -->
 
 								<div class="col-sm-6">
-									<div class="widget-box">
-										<div class="widget-header">
+									<div class="power-widget">
+										<div class="power-widget-header">
+											<div>
 											<h4 class="smaller">Popovers</h4>
 										</div>
+										</div>
 
-										<div class="widget-body">
-											<div class="widget-main">
+										<div class="power-widget-body">
+											<div class="widget-main" style="padding-left: 10px;">
 												<p>
 													<span class="btn btn-sm" data-rel="popover" title="" data-content="Heads up! This alert needs your attention, but it's not super important." data-original-title="Default">Default</span>
 													<span class="btn btn-success btn-sm popover-success" data-rel="popover" data-placement="right" title="" data-content="Well done! You successfully read this important alert message." data-original-title="<i class='ace-icon fa fa-check green'></i> Right Success">Right</span>
@@ -1029,14 +1018,7 @@
 											Gritter Notifications
 										</span><!-- /.col -->
 
-										<span class="col-sm-4">
-											<label class="pull-right inline">
-												<small class="muted">Dark:</small>
-
-												<input id="gritter-light" checked="" type="checkbox" class="ace ace-switch ace-switch-5">
-												<span class="lbl middle"></span>
-											</label>
-										</span><!-- /.col -->
+										
 									</h3>
 
 									<p>
@@ -1092,67 +1074,69 @@
 
 											<form class="form-horizontal" id="spinner-opts">
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Lines:</small>
+													<small class="lighter">Lines:</small>
 
-													<input class="hidden" type="text" name="lines" data-min="5" data-max="16" data-step="2" value="12" style="display: none;"><span class="ui-slider-small inline ui-slider- ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 72.72727272727273%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 72.72727272727273%;"></a></span>
+													<input class="hidden" type="text" name="lines" data-min="5" data-max="16" data-step="2" value="12" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Length:</small>
+													<small class="lighter">Length:</small>
 
-													<input class="hidden" type="text" name="length" data-min="0" data-max="30" value="7" style="display: none;"><span class="ui-slider-small inline ui-slider-green ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 23.333333333333332%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 23.333333333333332%;"></a></span>
+													<input class="hidden" type="text" name="length" data-min="0" data-max="30" value="7" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Width:</small>
+													<small class="lighter">Width:</small>
 
-													<input class="hidden" type="text" name="width" data-min="2" data-max="20" value="4" style="display: none;"><span class="ui-slider-small inline ui-slider-red ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 11.11111111111111%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 11.11111111111111%;"></a></span>
+													<input class="hidden" type="text" name="width" data-min="2" data-max="20" value="4" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Radius:</small>
+													<small class="lighter">Radius:</small>
 
-													<input class="hidden" type="text" name="radius" data-min="0" data-max="40" value="10" style="display: none;"><span class="ui-slider-small inline ui-slider-purple ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 25%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 25%;"></a></span>
+													<input class="hidden" type="text" name="radius" data-min="0" data-max="40" value="10" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Corners:</small>
+													<small class="lighter">Corners:</small>
 
-													<input class="hidden" type="text" name="corners" data-min="0" data-max="1" data-step="0.1" value="1" style="display: none;"><span class="ui-slider-small inline ui-slider-orange ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 100%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></span>
+													<input class="hidden" type="text" name="corners" data-min="0" data-max="1" data-step="0.1" value="1" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Rotate:</small>
+													<small class="lighter">Rotate:</small>
 
-													<input class="hidden" type="text" name="rotate" data-min="0" data-max="90" value="0" style="display: none;"><span class="ui-slider-small inline ui-slider-dark ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 0%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></span>
+													<input class="hidden" type="text" name="rotate" data-min="0" data-max="90" value="0" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Trail:</small>
+													<small class="lighter">Trail:</small>
 
-													<input class="hidden" type="text" name="trail" data-min="10" data-max="100" value="60" style="display: none;"><span class="ui-slider-small inline ui-slider- ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 55.55555555555556%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 55.55555555555556%;"></a></span>
+													<input class="hidden" type="text" name="trail" data-min="10" data-max="100" value="60" />
 												</label>
 
 												<div class="space-0"></div>
 
 												<label class="inline">
-													<small class="lighter" style="display: inline-block; width: 60px;">Speed:</small>
+													<small class="lighter">Speed:</small>
 
-													<input class="hidden" type="text" name="speed" data-min="0.5" data-max="2.2" data-step="0.1" value="1" style="display: none;"><span class="ui-slider-small inline ui-slider-green ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" aria-disabled="false" style="width: 125px;"><div class="ui-slider-range ui-widget-header ui-corner-all ui-slider-range-min" style="width: 50%;"></div><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 50%;"></a></span>
+													<input class="hidden" type="text" name="speed" data-min="0.5" data-max="2.2" data-step="0.1" value="1" />
 												</label>
 											</form>
+
+											
 										</div><!-- /.row -->
 									</div><!-- /.row -->
 								</div><!-- /.col -->
@@ -1380,12 +1364,13 @@
 										</span><!-- /.col -->
 
 										<span class="col-sm-5">
-											<label class="pull-right inline">
+											<div class="power-box-toolbar">
+											<label class="pull-right">
 												<small class="muted">Stacked:</small>
 
-												<input id="id-pills-stacked" type="checkbox" class="ace ace-switch ace-switch-5">
+												<input id="id-pills-stacked" type="checkbox" class="power power-switch">
 												<span class="lbl middle"></span>
-											</label>
+											</label></div>
 										</span><!-- /.col -->
 									</h3>
 
@@ -1442,15 +1427,236 @@
 	<script src="js/jquery.sparkline.min.js"></script>
 	<script src="js/nvd3/d3.v3.js"></script>
 	<script src="js/jquery.bootstrap.wizard.min.js"></script>
+	<script src="js/jquery.easypiechart.min.js"></script>
+	<script src="js/jquery.gritter.min.js"></script>
+	<script src="js/bootbox.min.js"></script>
 	
 <script src="js/wizard.js"></script>
 	
 <script src="js/SmartNotification.min.js"></script>
 	<script src="js/rickshaw/Rickshaw.js"></script>
-
+<script src="js/spin.min.js"></script>
  <script type="text/javascript">
 
 $(document).ready(function(){
+	var oldie = /msie\s*(8|7|6)/.test(navigator.userAgent.toLowerCase());
+	$('.easy-pie-chart.percentage').each(function(){
+					$(this).easyPieChart({
+						barColor: $(this).data('color'),
+						trackColor: '#EEEEEE',
+						scaleColor: false,
+						lineCap: 'butt',
+						lineWidth: 8,
+						animate: oldie ? false : 1000,
+						size:75
+					}).css('color', $(this).data('color'));
+				});
+
+	$('[data-rel=tooltip]').tooltip();
+				$('[data-rel=popover]').popover({html:true});
+
+				$('#gritter-regular').on("click", function(){
+					$.gritter.add({
+						title: 'This is a regular notice!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="blue">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'img/tumbnails/user4.jpg',
+						sticky: false,
+						time: '',
+						class_name: 'gritter-info gritter-light'
+						
+					});
+			
+					return false;
+				});
+
+				$('#gritter-sticky').on("click", function(){
+					var unique_id = $.gritter.add({
+						title: 'This is a sticky notice!',
+						text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="red">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'img/tumbnails/user4.jpg',
+						sticky: true,
+						time: '',
+						class_name: 'gritter-info gritter-light'
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-without-image').on("click", function(){
+					$.gritter.add({
+						// (string | mandatory) the heading of the notification
+						title: 'This is a notice without an image!',
+						// (string | mandatory) the text inside the notification
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="orange">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						class_name: 'gritter-success gritter-light'
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-max3').on("click", function(){
+					$.gritter.add({
+						title: 'This is a notice with a max of 3 on screen at one time!',
+						text: 'This will fade out after a certain amount of time. Vivamus eget tincidunt velit. Cum sociis natoque penatibus et <a href="#" class="green">magnis dis parturient</a> montes, nascetur ridiculus mus.',
+						image: 'img/tumbnails/user4.jpg',
+						sticky: false,
+						before_open: function(){
+							if($('.gritter-item-wrapper').length >= 3)
+							{
+								return false;
+							}
+						},
+						class_name: 'gritter-warning gritter-light'
+					});
+			
+					return false;
+				});
+			
+			
+				$('#gritter-center').on("click", function(){
+					$.gritter.add({
+						title: 'This is a centered notification',
+						text: 'Just add a "gritter-center" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-info gritter-center gritter-light' 
+					});
+			
+					return false;
+				});
+				
+				$('#gritter-error').on("click", function(){
+					$.gritter.add({
+						title: 'This is a warning notification',
+						text: 'Just add a "gritter-light" class_name to your $.gritter.add or globally to $.gritter.options.class_name',
+						class_name: 'gritter-error gritter-light'
+											});
+			
+					return false;
+				});
+					
+			
+				$("#gritter-remove").on("click", function(){
+					$.gritter.removeAll();
+					return false;
+				});
+
+				$("#bootbox-regular").on("click", function() {
+					bootbox.prompt("What is your name?", function(result) {
+						if (result === null) {
+							
+						} else {
+							
+						}
+					});
+				});
+					
+				$("#bootbox-confirm").on("click", function() {
+					bootbox.confirm("Are you sure?", function(result) {
+						if(result) {
+							//
+						}
+					});
+				});
+				
+			
+					
+				$("#bootbox-options").on("click", function() {
+					bootbox.dialog({
+						message: "<span class='bigger-110'>I am a custom dialog with smaller buttons</span>",
+						buttons: 			
+						{
+							"success" :
+							 {
+								"label" : "<i class='ace-icon fa fa-check'></i> Success!",
+								"className" : "btn-sm btn-success",
+								"callback": function() {
+									//Example.show("great success");
+								}
+							},
+							"danger" :
+							{
+								"label" : "Danger!",
+								"className" : "btn-sm btn-danger",
+								"callback": function() {
+									//Example.show("uh oh, look out!");
+								}
+							}, 
+							"click" :
+							{
+								"label" : "Click ME!",
+								"className" : "btn-sm btn-primary",
+								"callback": function() {
+									//Example.show("Primary button");
+								}
+							}, 
+							"button" :
+							{
+								"label" : "Just a button...",
+								"className" : "btn-sm"
+							}
+						}
+					});
+				});
+
+				$('#spinner-opts small').css({display:'inline-block', width:'60px'})
+			
+				var slide_styles = ['', 'green','red','purple','orange', 'dark'];
+				var ii = 0;
+				$("#spinner-opts input[type=text]").each(function() {
+					var $this = $(this);
+					$this.hide().after('<span />');
+					$this.next().addClass('ui-slider-small').
+					addClass("inline ui-slider-"+slide_styles[ii++ % slide_styles.length]).
+					css({'width':'125px'}).slider({
+						value:parseInt($this.val()),
+						range: "min",
+						animate:true,
+						min: parseInt($this.data('min')),
+						max: parseInt($this.data('max')),
+						step: parseFloat($this.data('step')),
+						slide: function( event, ui ) {
+							$this.val(ui.value);
+							spinner_update();
+						}
+					});
+				});
+			
+			
+			
+			
+			
+				$.fn.spin = function(opts) {
+					this.each(function() {
+					  var $this = $(this),
+						  data = $this.data();
+			
+					  if (data.spinner) {
+						data.spinner.stop();
+						delete data.spinner;
+					  }
+					  if (opts !== false) {
+						data.spinner = new Spinner($.extend({color: $this.css('color')}, opts)).spin(this);
+					  }
+					});
+					return this;
+				};
+			
+				function spinner_update() {
+					var opts = {};
+					$('#spinner-opts input[type=text]').each(function() {
+						opts[this.name] = parseFloat(this.value);
+					});
+					$('#spinner-preview').spin(opts);
+				}
+			
+			
+			
+				$('#id-pills-stacked').removeAttr('checked').on('click', function(){
+					$('.nav-pills').toggleClass('nav-stacked');
+				});
+			
+			
 
 });  
   
