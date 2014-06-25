@@ -2,6 +2,7 @@ var fixedHeader=localStorage.getItem('fixedHeader');
 var fixedNav=localStorage.getItem('fixedNav');
 var insideContainer=localStorage.getItem('insideContainer');
 var wallpaper=localStorage.getItem('wallpaper');
+var skin=localStorage.getItem('skin');
 
 
 
@@ -323,13 +324,27 @@ if(insideContainer){
                         $html.css("background-image", "url(" +wallpaper+ ")");
 	}
 }
+if(skin!=null && skin!='' && skin !='default'){
 
+	$('head').append('<link rel="stylesheet/less" type="text/css" href="css/'+skin+'-skin.less" />');
+			$('head').append('<script src="js/less-1.7.3.min.js"></script>');
+
+			$('[id^="smart-style"]').find('i.fa-check').remove();
+			if(skin=='apple'){
+			$('#smart-style-1').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');	
+			}
+			
+			
+
+}
 
 
 $('.page-content').after('<div class="footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span>'
 +'Application © 2014-2015</span>&nbsp; &nbsp;<span class="action-buttons"><a href="#"><i class="fa fa-twitter-square light-blue bigger-150"></i></a>'
 +'<a href="#"><i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i></a><a href="#"><i class=" fa fa-rss-square orange bigger-150"></i></a>'
 +'</span></div></div></div>');
+
+
 
 
 //End Document ready
@@ -691,15 +706,26 @@ if($(elem).parent().hasClass('btn-group')){
 
 
 $(document).on("click","#smart-style-1",function(event){
-		/*$('.navbar-default.navbar-static-top').css('background-color','#EC8E70');
-		$('#left-panel').css('background-color','#696665');
-		$('#left-panel ul li').css('border-bottom','1px solid #23272B');
-		$('#left-panel ul li').css('border-top','1px solid #ACADAF');
+			localStorage.setItem('skin','apple');
 
-		$('#left-panel ul ul').css('background','#898B8B');*/
+			$('[id^="smart-style"]').find('i.fa-check').remove();
+			$('#smart-style-1').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
+			//$('head').append('<link href="css/apple-skin.css" rel="stylesheet">');
+			$('head').append('<link rel="stylesheet/less" type="text/css" href="css/apple-skin.less" />');
+			$('head').append('<script src="js/less-1.7.3.min.js"></script>');
+		
+
+	});
 
 
-			$('head').append('<link href="css/apple-skin.css" rel="stylesheet">');
+$(document).on("click","#smart-style-0",function(event){
+			localStorage.setItem('skin','default');
+
+			$('[id^="smart-style"]').find('i.fa-check').remove();
+			$('#smart-style-0').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
+			$('head').append('<link href="css/default-skin.css" rel="stylesheet">');
+			
+			
 		
 
 	});
