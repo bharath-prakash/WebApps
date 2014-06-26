@@ -326,12 +326,16 @@ if(insideContainer){
 }
 if(skin!=null && skin!='' && skin !='default'){
 
-	$('head').append('<link rel="stylesheet/less" type="text/css" href="css/'+skin+'-skin.less" />');
-			$('head').append('<script src="js/less-1.7.3.min.js"></script>');
+	$('head').append('<link id="skin_css" rel="stylesheet/less" type="text/css" href="css/'+skin+'-skin.less" />');
+			$('head').append('<script id="less_link" src="js/less-1.7.3.min.js"></script>');
 
 			$('[id^="smart-style"]').find('i.fa-check').remove();
 			if(skin=='apple'){
 			$('#smart-style-1').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');	
+			}else if(skin=='light'){
+			$('#smart-style-2').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');	
+			} else if(skin=='metalic'){
+			$('#smart-style-3').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');	
 			}
 			
 			
@@ -339,7 +343,7 @@ if(skin!=null && skin!='' && skin !='default'){
 }
 
 
-$('.page-content').after('<div class="footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span>'
+$('.page-content').after('<div class="page-footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span>'
 +'Application © 2014-2015</span>&nbsp; &nbsp;<span class="action-buttons"><a href="#"><i class="fa fa-twitter-square light-blue bigger-150"></i></a>'
 +'<a href="#"><i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i></a><a href="#"><i class=" fa fa-rss-square orange bigger-150"></i></a>'
 +'</span></div></div></div>');
@@ -694,7 +698,7 @@ if($(elem).parent().hasClass('btn-group')){
 '<a href="javascript:void(0);" id="smart-style-0"  class="btn btn-block btn-xs txt-color-white margin-right-5" style="background-color:#3A6094;"><i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>Power Default</a>'+
 '<a href="javascript:void(0);" id="smart-style-1"  class="btn btn-block btn-xs txt-color-white" style="background:#EC8E70;">Apple Flavour</a>'+
 '<a href="javascript:void(0);" id="smart-style-2"  class="btn btn-xs btn-block txt-color-darken margin-top-5" style="background:#fff;">Ultra Light</a>'+
-'<a href="javascript:void(0);" id="smart-style-3"  class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#727677;">Mettalic Skin</a></section>'+
+'<a href="javascript:void(0);" id="smart-style-3"  class="btn btn-xs btn-block txt-color-white margin-top-5" style="background:#727677;">Metalic Skin</a></section>'+
 '</form> '+
 '</div>';
 
@@ -711,8 +715,11 @@ $(document).on("click","#smart-style-1",function(event){
 			$('[id^="smart-style"]').find('i.fa-check').remove();
 			$('#smart-style-1').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
 			//$('head').append('<link href="css/apple-skin.css" rel="stylesheet">');
-			$('head').append('<link rel="stylesheet/less" type="text/css" href="css/apple-skin.less" />');
-			$('head').append('<script src="js/less-1.7.3.min.js"></script>');
+			$('#skin_css').remove();
+			$('#less_link').remove();
+			$('[id^="less:"]').remove();
+			$('head').append('<link rel="stylesheet/less" type="text/css" id="skin_css" href="css/apple-skin.less" />');
+			$('head').append('<script src="js/less-1.7.3.min.js" id="less_link"></script>');
 		
 
 	});
@@ -720,11 +727,42 @@ $(document).on("click","#smart-style-1",function(event){
 
 $(document).on("click","#smart-style-0",function(event){
 			localStorage.setItem('skin','default');
-
+			$('#skin_css').remove();
+			$('#less_link').remove();
+			$('[id^="less:"]').remove();
 			$('[id^="smart-style"]').find('i.fa-check').remove();
 			$('#smart-style-0').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
-			$('head').append('<link href="css/default-skin.css" rel="stylesheet">');
+			$('head').append('<link href="css/default-skin.css" rel="stylesheet" id="skin_css"/>');
+			$('head').append('<script src="js/less-1.7.3.min.js" id="less_link" ></script>');
 			
+		
+
+	});
+
+
+$(document).on("click","#smart-style-2",function(event){
+			localStorage.setItem('skin','light');
+			$('#skin_css').remove();
+			$('#less_link').remove();
+			$('[id^="less:"]').remove();
+			$('[id^="smart-style"]').find('i.fa-check').remove();
+			$('#smart-style-2').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
+			$('head').append('<link rel="stylesheet/less" type="text/css" id="skin_css" href="css/light-skin.less" />');
+			$('head').append('<script src="js/less-1.7.3.min.js" id="less_link" ></script>');
+			
+		
+
+	});
+
+$(document).on("click","#smart-style-3",function(event){
+			localStorage.setItem('skin','metalic');
+			$('#skin_css').remove();
+			$('#less_link').remove();
+			$('[id^="less:"]').remove();
+			$('[id^="smart-style"]').find('i.fa-check').remove();
+			$('#smart-style-3').prepend('<i class="fa fa-check fa-fw pull-left" id="skin-checked"></i>');
+			$('head').append('<link rel="stylesheet/less" type="text/css" id="skin_css" href="css/metalic-skin.less" />');
+			$('head').append('<script src="js/less-1.7.3.min.js" id="less_link" ></script>');
 			
 		
 

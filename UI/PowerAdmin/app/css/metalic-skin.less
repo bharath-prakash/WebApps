@@ -1,15 +1,17 @@
+@appleColor : #727677;
+
 .navbar-default.navbar-static-top{
-	background-color: #3A6094;
+	background-color: @appleColor;
 }
 
 #left-panel{
-	background-color: rgba(58, 96, 148, 0.66);
+	background-color: darken(@appleColor,10%);
 }
 
 #left-panel ul li {
 overflow: hidden;
-border-bottom: 1px solid #54687C;
-border-top: 1px solid #88A2BB;
+border-bottom: 1px solid darken(@appleColor,20%);
+border-top: 1px solid lighten(@appleColor,10%);
 }
 
 
@@ -17,62 +19,55 @@ border-top: 1px solid #88A2BB;
 #left-panel ul ul {
 margin: 0;
 display: none;
-background: #31485E;
+background: darken(@appleColor,30%);;
 padding: 7px 0;
 }
 
 #left-panel>ul>li>a:hover {
-color: #ffffff;
-}
-
-#left-panel ul .active>a {
-color: #fff!important;
-
-}
-
-#left-panel ul li ul li a:hover {
-color: white!important;
+color: lighten(@appleColor,50%);
 }
 
 body{
-	background-color : #eef0f0;
-	color:#27484f;
+	background-color : white;
+	color:darken(@appleColor,40%);	
 
 }
 
 .power-widget.power-widget-color-greyDark .power-widget-header {
-background: #4C4F53;
+background: darken(@appleColor,40%);
 color: #FFF;
 }
 
 
 .dropdown-menu.inverse {
-background-color: #31485E;
+background-color: darken(@appleColor,40%);	
 }
+
 
 .music-dropdown > span:first-child {
 background-color: transparent!important;
-color: #27484F!important;
+color: darken(@appleColor,40%)!important;
 }
 
-
 .music-dropdown .player_control {
-color: #31485E;
+color: darken(@appleColor,40%)!important; 
 }
 
 .music-dropdown {
- color: #31485E; 
+
+color: darken(@appleColor,40%)!important;
 }
 
 .dropdown-menu.inverse .btn-group .btn {
-background-color: #31485E;
+background-color: darken(@appleColor,40%)!important;
 color: white;
 }
 
 .dropdown-menu.inverse>:last-child {
-background-color: #31485E;
+background-color: darken(@appleColor,40%)!important;
 color: white;
 }
+
 
 #left-panel ul li a {
 color: #DCE7F3;

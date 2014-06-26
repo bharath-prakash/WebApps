@@ -1,0 +1,117 @@
+@mainColor : #fff;
+@txtColor : rgb(48, 112, 169);
+
+.navbar-default.navbar-static-top{
+	background-color:@mainColor;
+}
+
+#left-panel{
+	background-color: darken(@mainColor,5%);
+}
+
+#left-panel ul li {
+overflow: hidden;
+border-bottom: 1px solid darken(@mainColor,20%);
+border-top: 1px solid lighten(@mainColor,10%);
+}
+
+
+
+#left-panel ul ul {
+margin: 0;
+display: none;
+background: darken(@mainColor,10%);
+padding: 7px 0;
+}
+
+#left-panel>ul>li>a:hover {
+color: lighten(#0F2136,10%);
+}
+#left-panel ul .active>a {
+color: #0F2136!important;
+
+}
+
+body{
+	background-color : white;
+	color:@txtColor;	
+
+}
+
+.power-widget.power-widget-color-greyDark .power-widget-header {
+background: darken(@mainColor,40%);
+color: @txtColor;
+}
+
+
+.dropdown-menu.inverse {
+background-color: darken(@mainColor,40%);	
+}
+
+
+.music-dropdown > span:first-child {
+background-color: transparent!important;
+color: darken(@mainColor,40%)!important;
+}
+
+.music-dropdown .player_control {
+color: darken(@mainColor,40%)!important; 
+}
+
+.music-dropdown {
+
+color: darken(@mainColor,40%)!important;
+}
+
+.dropdown-menu.inverse .btn-group .btn {
+background-color: darken(@mainColor,40%)!important;
+color: @txtColor;
+}
+
+.dropdown-menu.inverse>:last-child {
+background-color: darken(@mainColor,40%)!important;
+color: @txtColor;
+}
+
+#left-panel ul li a {
+color: #56718F;
+}
+
+
+#left-panel ul li.active>a:before {
+color: #fff;
+}
+
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-brand:focus {
+color: darken(@txtColor,20%);
+}
+
+
+.navbar-default .navbar-brand {
+color: @txtColor;
+}
+
+.navbar-default .navbar-nav > li > a {
+color: @txtColor;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+color: darken(@txtColor,10%);
+}
+
+.shortcuts .btn {
+color: darken(@txtColor,10%);
+}
+
+#left-panel ul li ul li a:hover {
+color: darken(@txtColor,10%);
+}
+
+#left-panel ul li ul li a:hover i {
+color: darken(@txtColor,10%);
+}
+
+.phone-bar > li > a {
+color: @txtColor;
+}

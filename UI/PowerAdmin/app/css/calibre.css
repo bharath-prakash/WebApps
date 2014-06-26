@@ -4202,13 +4202,13 @@ span.fc-button i.power-icon{
 top: 6px;
 }
 
-.footer {
+.page-footer {
 padding-top: 64px;
 height: 0;
 width: 0;
 }
 
-.footer .footer-inner {
+.page-footer .footer-inner {
 text-align: center;
 position: absolute;
 z-index: auto;
@@ -4217,7 +4217,7 @@ right: 0;
 bottom: 0;
 }
 
-.footer .footer-inner .footer-content {
+.page-footer .footer-inner .footer-content {
 position: absolute;
 left: 12px;
 right: 12px;
