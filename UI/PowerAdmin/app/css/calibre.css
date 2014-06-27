@@ -4249,3 +4249,240 @@ color: #93cbf9 !important;
 .orange {
 color: #ff892a !important;
 }
+
+.pricing-big {
+border: none!important;
+}
+
+.pricing-big .panel-heading {
+border-radius: 5px 5px 0 0;
+}
+
+.panel-success > .panel-heading {
+color: #468847;
+background-color: #DFF0D8;
+border-color: #468847;
+}
+
+.pricing-big .panel-footer {
+background-color: #A1A1A1!important;
+}
+
+
+.pricing-big .panel-footer {
+border-radius: 0 0 5px 5px;
+}
+
+.pricing-big .panel-title {
+text-transform: capitalize;
+font-size: 18px;
+padding: 20px 0;
+text-align: center;
+border-radius: 5px 5px 0 0;
+margin: 0;
+font-weight: 700;
+}
+
+.pricing-big .the-price {
+padding: 20px 0;
+background: #333;
+text-align: center;
+font-size: 24px;
+font-weight: 700;
+color: white;
+box-shadow: none!important;
+-moz-box-shadow: none!important;
+}
+
+.the-price h1 {
+line-height: 1em;
+padding: 0;
+margin: 0;
+}
+
+.well.well-light {
+border: 1px solid #E2E2E2;
+}
+
+.price-features {
+background: #FAFAFA;
+padding: 20px 15px;
+min-height: 230px;
+font-size: 13.5px;
+}
+.text-align-left, .text-left {
+text-align: left!important;
+}
+
+.price-features li + li {
+margin-top: 10px;
+}
+
+.pricing-big .panel-footer .btn {
+padding: 15px 0;
+border-radius: 3px;
+font-weight: 700;
+font-size: 14px;
+}
+
+.pricing-big .panel-footer .btn span {
+font-weight: 400;
+font-style: italic;
+}
+
+.pricing-big .panel-footer > div {
+padding: 15px 0 10px;
+display: block;
+font-size: 13px;
+}
+
+.panel-teal {
+border-color: #568A89;
+}
+
+.panel-teal > .panel-heading {
+color: white;
+background-color: #568A89;
+border-color: #568A89;
+}
+
+.panel-primary {
+border-color: #3276B1;
+}
+
+.ribbon {
+position: absolute;
+right: 9px;
+top: -4px;
+}
+
+.panel-primary > .panel-heading {
+color: white;
+background-color: #3276B1;
+border-color: #3276B1;
+}
+
+.pricing-big .subscript {
+font-size: 18px;
+color: #999;
+margin-left: 5px;
+}
+.no-padding {
+padding: 0!important;
+}
+
+.panel-darken {
+border-color: #333;
+}
+
+.panel-darken > .panel-heading {
+color: white;
+background-color: #404040;
+border-color: #404040;
+}
+
+.panel-greenLight {
+border-color: #71843F;
+}
+
+.panel-greenLight > .panel-heading {
+color: white;
+background-color: #71843F;
+border-color: #71843F;
+}
+
+.panel-primary > .panel-heading {
+color: white;
+background-color: #3276B1;
+border-color: #3276B1;
+}
+
+.the-price {
+background-color: rgba(220, 220, 220, .17);
+box-shadow: 0 1px 0 #dcdcdc,inset 0 1px 0 #fff;
+padding: 20px;
+margin: 0;
+}
+
+
+.the-price h1 {
+line-height: 1em;
+padding: 0;
+margin: 0;
+}
+
+.subscript {
+font-size: 21px;
+color: #999;
+}
+
+.text-align-center td{
+  text-align: center!important;
+}
+
+.panel-orange {
+border-color: #C79121;
+}
+
+.panel-orange > .panel-heading {
+color: white;
+background-color: #C79121;
+border-color: #C79121;
+}
+
+
+.panel-purple {
+border-color: #6E587A;
+}
+
+
+.panel-purple > .panel-heading {
+color: white;
+background-color: #6E587A;
+border-color: #6E587A;
+}
+
+
+.panel-blue {
+border-color: #57889C;
+}
+
+
+.panel-blue > .panel-heading {
+color: white;
+background-color: #57889C;
+border-color: #57889C;
+}
+
+
+.panel-redLight {
+border-color: #A65858;
+}
+
+.panel-redLight > .panel-heading {
+color: white;
+background-color: #A65858;
+border-color: #A65858;
+}
+
+.panel-pink {
+border-color: #AC5287;
+}
+
+.panel-pink > .panel-heading {
+color: white;
+background-color: #AC5287;
+border-color: #AC5287;
+}
+
+.bg-color-orange {
+background-color: #C79121!important;
+}
+
+.bg-color-redLight {
+background-color: #A65858!important;
+}
+
+.bg-color-pink {
+background-color: #AC5287!important;
+}
