@@ -4549,3 +4549,17 @@ width: 1166px;
 left:10px;
 
 }
+
+.login {
+  color:#3070A9;
+}
+
+.gallery-header{
+  padding: 20px;
+  float: right;
+}
+
+
+.dropdown-menu > li > a:hover .fa-stack, .dropdown-menu > li > a:focus .fa-stack, .dropdown-menu > li > a:active .fa-stack, .dropdown-menu > li.active > a .fa-stack, .dropdown-menu > li.active > a:hover .fa-stack, .dropdown-menu .dropdown-submenu:hover > a .fa-stack{
+color: #4F99C6;
+}
