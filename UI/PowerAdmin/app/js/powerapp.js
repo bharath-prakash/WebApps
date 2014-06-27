@@ -343,13 +343,13 @@ if(skin!=null && skin!='' && skin !='default'){
 }
 
 
-$('.page-content').after('<div class="page-footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span>'
-+'Application © 2014-2015</span>&nbsp; &nbsp;<span class="action-buttons"><a href="#"><i class="fa fa-twitter-square light-blue bigger-150"></i></a>'
+$('.page-content').after('<div class="page-footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span> ' 
++'Application © 2014-2020</span>&nbsp; &nbsp;<span class="action-buttons"><a href="#"><i class="fa fa-twitter-square light-blue bigger-150"></i></a>'
 +'<a href="#"><i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i></a><a href="#"><i class=" fa fa-rss-square orange bigger-150"></i></a>'
 +'</span></div></div></div>');
 
 
-
+$('i.fa-sign-out').parent().parent().attr('href','login.html');
 
 //End Document ready
 	});

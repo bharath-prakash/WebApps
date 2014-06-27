@@ -1,0 +1,307 @@
+<html lang="en"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="../../docs-assets/ico/favicon.png">
+
+    <title>Power Admin</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.css" rel="stylesheet">
+	<link href="css/calibre.css" rel="stylesheet">
+	<link href="css/rss_ticker.css" rel="stylesheet">
+	<link href="css/power-responsive.css" rel="stylesheet">
+	<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+	<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+	<link href="css/jquery.gritter.css" rel="stylesheet" type="text/css">
+	  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+	  <link type="text/css" rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8/themes/base/jquery-ui.css">
+	  
+	  <style>
+		
+	
+		
+	</style>
+	  
+    <!-- Custom styles for this template
+    <link href="navbar-static-top.css" rel="stylesheet">
+ -->
+    <!-- Just for debugging purposes. Don't actually copy this line! -->
+    <!--[if lt IE 9]><script src="../../docs-assets/js/ie8-responsive-file-warning.js"></script><![endif]-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+  </head>
+
+  <body class="login">
+  
+    <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+         
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  
+        </div>
+       
+      
+
+     <span id="extr-page-header-space"> <span class="hidden-mobile">Already registered?</span> <a href="login.html" class="btn btn-danger">Sign in</a> </span>
+	
+     
+	  
+	  </div>
+    </div>
+<div class="main-container">
+<div class="row">
+
+	<div class="col-xs-12 col-sm-12 col-md-7 col-lg-7 hidden-xs hidden-sm">
+<div class="snapshot">
+
+<span> <h3>Power Admin </h3> <h4>Use response bootstrap template to empower your business.</h4></span>
+<div style="padding:15px;">
+ <img class="img-responsive" src="img/multidevice_snapshot.png">
+</div>
+ </div>
+	</div>
+
+	<div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+						
+<div class="power-widget">
+
+<div class="power-widget-header">
+
+<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x "></i>
+  <i class="fa fa-user fa-inverse fa-stack-1x"></i>
+</span>
+<div class="">
+
+
+	<h4>Registration </h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+<form action="index.html" method="get" id="power-form-register" class="power-form" novalidate="novalidate">
+							<div class="header">
+								Registration form
+							</div>
+
+							<fieldset>
+								<div>
+									<label class="input"> <i class="icon-append fa fa-user"></i>
+										<input type="text" class="form-control" name="username" placeholder="Username">
+										<b class="tooltip tooltip-bottom-right">Needed to enter the Username</b> </label>
+								</div>
+								
+								
+								
+								<div>
+									<label class="input"> <i class="icon-append fa fa-envelope-o"></i>
+										<input type="email" class="form-control" name="email" placeholder="Email address">
+										<b class="tooltip tooltip-bottom-right">Needed to enter your email.</b> </label>
+								</div>
+
+								<div>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" class="form-control" name="password" placeholder="Password" id="password">
+										<b class="tooltip tooltip-bottom-right">Don't forget your password</b> </label>
+								</div>
+
+								<div>
+									<label class="input"> <i class="icon-append fa fa-lock"></i>
+										<input type="password" class="form-control" name="passwordConfirm" placeholder="Confirm password">
+										<b class="tooltip tooltip-bottom-right">Need to confirm your password</b> </label>
+								</div>
+							</fieldset>
+
+							<fieldset>
+								<div class="row">
+									<div class="col col-6">
+										<label class="input">
+											<input type="text" class="form-control" name="firstname" placeholder="First name">
+										</label>
+									</div>
+									<div class="col col-6">
+										<label class="input">
+											<input type="text" class="form-control" name="lastname" placeholder="Last name">
+										</label>
+									</div>
+								</div>
+								
+								<div class="row">
+									<div class="col col-6">
+										<label class="select">
+											<select name="gender" class="form-control">
+												<option value="0" selected="" disabled="">Gender</option>
+												<option value="1">Male</option>
+												<option value="2">Female</option>
+												<option value="3">Prefer not to answer</option>
+											</select> <i></i> </label>
+									</div>
+									<div class="col col-6">
+										<label class="input"> <i class="icon-append fa fa-calendar"></i>
+											<input type="text" id="requestdate"  name="requestdate" placeholder="Request activation on" class=" form-control " >
+										</label>
+									</div>
+								</div>	
+
+								<div>
+									<label class="checkbox">
+										<input type="checkbox"  name="subscription" id="subscription">
+										<i></i>I want to receive news and special offers</label>
+									<label class="checkbox">
+										<input type="checkbox" name="terms" id="terms">
+										<i></i>I agree with the Terms and Conditions</label>
+								</div>
+							</fieldset>
+							<div class="footer">
+								<button type="submit" class="btn btn-primary">
+									Validate Form
+								</button>
+							</div>
+						</form>			
+ 
+ 
+  
+  </div>
+ 
+</div>
+
+						
+					
+						
+					</div>
+
+
+</div>
+   
+
+
+
+<div class="page-footer"><div class="footer-inner"><div class="footer-content"><span class="bigger-120"><span class="blue bolder">Power Admin</span> Application © 2014-2020</span>&nbsp; &nbsp;<span class="action-buttons"><a href="#"><i class="fa fa-twitter-square light-blue bigger-150"></i></a><a href="#"><i class="ace-icon fa fa-facebook-square text-primary bigger-150"></i></a><a href="#"><i class=" fa fa-rss-square orange bigger-150"></i></a></span></div></div></div>
+
+
+
+
+ </div>
+
+	
+    
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/jquery.validate.min.js"></script>
+<script src="js/jquery-form.min.js"></script>
+<script type="text/javascript" src="js/jquery.maskedinput.min.js"></script>
+
+    <script src="js/bootstrap.js"></script>
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	
+<script src="js/fullcalendar.min.js"></script>	
+
+	
+ <script type="text/javascript">
+
+$(document).ready(function(){
+
+var $registerForm = $("#power-form-register").validate({
+
+			// Rules for form validation
+			rules : {
+				username : {
+					required : true
+				},
+				email : {
+					required : true,
+					email : true
+				},
+				password : {
+					required : true,
+					minlength : 3,
+					maxlength : 20
+				},
+				passwordConfirm : {
+					required : true,
+					minlength : 3,
+					maxlength : 20,
+					equalTo : '#password'
+				},
+				firstname : {
+					required : true
+				},
+				lastname : {
+					required : true
+				},
+				gender : {
+					required : true
+				},
+				terms : {
+					required : true
+				}
+			},
+
+			// Messages for form validation
+			messages : {
+				login : {
+					required : 'Please enter your login'
+				},
+				email : {
+					required : 'Please enter your email address',
+					email : 'Please enter a VALID email address'
+				},
+				password : {
+					required : 'Please enter your password'
+				},
+				passwordConfirm : {
+					required : 'Please enter your password one more time',
+					equalTo : 'Please enter the same password as above'
+				},
+				firstname : {
+					required : 'Please select your first name'
+				},
+				lastname : {
+					required : 'Please select your last name'
+				},
+				gender : {
+					required : 'Please select your gender'
+				},
+				terms : {
+					required : 'You must agree with Terms and Conditions'
+				}
+			},
+
+			// Do not change code below
+			errorPlacement : function(error, element) {
+				error.insertAfter(element.parent());
+			}
+		});
+
+$('#requestdate').datepicker({
+			dateFormat : 'dd.mm.yy',
+			prevText : '<i class="fa fa-chevron-left"></i>',
+			nextText : '<i class="fa fa-chevron-right"></i>'			
+		});
+
+
+});  
+  
+ </script>
+
+</body></html>
