@@ -3,6 +3,7 @@ var fixedNav=localStorage.getItem('fixedNav');
 var insideContainer=localStorage.getItem('insideContainer');
 var wallpaper=localStorage.getItem('wallpaper');
 var skin=localStorage.getItem('skin');
+var tour=localStorage.getItem('tour');
 
 
 

@@ -1586,6 +1586,7 @@ var date = new Date();
 	            }
 		});
 
+if(!tour){
 
 $('#joyRideTipContent').joyride({
           autoStart : true,
@@ -1593,6 +1594,11 @@ $('#joyRideTipContent').joyride({
         modal:true,
         expose: true
         });
+localStorage.setItem('tour',true);
+
+}
+
+
 
  </script>
 

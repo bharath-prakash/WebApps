@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+	<head lang="en">
+		<meta http-equiv="content-type" content="text/html;charset=utf-8">
+		<title>Power Admin Template Documentation</title>
+		<!-- Documentation CSS -->
+		<link rel="stylesheet" href="assets/screen.css" type="text/css" media="screen, projection">
+
+		
+		
+		<script type="text/javascript" src="assets/scripts/shCore.js"></script>
+		<script type="text/javascript" src="assets/scripts/shBrushXml.js"></script>
+		<link type="text/css" rel="stylesheet" href="assets/shCoreDefault.css"/>
+		<script type="text/javascript">SyntaxHighlighter.all();</script>
+	
+	</head>
+
+	<body>
+		
+		<div class="container">
+		
+			<h3 class="center alt">&ldquo;Power&rdquo; Documentation by &ldquo;Bharath Prakash&rdquo; v1.0</h3>		
+			
+			<hr>		
+
+			<h1 class="center">&ldquo;Power Admin - Responsive Admin Dashboard&rdquo;</h1>
+			
+			<div class="borderTop">
+				<div class="span-6 colborder info prepend-1">
+					<p class="prepend-top">
+						<strong>
+							Created: 04/07/2014<br>
+							By: Bharath Prakash<br>
+							<a href="mailto:bharathn.prakash@gmail.com?Subject=PowerAdmin%20Template">Contact me</a>
+						</strong>
+					</p>
+				</div>
+		
+				<div class="span-12 last">
+					<p class="prepend-top append-0">Thank you for purchasing my theme. If you have any questions that are beyond the scope of this help file, please feel free to email me via my user page contact form <a href="mailto:bharathn.prakash@gmail.com?Subject=PowerAdmin%20Template">here</a>.  Thanks so much!</p>
+				</div>
+			</div>
+			
+			<hr>
+			
+			<h2 id="toc" class="alt">Table of Contents</h2>
+			<ol class="alpha">
+				<li>HTML Structure
+					<ol>
+						<li><a href="#XX0">Layout</a>
+						<li><a href="#XX1">Header</a>
+						<li><a href="#XX2">Power Widget</a></li>
+					</ol>
+				</li>
+				<br>
+				<li><a href="#YY">CSS Files and Structures</a></li>
+				<br>
+				<li><a href="#ZZ">Javascript files</a></li>
+			</ol>
+			
+			<hr>
+			
+			<p>Power Admin has a number of different layouts. It can be a fixed or fluid width and it can have a sidebar or be full width. You can combine these in many ways. This is done easily by adding/changing a stylesheet. The layout uses the default 12 column, fluid layout that generally comes with the bootstrap default css file. </p> 
+
+			<p>Power Admin also scales down automatically to mobile devices of different resolutions. It works perfectly on an iPhone for example (without changing the HTML of the page).</p>
+
+
+			<h1><strong>A) HTML Structure</strong></h1>
+			<hr>
+			<br><br>
+			<h2 id="XX0"><strong>A. 1) Main Layout</strong> - <a href="#toc">top</a></h2>
+			
+			<pre class="prettyprint lines brush: xml">
+				<!-- Layout Starts -->
+				 
+    <!-- Static navbar with all notifications-->
+ <div class="navbar navbar-default navbar-static-top" role="navigation">
+
+</div>
+
+<!-- Static navbar End-->
+<div class="main-container"> <!-- Main container -->
+<div class="main-container-inner">
+<div id="left-panel" class="main-navbar"> <!-- Left navigation panel -->
+		<div class="shortcuts"> <!-- Shotcut access to features -->
+		</div>
+			<ul>
+		</ul>
+		</div>
+<div class="breadcrumb"> </div> <!-- bread crumb -->
+   
+<div class="page-content"> <!-- Main page content-->
+<div class="container">
+<div class="row page-title" id="page-title"> <!-- Page Title content-->
+
+</div>
+ </div>
+<div id="push"></div>
+    </div>
+</div>
+ 
+</div>
+				
+				<!-- Bootstrap responsive layout Container end -->
+			</pre>
+
+			<hr>
+
+			<h2 id="XX1"><strong>A. 2) Header</strong> - <a href="#toc">top</a></h2>
+			
+			<pre class="prettyprint lines brush: xml">
+				<!-- Header start -->
+			  <!-- Static navbar -->
+    <div class="navbar navbar-default navbar-static-top" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" id="hide-menu" class="navbar-toggle" data-toggle="collapse" data-target="#left-panel">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  
+          <a class="navbar-brand" href="#"> <i class="fa fa-bolt fa-fw"></i> Power Admin</a>
+		  <div class="visible-xs">
+		   <ul class="phone-bar" >
+		   	<li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-search-collapse">
+			 <i class="fa fa-search fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a  href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-message-collapse">
+			 <i class="fa fa-bell fa-lg fa-fw"></i> 			
+			 </a>			 
+			  
+			 </li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-feed-collapse">
+			
+			<i class="fa fa-rss-square fa-lg fa-fw"></i>
+			</a>
+			 
+			</li>
+            <li><a href="#" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-user-collapse">
+			
+				<img class="nav-user-photo" src="img/user_login.jpg" />
+			
+			<span class="visible-sm">Welcome, Andy</span>
+			 <b class="caret"></b>
+			</a>
+			 
+			
+			</li>
+          </ul>
+       
+		  </div>
+        </div>
+        
+      
+	  </div>
+    </div>
+				<!-- end header -->
+			</pre>
+
+			<hr>
+
+			<h2 id="XX2"><strong>A. 3) Power Widget</strong> - <a href="#toc">top</a></h2>
+
+			<pre class="prettyprint lines brush: xml">
+				<!-- power widget start -->
+				<div class="power-widget">
+
+<div class="power-widget-header">
+	<span class="fa-stack fa-2x">
+  <i class="fa fa-square fa-stack-2x"></i>
+  <i class="fa  fa-inverse fa-stack-1x"></i>
+</span>
+<div class=""><h4> ... </h4></div>
+<div class="controls"><i class="fa fa-minus-square"></i></div>
+</div>
+
+<div class="power-widget-body">
+
+</div>
+</div>
+				<!-- power widget end -->
+			</pre>
+
+			<hr>
+
+			<h1 id="YY"><strong>B) CSS</strong> - <a href="#toc">top</a></h1>		
+			<pre class="prettyprint lines brush: xml">
+
+				<!-- Bootstrap core CSS -->
+				<link href="css/bootstrap.css" rel="stylesheet">
+				<link href="css/calibre.css" rel="stylesheet">
+				<link href="css/rss_ticker.css" rel="stylesheet">
+				<link href="css/power-responsive.css" rel="stylesheet">
+				<link href="css/nvd3/nv.d3.min.css" rel="stylesheet" type="text/css">
+				<link href="css/fullcalendar.css" rel="stylesheet" type="text/css">
+				  <link href="css/jquery-jvectormap-1.2.2.css" rel="stylesheet" type="text/css">
+				
+					<link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
+					<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+					
+				
+			</pre>
+
+			<p>This template was built using <a href="http://twitter.github.com/bootstrap/"> Twitter Bootstrap </a>.</p>
+
+			<p> This template has skins build using LESS. You can find less files with Skin name . You can alter the main color in .less file to automatically generate a new skin for this template.
+
+			<hr>
+			
+			<h1 id="ZZ">C) JavaScript - <a href="#toc">top</a></h1>
+			
+			<pre class="prettyprint lines brush: xml">
+		  	
+				  <script src="js/jquery-1.10.2.min.js"></script>
+    
+	<script src="js/jquery.zrssfeed.min.js"></script>
+	<script src="js/jquery.vticker.js"></script>
+	<script src="js/morris/raphael-min.js"></script>
+	<script src="js/morris/morris.min.js"></script>
+	<script src="js/jquery.sparkline.min.js"></script>
+	<script src="js/nvd3/d3.v3.js"></script>
+	<script src="js/nvd3/nv.d3.min.js"></script>
+	<script src="js/nvd3/utils.js"></script>
+<script src="js/nvd3/tooltip.js"></script>
+<script src="js/jquery-ui.custom.min.js"></script>
+<script src="js/bootstrap.js"></script>
+	<script src="js/powerapp.js"></script>
+<script src="js/fullcalendar.min.js"></script>
+	<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
+	<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="js/jquery.joyride-2.1.js"></script>
+	<script src="js/modernizr.mq.js"></script>
+		  </pre>
+		
+		</div>
+	</body>
+</html>
