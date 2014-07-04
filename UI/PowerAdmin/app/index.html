@@ -29,6 +29,7 @@
     <![endif]-->
 	    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,300">
 		<link rel="stylesheet" type="text/css" href="css/font-awesome-4.0.3/css/font-awesome.css">
+		<link rel="stylesheet" type="text/css" href="css/joyride-2.1.css">
 		<script type="text/javascript">
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -90,7 +91,7 @@
         <!--- Notification Dropdown-->
         <div class="navbar-collapse collapse">
           
-          <ul class="nav navbar-nav navbar-right">
+          <ul class="nav navbar-nav navbar-right" id="quick_notification">
 		   <li>
 		  <form action="search.html" class="header-search pull-right">
 					<input type="text" placeholder="Find reports and more" id="search-fld">
@@ -519,7 +520,7 @@
 
 
 
-<div class="row page-title">
+<div class="row page-title" id="page-title">
 
 <div class="col-xs-12 col-sm-4 col-lg-5">
 <h3 class=""> Dashboard <span> <i class="fa fa-angle-right"></i> Overview & Statistics</span></h3> 
@@ -1123,7 +1124,34 @@
     </div>
 </div>
  
-
+  <!-- Tip Content -->
+    <ol id="joyRideTipContent">
+      <li data-id="quick_notification" data-text="Next" class="custom">
+        <h2>Notification Bar </h2>
+        <p>Quick access and notifications with music player, rss feeder.</p>
+      </li>
+      <li data-id="left-panel" data-button="Next" data-options="tipLocation:right;tipAnimation:fade">
+        <h2>Navigation Bar</h2>
+        <p>Complete navigation bar with auto collapse in smaller form factor!</p>
+      </li>
+      <li data-class="breadcrumb" data-button="Next" data-options="tipLocation:bottom">
+        <h2>Breadcrumb</h2>
+        <p>Breadcrumb to know you current navigation.</p>
+      </li>
+      <li data-id="page-title" data-button="Next">
+        <h2>Page Title</h2>
+        <p>Page Title with updates and statistics!</p>
+      </li>
+      <li data-class="power-widget" data-button="Next" data-options="tipLocation:top" >
+        <h2>Power Widgets</h2>
+        <p>Widgets wtih fancy icons, header, controls and footer. It can be dragged and arranged with inline with columns</p>
+      </li>
+      <li data-class="power-setting" data-button="Close" data-options="tipLocation:left" >
+        <h2>Settings</h2>
+        <p>Choose layout settings to view page in fixed header,navigation and insider container with background images. Also you can opt for alternative skins.</p>
+      </li>
+      
+    </ol>
 	
     
     <!-- Bootstrap core JavaScript
@@ -1146,6 +1174,8 @@
 <script src="js/fullcalendar.min.js"></script>
 	<script src="js/jquery-jvectormap-1.2.2.min.js"></script>
 	<script src="js/jquery-jvectormap-world-mill-en.js"></script>
+	<script src="js/jquery.joyride-2.1.js"></script>
+	<script src="js/modernizr.mq.js"></script>
 	
  <script type="text/javascript">
 
@@ -1555,6 +1585,14 @@ var date = new Date();
 	                }
 	            }
 		});
+
+
+$('#joyRideTipContent').joyride({
+          autoStart : true,
+          
+        modal:true,
+        expose: true
+        });
 
  </script>
 
